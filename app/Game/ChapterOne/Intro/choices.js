@@ -26,6 +26,40 @@ export function createChoices(changeScene) {
                 key: "4"
             }
         ],
+        [
+            {
+                label: "The Kitchen",
+                action: () => changeScene(5, 4, -1),
+                key: "5"
+            },
+            {
+                label: "Pepper's Room",
+                action: () => changeScene(-1),
+                key: "6"
+            },
+            {
+                label: "The Bunkbed Room",
+                action: () => changeScene(-1),
+                key: "7"
+            },
+            {
+                label: "The Garage",
+                action: () => changeScene(-1),
+                key: "8"
+            },
+            {
+                label: "Back Porch",
+                action: () => changeScene(-1),
+                key: "9"
+            }
+        ],
+        [
+            {
+                label: "Continue",
+                action: () => changeScene(-1),
+                key: "10"
+            }
+        ]
         
     ];
 }

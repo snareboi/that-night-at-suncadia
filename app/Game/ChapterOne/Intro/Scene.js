@@ -47,6 +47,7 @@ export default function Scene() {
 
         getScenes();
         getPictures();
+        
     }, [React.useRef()]);
 
     const choices = createChoices((newScene, newChoice, newImage) => {
@@ -59,13 +60,15 @@ export default function Scene() {
 
     return (
       <>
+      {(images != null) && ( //makes sure the images list is not null
         <Image
-          src={images ? urlFor(images[currImage].image).auto("format").url() : null}
+          src={urlFor(images[currImage].image).auto("format").url()}
           fill={true}
           alt={images ? images[currImage].description : "blank background"}
           style={pictureStyle}
-          // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" - how to properly size images?
         />
+      )}
+        
         <section className="bg-gray-200 ml-auto mr-auto mt-10 max-w-3xl min-w-1 opacity-90 text-black">
           <div className="mx-auto max-w-prose space-y-8 py-13 p-1 text-left">
               <article className="p-2 prose md:prose-md prose-primary mx-auto max-h-125 overflow-y-scroll">
@@ -80,7 +83,8 @@ export default function Scene() {
                     ))}
               </article>
           </div>   
-        </section>     
+        </section>    
+         
       </>  
     )
 }
