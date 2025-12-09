@@ -1,17 +1,23 @@
 "use client"
 import { client } from "@/sanity/lib/client";
+import imageUrlBuilder from '@sanity/image-url';
+import Image from "next/image";
 import { PortableText } from "next-sanity";
 import React, { useEffect, useState } from "react";
+import { createChoices } from "./choices";
 
-
+const builder = imageUrlBuilder(client);
 export default function Scene() {
     const [scene, updateScene] = useState(0);
     const [currChoices, updateChoices] = useState(0);
     const [text, updateText] = useState(null);
 
-    function changeScene(newScene, newChoice) {
-      updateScene(newScene);
-      updateChoices(newChoice);
+    const [images, setImages] = useState(null);
+    const [currImage, changeImage] = useState(0);
+
+
+    const pictureStyle = {
+      opacity: 0.8
     }
     
     useEffect (() => {
@@ -27,38 +33,55 @@ export default function Scene() {
             const content = await client.fetch(query);
             updateText(content);
         }
+
+        async function getPictures() {
+          const query = `*[_type == "photo"] | order(id) {
+            description,
+            image
+          }`;
+          
+          const pictures = await client.fetch(query);
+          setImages(pictures);
+        }
+
+
         getScenes();
+        getPictures();
     }, [React.useRef()]);
 
-    const choices = [
-      (
-          <div className="text-left text-red-500 font-bold">
-              <button className="md:hover:underline cursor-pointer p-1" onClick={(() => changeScene(1, 1))}>"I'm coming"</button>
-              <br/>
-              <button className="md:hover:underline cursor-pointer p-1" onClick={(() => changeScene(2, 1))}>"Can you give me a minute?"</button>
-          </div>
-      ),
-      (
-        <div className="text-left text-red-500 font-bold">
-          <button className="md:hover:underline cursor-pointer p-1" onClick={(() => changeScene(3, 2))}>Continue</button>
-        </div>
-      ),
-      (
-        <div className="text-left text-red-500 font-bold">
-          <button>Continue</button>
-        </div>
-      )
-    ];
+    const choices = createChoices((newScene, newChoice, newImage) => {
+      updateScene(newScene);
+      updateChoices(newChoice);
+      if(newImage >= 0) {
+        changeImage(newImage);
+      }
+    });
 
     return (
-        <div className="mx-auto max-w-prose space-y-8 py-8">
-            <article className="p-2 prose md:prose-md prose-primary mx-auto max-h-125 overflow-y-scroll">
-                <PortableText value={text ? replaceInBlocks(text[scene].text, "Ellie") : ""} components={[]} />
-                <br/>
-                {choices[currChoices]}
-            </article>
-        </div>
-                
+      <>
+        <Image
+          src={images ? urlFor(images[currImage].image).auto("format").url() : null}
+          fill={true}
+          alt={images ? images[currImage].description : "blank background"}
+          style={pictureStyle}
+          // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" - how to properly size images?
+        />
+        <section className="bg-gray-200 ml-auto mr-auto mt-10 max-w-3xl min-w-1 opacity-90 text-black">
+          <div className="mx-auto max-w-prose space-y-8 py-13 p-1 text-left">
+              <article className="p-2 prose md:prose-md prose-primary mx-auto max-h-125 overflow-y-scroll">
+                  <PortableText value={text ? replaceInBlocks(text[scene].text, "Ellie") : ""} components={[]} />
+                  <br/>
+                  {choices[currChoices].map((choice) => (
+                      <div key={choice.key}>
+                        <button key={choice.key} className="md:hover:underline cursor-pointer p-1 text-left text-red-500 font-bold" onClick={choice.action}>
+                          {choice.label}
+                        </button>
+                      </div>
+                    ))}
+              </article>
+          </div>   
+        </section>     
+      </>  
     )
 }
 
@@ -80,5 +103,10 @@ function replaceInBlocks(blocks, playerName) {
 
     return { ...block, children: newChildren };
   });
+}
+
+
+function urlFor(source) {
+ return builder.image(source);
 }
 
