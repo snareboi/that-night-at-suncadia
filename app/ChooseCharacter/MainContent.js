@@ -14,7 +14,7 @@ export default function MainContent() {
     const content = await getCharacterBio(name);
     setBio(content);
     setScene(scene+1);
-    
+    localStorage.setItem("playerName", name);
   }
 
   return (

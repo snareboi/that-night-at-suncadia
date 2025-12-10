@@ -8,8 +8,11 @@ import { createChoices } from "./choices";
 
 const builder = imageUrlBuilder(client);
 export default function Scene() {
+    const playerName = localStorage.getItem("playerName");
+
     const [scene, updateScene] = useState(0);
     const [currChoices, updateChoices] = useState(0);
+    const [choices, modifyChoices] = useState(createChoices());
     const [text, updateText] = useState(null);
 
     const [images, setImages] = useState(null);
@@ -43,44 +46,50 @@ export default function Scene() {
           const pictures = await client.fetch(query);
           setImages(pictures);
         }
-
-
         getScenes();
         getPictures();
-        
     }, [React.useRef()]);
 
-    const choices = createChoices((newScene, newChoice, newImage) => {
-      updateScene(newScene);
-      updateChoices(newChoice);
+    function changeScene(newScene, newChoice, newImage) {
       if(newImage >= 0) {
         changeImage(newImage);
       }
-    });
+      updateScene(newScene);
+      updateChoices(newChoice);
+      
+      if(newScene == 5) {
+        choices[3][0] = "";
+      } else if(newScene == 14) {
+        choices[3][1] = "";
+      }
+      
+    }
 
     return (
       <>
-      {(images != null) && ( //makes sure the images list is not null
-        <Image
-          src={urlFor(images[currImage].image).auto("format").url()}
-          fill={true}
-          alt={images ? images[currImage].description : "blank background"}
-          style={pictureStyle}
-        />
-      )}
-        
+        {(images != null) && ( //makes sure the images list is not null
+          <Image
+            src={urlFor(images[currImage].image).auto("format").url()}
+            fill={true}
+            alt={images ? images[currImage].description : "blank background"}
+            style={pictureStyle}
+          />
+        )}
+        {console.log(playerName)}
         <section className="bg-gray-200 ml-auto mr-auto mt-10 max-w-3xl min-w-1 opacity-90 text-black">
           <div className="mx-auto max-w-prose space-y-8 py-13 p-1 text-left">
               <article className="p-2 prose md:prose-md prose-primary mx-auto max-h-125 overflow-y-scroll">
-                  <PortableText value={text ? replaceInBlocks(text[scene].text, "Ellie") : ""} components={[]} />
+                  <PortableText value={text ? replaceInBlocks(text[scene].text, playerName) : ""} components={[]} />
                   <br/>
-                  {choices[currChoices].map((choice) => (
+                  {choices[currChoices].map((choice) => 
+                    choice ? 
                       <div key={choice.key}>
-                        <button key={choice.key} className="md:hover:underline cursor-pointer p-1 text-left text-red-500 font-bold" onClick={choice.action}>
-                          {choice.label}
-                        </button>
-                      </div>
-                    ))}
+                      <button key={choice.key} className="md:hover:underline cursor-pointer p-1 text-left text-red-500 font-bold" 
+                      onClick={() => changeScene(choice.newScene, choice.newChoice, choice.newImage)}>
+                        {choice.label}
+                      </button>
+                    </div> : null
+                  )}
               </article>
           </div>   
         </section>    
@@ -88,6 +97,7 @@ export default function Scene() {
       </>  
     )
 }
+
 
 
 //replaces all of the <> in the sanity block text with the player's selected name
