@@ -141,7 +141,7 @@ export function createChoices(chapterSection) {
                     key: "1"
                 },
                 {
-                    label: "\"We had that last year.\"",
+                    label: "\"Didn't you say you had that last year?\"",
                     newScene: 11,
                     newChoice: 8,
                     newImage: -1,
@@ -472,7 +472,7 @@ export function createChoices(chapterSection) {
                     key: "1"
                 },
                 {
-                    label: "Barate Roxy",
+                    label: "Berate Roxy",
                     newScene: 37,
                     newChoice: 29,
                     newImage: -1,
@@ -482,7 +482,7 @@ export function createChoices(chapterSection) {
             ],
             [
                 {
-                    label: "\"I'm glad to be back\" (lighten the mood)",
+                    label: "\"I'm glad to be back\"",
                     newScene: 38,
                     newChoice: 29,
                     newImage: -1,
@@ -573,7 +573,7 @@ export function createChoices(chapterSection) {
                 {
                     label: "Put away toiletries",
                     newScene: 44,
-                    newChoice: 37, //35 if you saw Mort's notebook
+                    newChoice: 37,
                     newImage: -1,
                     remove: false,
                     key: "0"
@@ -604,7 +604,7 @@ export function createChoices(chapterSection) {
                     key: "3"
                 }
             ],
-            [ //35
+            [ //35 (not used)
                 {
                     label: "Continue",
                     newScene: 45,
@@ -614,7 +614,7 @@ export function createChoices(chapterSection) {
                     key: "0"
                 }
             ],
-            [ //36
+            [ //36 (not used)
                 {
                     label: "Look for it",
                     newScene: 46,
@@ -685,7 +685,7 @@ export function createChoices(chapterSection) {
                     label: "Join Mort in the hot tub",
                     newScene: 0,
                     newChoice: 0,
-                    newImage: -1,
+                    newImage: 8,
                     remove: false,
                     key: "2",
                     newSection: "Tub"
@@ -951,7 +951,7 @@ export function createChoices(chapterSection) {
         ];
     } else if (chapterSection == "Cabin") {
         return [
-            [
+            [ //0
                 {
                     label: "Help Mitch",
                     newScene: 1,
@@ -962,20 +962,22 @@ export function createChoices(chapterSection) {
                 },
                 {
                     label: "Try talking to Alicia",
-                    
+                    newScene: 12,
+                    newChoice: 6,
                     newImage: -1,
                     remove: false,
                     key: "1"
                 },
                 {
                     label: "Do something else",
-
+                    newScene: 25,
+                    newChoice: 12,
                     newImage: -1,
                     remove: false,
                     key: "2"
                 }
             ],
-            [
+            [ //1
                 {
                     label: "Pepper's paperweight",
                     newScene: 2,
@@ -1023,7 +1025,7 @@ export function createChoices(chapterSection) {
             ],
             [ //Marlin (3)
                 {
-                    label: "\"What's pushing him away from us\"",
+                    label: "\"You still don't know what happened then?\"",
                     newScene: 6,
                     newChoice: 4,
                     newImage: -1,
@@ -1031,7 +1033,7 @@ export function createChoices(chapterSection) {
                     key: "0"
                 },
                 {
-                    label: "\"I feel bad for him\"",
+                    label: "Don't respond",
                     newScene: 8,
                     newChoice: 5,
                     newImage: -1,
@@ -1039,7 +1041,7 @@ export function createChoices(chapterSection) {
                     key: "1"
                 }
             ],
-            [
+            [ //4
                 {
                     label: "\"What about Josh? He deals with them just fine\"",
                     newScene: 7,
@@ -1056,17 +1058,809 @@ export function createChoices(chapterSection) {
                     key: "1"
                 }
             ],
-            [ //end of Mitch sequence
+            [ //end of Mitch sequence (5)
                 {
                     label: "Continue",
                     newScene: 11,
+                    newChoice: 11,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
 
+            [//talking to Alicia (6)
+                {
+                    label: "\"How's the job search?\"",
+                    newScene: 13,
+                    newChoice: 7,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "\"How's it going?\"",
+                    newScene: 17,
+                    newChoice: 9,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //7
+                {
+                    label: "\"Why do you need a job?\"",
+                    newScene: 14,
+                    newChoice: 8,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "\"What have you tried?\"",
+                    newScene: 15,
+                    newChoice: 8,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                },
+                {
+                    label: "Don't respond",
+                    newScene: 16,
+                    newChoice: 9,
+                    newImage: -1,
+                    remove: false,
+                    key: "2"
+                }
+            ],
+            [ //8
+                {
+                    label: "Continue",
+                    newScene: 18,
+                    newChoice: 9,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //9
+                {
+                    label: "Pepper's paperweight",
+                    newScene: 19,
+                    newChoice: 11,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "Marlin",
+                    newScene: 20,
+                    newChoice: 10,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                },
+                ""
+            ],
+            [ //10
+                {
+                    label: "\"So don't you know why?\"",
+                    newScene: 21,
+                    newChoice: 11,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "Don't respond",
+                    newScene: 22,
+                    newChoice: 11,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [//end of Alicia and Mitch sequence (11)
+                {
+                    label: "Continue",
+                    newScene: 0,
+                    newChoice: 0,
+                    newImage: 1,
+                    remove: false,
+                    key: "0",
+                    newSection: "Evening"
+                }
+            ],
+            [ //doing something else (12)
+                {
+                    label: "Explore the house some more",
+                    newScene: 29,
+                    newChoice: 13,
+                    newImage: -1,
+                    remove: true,
+                    key: "0"
+                },
+                {
+                    label: "Scroll on your phone",
+                    newScene: 24,
+                    newChoice: 11,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                },
+                {
+                    label: "Watch TV",
+                    newScene: 26,
+                    newChoice: 11,
+                    newImage: -1,
+                    remove: false,
+                    key: "2"
+                },
+                {
+                    label: "Read a book",
+                    newScene: 28,
+                    newChoice: 11,
+                    newImage: -1,
+                    remove: false,
+                    key: "3"
+                }
+            ],
+            [ //13
+                {
+                    label: "The fancy room",
+                    newScene: 30,
+                    newChoice: 14,
+                    newImage: 2,
+                    remove: true,
+                    key: "0"
+                },
+                {
+                    label: "The other bedrooms",
+                    newScene: 31,
+                    newChoice: 14,
+                    newImage: -1,
+                    remove: true,
+                    key: "1"
+                },
+                {
+                    label: "The bunkbed room",
+                    newScene: 32,
+                    newChoice: 14,
+                    newImage: -1,
+                    remove: true,
+                    key: "2"
+                },
+            ],
+            [ //14
+                {
+                    label: "Continue",
+                    newScene: 29,
+                    newChoice: 13,
+                    newImage: 1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //15 (Finding Mort's notebook)
+                {
+                    label: "Continue",
+                    newScene: 33,
+                    newChoice: 16,
+                    newImage: -1,
+                    remove: false,
+                    key: "0" 
+                }
+            ],
+            [ //16
+                {
+                    label: "Look for it",
+                    newScene: 35,
+                    newChoice: 17,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "Leave it",
+                    newScene: 34,
+                    newChoice: 17,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //17 (end of do something else sequence)
+                {
+                    label: "Continue",
+                    newScene: 0,
+                    newChoice: 0,
+                    newImage: 1,
+                    remove: false,
+                    key: "0",
+                    newSection: "Evening"
+                }
+            ]
+        ];
+    } else if (chapterSection == "Tub") {
+        return [
+            [ //0
+                {
+                    label: "\"Nah, just didn't feel like volleyball\"",
+                    newScene: 1,
+                    newChoice: 1,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "\"I guess so\"",
+                    newScene: 2,
+                    newChoice: 1,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"                
+                }
+            ],
+            [ //1
+                {
+                    label: "Relax silently",
+                    newScene: 3,
+                    newChoice: 2,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"  
+                },
+                {
+                    label: "Chat with Mort",
+                    newScene: 6,
+                    newChoice: 5,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                },
+            ],
+            [ //2 (universal end of the sequence)
+                {
+                    label: "Continue",
+                    newScene: 4,
+                    newChoice: 3,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"  
+                }
+            ],
+            [ //3
+                {
+                    label: "Continue",
+                    newScene: 5,
+                    newChoice: 4,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //4
+                {
+                    label: "Continue",
+                    newScene: 0,
+                    newChoice: 0,
+                    newImage: 1,
+                    remove: false,
+                    key: "0",
+                    newSection: "Evening"
+                }
+            ],
+            [ //5
+                {
+                    label: "Continue",
+                    newScene: 7,
+                    newChoice: 6,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //6
+                {
+                    label: "Marlin",
+                    newScene: 8,
+                    newChoice: 7,
+                    newImage: -1,
+                    remove: true,
+                    key: "0"
+                },
+                {
+                    label: "Gang history",
+                    newScene: 11,
+                    newChoice: 8,
+                    newImage: -1,
+                    remove: true,
+                    key: "1"
+                },
+                {
+                    label: "Alicia",
+                    newScene: 12,
+                    newChoice: 8,
+                    newImage: -1,
+                    remove: true,
+                    key: "2"
+                },
+                {
+                    label: "Other Suncadia bits",
+                    newScene: 13,
+                    newChoice: 8,
+                    newImage: -1,
+                    remove: true,
+                    key: "3"
+                },
+            ],
+            [ //7 (Marlin sequence)
+                {
+                    label: "\"So you still don't know why that happened?\"",
+                    newScene: 9,
+                    newChoice: 8,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "Don't respond",
+                    newScene: 10,
+                    newChoice: 8,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //8
+                {
+                    label: "Continue",
+                    newScene: 7,
+                    newChoice: 6,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //9 (end of tub)
+                {
+                    label: "Continue",
+                    newScene: 4,
+                    newChoice: 3,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //10 (knowing about the notebook)
+                {
+                    label: "Ask about it",
+                    newScene: 16,
+                    newChoice: 11,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "Leave it",
+                    newScene: 19,
+                    newChoice: 12,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //11
+                {
+                    label: "Be honest",
+                    newScene: 17,
+                    newChoice: 12,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "Talk around it",
+                    newScene: 18,
+                    newChoice: 12,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //12
+                {
+                    label: "Continue",
+                    newScene: 4,
+                    newChoice: 3,
                     newImage: -1,
                     remove: false,
                     key: "0"
                 }
             ]
             
+        ]
+    } else if (chapterSection == "Evening") {
+        return [
+            [ //0
+                {
+                    label: "Continue",
+                    newScene: 1, 
+                    newChoice: 1,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //1
+                {
+                    label: "Continue",
+                    newScene: 1,//this changes based on what activity you did
+                    newChoice: 2,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //2
+                {
+                    label: "Continue",
+                    newScene: 6, //changes depending on the game played
+                    newChoice: 3, //changes depending on the game played
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //3 (jackbox sequence)
+                {
+                    label: "Continue",
+                    newScene: 7,
+                    newChoice: 4,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //4 
+                {
+                    label: "Continue",
+                    newScene: 8,
+                    newChoice: 5,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //5 (end of jackbox sequence)
+                {
+                    label: "Continue",
+                    newScene: 0,
+                    newChoice: 0,
+                    newImage: -1,
+                    remove: false,
+                    key: "0",
+                    newSection: "Inside"
+                }
+            ],
+            [ //6 (Telestrations sequence)
+                {
+                    label: "Zootopia",
+                    newScene: 10,
+                    newChoice: 7,
+                    newImage: -1,
+                    remove: false,
+                    key: "0",
+                },
+                {
+                    label: "Magic School Bus",
+                    newScene: 11,
+                    newChoice: 8,
+                    newImage: -1,
+                    remove: false,
+                    key: "1",
+                }
+            ],
+            [ //7
+                {
+                    label: "Continue",
+                    newScene: 12,
+                    newChoice: 9,
+                    newImage: -1,
+                    remove: false,
+                    key: "0",
+                }
+            ],
+            [ //8
+                {
+                    label: "Continue",
+                    newScene: 13,
+                    newChoice: 9,
+                    newImage: -1,
+                    remove: false,
+                    key: "0",
+                }
+            ],
+            [ //9
+                {
+                    label: "Continue",
+                    newScene: 14,
+                    newChoice: 10,
+                    newImage: -1,
+                    remove: false,
+                    key: "0",
+                }
+            ],
+            [ //10 (end of Telestrations sequence)
+                {
+                    label: "Continue",
+                    newScene: 0,
+                    newChoice: 0,
+                    newImage: -1,
+                    remove: false,
+                    key: "0",
+                    newSection: "Inside"
+                }
+            ],
+            [ //11 (Poker sequence)
+                {
+                    label: "Continue",
+                    newScene: 16,
+                    newChoice: 12,
+                    newImage: -1,
+                    remove: false,
+                    key: "0",
+                }
+            ],
+            [ //12
+                {
+                    label: "Fold",
+                    newScene: 17,
+                    newChoice: 13,
+                    newImage: -1,
+                    remove: false,
+                    key: "0",
+                },
+                {
+                    label: "Play",
+                    newScene: 20,
+                    newChoice: 17,
+                    newImage: -1,
+                    remove: false,
+                    key: "1",  
+                }
+            ],
+            [ //13
+                {
+                    label: "Continue",
+                    newScene: 18,
+                    newChoice: 14,
+                    newImage: -1,
+                    remove: false,
+                    key: "0",
+                }
+            ],
+            [ //14
+                {
+                    label: "Continue",
+                    newScene: 19,
+                    newChoice: 15,
+                    newImage: -1,
+                    remove: false,
+                    key: "0",
+                }
+            ],
+            [ //15 
+                {
+                    label: "Continue",
+                    newScene: 41,
+                    newChoice: 16,
+                    newImage: -1,
+                    remove: false,
+                    key: "0",
+                }
+            ],
+            [ //16 (end of poker sequence)
+                {
+                    label: "Continue",
+                    newScene: 0,
+                    newChoice: 0,
+                    newImage: -1,
+                    remove: false,
+                    key: "0",
+                    newSection: "Inside"
+                }
+            ],
+            [ //17
+                {
+                    label: "Match",
+                    newScene: 30,
+                    newChoice: 20,
+                    newImage: -1,
+                    remove: false,
+                    key: "0",
+                },
+                {
+                    label: "Raise",
+                    newScene: 22,
+                    newChoice: 18,
+                    newImage: -1,
+                    remove: false,
+                    key: "1",
+                },
+                {
+                    label: "Fold",
+                    newScene: 21,
+                    newChoice: 14,
+                    newImage: -1,
+                    remove: false,
+                    key: "2",
+                }
+            ],
+            [ //18
+                {
+                    label: "Match",
+                    newScene: 24,
+                    newChoice: 19,
+                    newImage: -1,
+                    remove: false,
+                    key: "0",
+                },
+                {
+                    label: "Raise",
+                    newScene: 25,
+                    newChoice: 19,
+                    newImage: -1,
+                    remove: false,
+                    key: "1",
+                },
+                {
+                    label: "Fold",
+                    newScene: 23,
+                    newChoice: 15,
+                    newImage: -1,
+                    remove: false,
+                    key: "2",
+                }
+            ],
+            [ //19
+                {
+                    label: "Match",
+                    newScene: 26,
+                    newChoice: 15,
+                    newImage: -1,
+                    remove: false,
+                    key: "0",
+                },
+                {
+                    label: "Raise",
+                    newScene: 27,
+                    newChoice: 15,
+                    newImage: -1,
+                    remove: false,
+                    key: "1",
+                },
+                {
+                    label: "Fold",
+                    newScene: 23,
+                    newChoice: 15,
+                    newImage: -1,
+                    remove: false,
+                    key: "2",
+                },
+                {
+                    label: "All in",
+                    newScene: 28,
+                    newChoice: 15,
+                    newImage: -1,
+                    remove: false,
+                    key: "3",
+                }
+            ],
+            [ //20
+                {
+                    label: "Match",
+                    newScene: 31,
+                    newChoice: 21,
+                    newImage: -1,
+                    remove: false,
+                    key: "0",
+                },
+                {
+                    label: "Raise",
+                    newScene: 36,
+                    newChoice: 22,
+                    newImage: -1,
+                    remove: false,
+                    key: "1",
+                },
+                {
+                    label: "Fold",
+                    newScene: 29,
+                    newChoice: 15,
+                    newImage: -1,
+                    remove: false,
+                    key: "2",
+                },
+            ],
+            [ //21
+                {
+                    label: "Match",
+                    newScene: 32,
+                    newChoice: 15,
+                    newImage: -1,
+                    remove: false,
+                    key: "0",
+                },
+                {
+                    label: "Raise",
+                    newScene: 33,
+                    newChoice: 15,
+                    newImage: -1,
+                    remove: false,
+                    key: "1",
+                },
+                {
+                    label: "Fold",
+                    newScene: 34,
+                    newChoice: 15,
+                    newImage: -1,
+                    remove: false,
+                    key: "2",
+                },
+                {
+                    label: "All in",
+                    newScene: 35,
+                    newChoice: 23,
+                    newImage: -1,
+                    remove: false,
+                    key: "3"
+                }
+            ],
+            [ //22
+                {
+                    label: "Match",
+                    newScene: 37,
+                    newChoice: 15,
+                    newImage: -1,
+                    remove: false,
+                    key: "0",
+                },
+                {
+                    label: "Raise",
+                    newScene: 38,
+                    newChoice: 15,
+                    newImage: -1,
+                    remove: false,
+                    key: "1",
+                },
+                {
+                    label: "Fold",
+                    newScene: 39,
+                    newChoice: 15,
+                    newImage: -1,
+                    remove: false,
+                    key: "2",
+                },
+                {
+                    label: "All in",
+                    newScene: 40,
+                    newChoice: 15,
+                    newImage: -1,
+                    remove: false,
+                    key: "3",
+                }
+            ],
+            [ //23
+                {
+                    label: "Continue",
+                    newScene: 42,
+                    newChoice: 16,
+                    newImage: -1,
+                    remove: false,
+                    key: "0",
+                }
+            ]
         ];
     } else {
         return[];

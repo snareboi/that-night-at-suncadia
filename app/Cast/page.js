@@ -72,7 +72,7 @@ function Josh() {
 function Pepper() {
     return (
     <>
-        <p>The group's dram queen. Anytime a rumor or something spicy happens either inside or outside the group, she is the first to bring it up
+        <p>The group's drama queen. Anytime a rumor or something spicy happens either inside or outside the group, she is the first to bring it up
             if it were ever come up in the first place. Many of the group tolerate her since without her, they admit they wouldn't know much about
             the circle.
         </p>
