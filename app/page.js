@@ -6,7 +6,7 @@ export default function Home() {
 
 function WhiteBox() {
   return (
-    <section className="top-0 sticky bg-gray-200 ml-45 mr-45 mt-10 min-w-1xl opacity-90 z-10 text-black">
+    <section className="top-0 sticky bg-gray-200 ml-4 mr-4 mt-10 min-w-1xl opacity-90 z-10 text-black">
         <div className="max-w-7xl p-10 mx-auto flex-col text-center">
           <h1 className="text-4xl font-bold m-2">That Night At Suncadia</h1>
           <p>

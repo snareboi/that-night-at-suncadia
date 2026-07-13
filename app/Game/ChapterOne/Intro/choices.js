@@ -1,14 +1,14 @@
 export function createChoices(chapterSection) {
     if (chapterSection == "Intro") {
         return [
-            [
+            [ //0
                 {
                     label: "\"I'm coming\"",
                     newScene: 1,
                     newChoice: 1,
                     newPicture: -1,
                     remove: false,
-                    key: "0"
+                    key: "0",
                 },
                 {
                     label: "\"Can you give me a minute?\"",
@@ -16,10 +16,10 @@ export function createChoices(chapterSection) {
                     newChoice: 1,
                     newPicture: -1,
                     remove: false,
-                    key: "1"
+                    key: "1",
                 }
             ],
-            [
+            [ //1
                 {
                     label: "Continue",
                     newScene: 3,
@@ -29,7 +29,7 @@ export function createChoices(chapterSection) {
                     key: "0"
                 }
             ],
-            [
+            [ //2
                 {
                     label: "Continue",
                     newScene: 4,
@@ -41,7 +41,7 @@ export function createChoices(chapterSection) {
             ],
 
             //intro exploration
-            [
+            [ //3
                 {
                     label: "The Kitchen",
                     newScene: 5,
@@ -85,7 +85,7 @@ export function createChoices(chapterSection) {
             ],
 
             //Kitchen sequence
-            [
+            [ //4
                 {
                     label: "Continue",
                     newScene: 6,
@@ -95,7 +95,7 @@ export function createChoices(chapterSection) {
                     key: "0"
                 }
             ],
-            [
+            [ //5
                 {
                     label: "Offer Help",
                     newScene: 7,
@@ -113,7 +113,7 @@ export function createChoices(chapterSection) {
                     key: "1"
                 }
             ],
-            [
+            [ //6
                 {
                 label: "Continue",
                 newScene: 8,
@@ -123,7 +123,7 @@ export function createChoices(chapterSection) {
                 key: "0"
                 }
             ],
-            [
+            [ //7
                 {
                     label: "\"Oh 100% yeah!\"",
                     newScene: 9,
@@ -149,7 +149,7 @@ export function createChoices(chapterSection) {
                     key: "2"
                 }
             ],
-            [
+            [ //8
                 {
                     label: "\"Why not take a break?\"",
                     newScene: 12,
@@ -167,7 +167,7 @@ export function createChoices(chapterSection) {
                     key: "1"
                 }
             ],
-            [
+            [ //9
                 {
                     label: "Continue",
                     newScene: 4,
@@ -179,7 +179,7 @@ export function createChoices(chapterSection) {
             ],
 
             //Pepper's room sequence
-            [
+            [ //10
                 {
                     label: "Continue",
                     newScene: 15,
@@ -189,9 +189,9 @@ export function createChoices(chapterSection) {
                     key: "0"
                 }
             ],
-            [
+            [ //11
                 {
-                    label: "\"Just looking around\"",
+                    label: "\"Since when do you just get to take this room?\"",
                     newScene: 16,
                     newChoice: 12,
                     newImage: -1,
@@ -199,7 +199,7 @@ export function createChoices(chapterSection) {
                     key: "0"
                 },
                 {
-                    label: "\"So? That means I can't look around?\"",
+                    label: "\"Yeah, amazing.\"",
                     newScene: 19,
                     newChoice: 13,
                     newImage: -1,
@@ -207,9 +207,9 @@ export function createChoices(chapterSection) {
                     key: "1"
                 }
             ],
-            [
+            [ //12
                 {
-                    label: "\"Wouldn't be worth a look anyway\"",
+                    label: "\"Ok, greedy ass\"",
                     newScene: 17,
                     newChoice: 13,
                     newImage: -1,
@@ -217,7 +217,7 @@ export function createChoices(chapterSection) {
                     key: "0"
                 },
                 {
-                    label: "\"Fine, whatever. Just let me finish looking around.\"",
+                    label: "\"Fine, whatever. Just let me finish looking around\"",
                     newScene: 18,
                     newChoice: 13,
                     newImage: -1,
@@ -233,7 +233,7 @@ export function createChoices(chapterSection) {
                     key: "2"
                 }
             ],
-            [
+            [ //13
                 {
                     label: "Continue",
                     newScene: 4,
@@ -245,7 +245,7 @@ export function createChoices(chapterSection) {
             ],
 
             //Bunk bed sequence (14)
-            [
+            [ //14
                 {
                     label: "Continue",
                     newScene: 21,
@@ -255,7 +255,7 @@ export function createChoices(chapterSection) {
                     key: "0"
                 }
             ],
-            [
+            [ //15
                 {
                     label: "Leave",
                     newScene: 4,
@@ -281,7 +281,7 @@ export function createChoices(chapterSection) {
                     key: "2"
                 }
             ],
-            [
+            [ //16
                 {
                     label: "Leave them be",
                     newScene: 21,
@@ -291,7 +291,7 @@ export function createChoices(chapterSection) {
                     key: "0"
                 },
                 {
-                    label: "Talk to Josh",
+                    label: "Look through the movie shelf",
                     newScene: 31,
                     newChoice: 24,
                     newImage: -1,
@@ -301,7 +301,7 @@ export function createChoices(chapterSection) {
             ],
 
             //Talking to Sayori
-            [
+            [ //17
                 {
                     label: "Talk to Sayori",
                     newScene: 24,
@@ -319,7 +319,7 @@ export function createChoices(chapterSection) {
                     key: "1"
                 }
             ],
-            [
+            [ //18
                 {
                     label: "Keep talking",
                     newScene: 25,
@@ -337,7 +337,7 @@ export function createChoices(chapterSection) {
                     key: "1"
                 }
             ],
-            [
+            [ //19
                 {
                     label: "Keep talking",
                     newScene: 26,
@@ -355,7 +355,7 @@ export function createChoices(chapterSection) {
                     key: "1"
                 }
             ],
-            [
+            [ //20
                 "", //if you see Mort with the notebook
                 {
                     label: "Leave balcony",
@@ -366,7 +366,7 @@ export function createChoices(chapterSection) {
                     key: "1"
                 }
             ],
-            [
+            [ //21
                 {
                     label: "\"What if it's not his diary?\"",
                     newScene: 28, 
@@ -384,7 +384,7 @@ export function createChoices(chapterSection) {
                     key: "1"
                 }
             ],
-            [
+            [ //22
                 {
                     label: "Continue",
                     newScene: 30,
@@ -394,7 +394,7 @@ export function createChoices(chapterSection) {
                     key: "0"
                 }
             ],
-            [
+            [ //23
                 {
                     label: "Continue",
                     newScene: 4,
@@ -405,10 +405,10 @@ export function createChoices(chapterSection) {
                 }
             ],
 
-            //talking to the others
-            [
+            //more in the bunkbed room choices
+            [ //24
                 {
-                    label: "Ask about the story",
+                    label: "Keep looking",
                     newScene: 32,
                     newChoice: 25,
                     newImage: -1,
@@ -416,7 +416,7 @@ export function createChoices(chapterSection) {
                     key: "0"
                 },
                 {
-                    label: "Leave Josh be",
+                    label: "Give up",
                     newScene: 33,
                     newChoice: 25,
                     newImage: -1,
@@ -424,7 +424,7 @@ export function createChoices(chapterSection) {
                     key: "1"
                 }
             ],
-            [
+            [ //25
                 {
                     label: "Continue",
                     newScene: 21,
@@ -436,7 +436,7 @@ export function createChoices(chapterSection) {
             ],
 
             //garage sequence (26)
-            [
+            [ //26
                 {
                     label: "Try talking to them",
                     newScene: 35,
@@ -454,7 +454,7 @@ export function createChoices(chapterSection) {
                     key: "1"
                 }
             ],
-            [
+            [ //27
                 {
                     label: "\"What's the score?\"",
                     newScene: 36,
@@ -480,51 +480,27 @@ export function createChoices(chapterSection) {
                     key: "2"
                 }
             ],
-            [
+            [ //28
                 {
-                    label: "\"I'm glad to be back\"",
+                    label: "Continue",
                     newScene: 38,
                     newChoice: 29,
                     newImage: -1,
                     remove: false,
                     key: "0"
                 },
-                {
-                    label: "Talk to Ben",
-                    newScene: 39,
-                    newChoice: 30,
-                    newImage: -1,
-                    remove: false,
-                    key: "1"
-                },
-                {
-                    label: "Leave",
-                    newScene: 4,
-                    newChoice: 3,
-                    newImage: -1,
-                    remove: false,
-                    key: "2"
-                }
             ],
-            [
+            [ //29
                 {
-                    label: "Talk to Ben",
+                    label: "Continue",
                     newScene: 39,
                     newChoice: 30,
                     newImage: -1,
                     remove: false,
                     key: "0"
                 },
-                {
-                    label: "Leave",
-                    newScene: 4,
-                    newChoice: 3,
-                    newImage: 1,
-                    remove: false,
-                    key: "1"
-                }
             ],
-            [
+            [ //30
                 {
                     label: "Leave",
                     newScene: 4,
@@ -670,16 +646,16 @@ export function createChoices(chapterSection) {
                     newImage: 5,
                     remove: false,
                     key: "0",
-                    newSection: "Park"
+                    newSection: "Park",
                 },
                 {
-                    label: "Stay in the cabin with Mitch and Alicia",
+                    label: "Stay in the cabin with Alicia",
                     newScene: 0,
                     newChoice: 0,
                     newImage: -1,
                     remove: false,
                     key: "1",
-                    newSection: "Cabin"
+                    newSection: "Cabin",
                 },
                 {
                     label: "Join Mort in the hot tub",
@@ -688,7 +664,7 @@ export function createChoices(chapterSection) {
                     newImage: 8,
                     remove: false,
                     key: "2",
-                    newSection: "Tub"
+                    newSection: "Tub",
                 }
             ]
         ];
@@ -696,28 +672,20 @@ export function createChoices(chapterSection) {
         return [
             [
                 {
-                    label: "Ben and Roxy",
-                    newScene: 1,
-                    newChoice: 1,
+                    label: "Lonnie and Sayori",
+                    newScene: 2,
+                    newChoice: 2,
                     newImage: -1,
                     remove: false,
                     key: "0"
                 },
                 {
-                    label: "Josh, Lonnie and Sayori",
-                    newScene: 2,
-                    newChoice: 2,
-                    newImage: -1,
-                    remove: false,
-                    key: "1"
-                },
-                {
-                    label: "Pepper and Marlin",
-                    newScene: 6,
+                    label: "Ben, Pepper and Roxy",
+                    newScene: 1,
                     newChoice: 1,
                     newImage: -1,
                     remove: false,
-                    key: "2"
+                    key: "1"
                 },
                 {
                     label: "Nobody",
@@ -725,7 +693,7 @@ export function createChoices(chapterSection) {
                     newChoice: 1,
                     newImage: -1,
                     remove: false,
-                    key: "3"
+                    key: "2"
                 }
             ],
             [
@@ -740,7 +708,7 @@ export function createChoices(chapterSection) {
             ],
             [
                 {
-                    label: "Side with Lonnie and Sayori",
+                    label: "Side with Lonnie",
                     newScene: 3,
                     newChoice: 1,
                     newImage: -1,
@@ -748,7 +716,7 @@ export function createChoices(chapterSection) {
                     key: "0"
                 },
                 {
-                    label: "Side with Josh",
+                    label: "Side with Sayori",
                     newScene: 4,
                     newChoice: 1,
                     newImage: -1,
@@ -766,7 +734,7 @@ export function createChoices(chapterSection) {
             ],
             [
                 {
-                    label: "Lonnie, Josh and Roxy",
+                    label: "Lonnie and Roxy",
                     newScene: 9,
                     newChoice: 4,
                     newImage: -1,
@@ -774,7 +742,7 @@ export function createChoices(chapterSection) {
                     key: "0"
                 },
                 {
-                    label: "Pepper, Marlin and Ben",
+                    label: "Pepper and Ben",
                     newScene: 12,
                     newChoice: 6,
                     newImage: -1,
@@ -790,7 +758,7 @@ export function createChoices(chapterSection) {
                     key: "2"
                 }
             ],
-            [ //Lonnie, Josh and Roxy (4)
+            [ //Lonnie and Roxy (4)
                 {
                     label: "Continue",
                     newScene: 10,
@@ -810,7 +778,7 @@ export function createChoices(chapterSection) {
                     key: "0"
                 }
             ],
-            [ //Marlin, Pepper and Ben (6)
+            [ //Pepper and Ben (6)
                 {
                     label: "Continue",
                     newScene: 13,
@@ -870,10 +838,10 @@ export function createChoices(chapterSection) {
                     newChoice: 12,
                     newImage: 7,
                     remove: false,
-                    key: "0"
+                    key: "0",
                 }
             ],
-            [
+            [ //12
                 {
                     label: "\"Maybe you didn't know him well enough\"",
                     newScene: 20,
@@ -891,7 +859,7 @@ export function createChoices(chapterSection) {
                     key: "1"
                 }
             ],
-            [
+            [ //13
                 {
                     label: "Continue",
                     newScene: 22,
@@ -901,7 +869,7 @@ export function createChoices(chapterSection) {
                     key: "0"
                 }
             ],
-            [
+            [ //14
                 {
                     label: "\"What about Jackbox\"",
                     newScene: 23,
@@ -942,7 +910,7 @@ export function createChoices(chapterSection) {
                     label: "Enter the house",
                     newScene: 0,
                     newChoice: 0,
-                    newImage: -1,
+                    newImage: 1,
                     remove: false,
                     key: "0",
                     newSection: "Evening"
@@ -953,7 +921,7 @@ export function createChoices(chapterSection) {
         return [
             [ //0
                 {
-                    label: "Help Mitch",
+                    label: "Help Alicia",
                     newScene: 1,
                     newChoice: 1,
                     newImage: -1,
@@ -961,20 +929,12 @@ export function createChoices(chapterSection) {
                     key: "0"
                 },
                 {
-                    label: "Try talking to Alicia",
-                    newScene: 12,
-                    newChoice: 6,
-                    newImage: -1,
-                    remove: false,
-                    key: "1"
-                },
-                {
                     label: "Do something else",
                     newScene: 25,
                     newChoice: 12,
                     newImage: -1,
                     remove: false,
-                    key: "2"
+                    key: "1"
                 }
             ],
             [ //1
@@ -987,7 +947,7 @@ export function createChoices(chapterSection) {
                     key: "0"
                 },
                 {
-                    label: "Marlin",
+                    label: "Ben",
                     newScene: 5,
                     newChoice: 3,
                     newImage: -1,
@@ -995,7 +955,7 @@ export function createChoices(chapterSection) {
                     key: "1"
                 },
                 {
-                    label: "Ben as a roommate",
+                    label: "Sayori as a roommate",
                     newScene: 9,
                     newChoice: 5,
                     newImage: -1,
@@ -1004,7 +964,7 @@ export function createChoices(chapterSection) {
                 },
                 "" //
             ],
-            [ //Help Mitch (2)
+            [ //Help Alicia (2)
                 //Pepper's paperweight (2)
                 {
                     label: "\"Still think it's ridiculous\"",
@@ -1023,7 +983,7 @@ export function createChoices(chapterSection) {
                     key: "1"
                 }
             ],
-            [ //Marlin (3)
+            [ //Ben (3)
                 {
                     label: "\"You still don't know what happened then?\"",
                     newScene: 6,
@@ -1043,7 +1003,7 @@ export function createChoices(chapterSection) {
             ],
             [ //4
                 {
-                    label: "\"What about Josh? He deals with them just fine\"",
+                    label: "\"What about Alicia? She deals with them just fine\"",
                     newScene: 7,
                     newChoice: 5,
                     newImage: -1,
@@ -1052,13 +1012,14 @@ export function createChoices(chapterSection) {
                 },
                 {
                     label: "Don't ask anything",
-                    
+                    newScene: 8,
+                    newChoice: 5,
                     newImage: -1,
                     remove: false,
                     key: "1"
                 }
             ],
-            [ //end of Mitch sequence (5)
+            [ //end of Alicia sequence (5)
                 {
                     label: "Continue",
                     newScene: 11,
@@ -1069,7 +1030,7 @@ export function createChoices(chapterSection) {
                 }
             ],
 
-            [//talking to Alicia (6)
+            [// cut out Alicia option
                 {
                     label: "\"How's the job search?\"",
                     newScene: 13,
@@ -1133,7 +1094,7 @@ export function createChoices(chapterSection) {
                     key: "0"
                 },
                 {
-                    label: "Marlin",
+                    label: "Ben",
                     newScene: 20,
                     newChoice: 10,
                     newImage: -1,
@@ -1160,7 +1121,7 @@ export function createChoices(chapterSection) {
                     key: "1"
                 }
             ],
-            [//end of Alicia and Mitch sequence (11)
+            [//end of Alicia sequence (11)
                 {
                     label: "Continue",
                     newScene: 0,
@@ -1362,7 +1323,7 @@ export function createChoices(chapterSection) {
             ],
             [ //6
                 {
-                    label: "Marlin",
+                    label: "Ben",
                     newScene: 8,
                     newChoice: 7,
                     newImage: -1,
@@ -1378,23 +1339,23 @@ export function createChoices(chapterSection) {
                     key: "1"
                 },
                 {
-                    label: "Alicia",
-                    newScene: 12,
+                    label: "Other Suncadia bits",
+                    newScene: 13,
                     newChoice: 8,
                     newImage: -1,
                     remove: true,
                     key: "2"
                 },
                 {
-                    label: "Other Suncadia bits",
-                    newScene: 13,
-                    newChoice: 8,
+                    label: "Stop talking",
+                    newScene: 12,
+                    newChoice: 9,
                     newImage: -1,
                     remove: true,
                     key: "3"
                 },
             ],
-            [ //7 (Marlin sequence)
+            [ //7 (Ben sequence)
                 {
                     label: "\"So you still don't know why that happened?\"",
                     newScene: 9,
@@ -1535,12 +1496,11 @@ export function createChoices(chapterSection) {
             [ //5 (end of jackbox sequence)
                 {
                     label: "Continue",
-                    newScene: 0,
-                    newChoice: 0,
+                    newScene: 43,
+                    newChoice: 25,
                     newImage: -1,
                     remove: false,
-                    key: "0",
-                    newSection: "Inside"
+                    key: "0"
                 }
             ],
             [ //6 (Telestrations sequence)
@@ -1594,12 +1554,11 @@ export function createChoices(chapterSection) {
             [ //10 (end of Telestrations sequence)
                 {
                     label: "Continue",
-                    newScene: 0,
-                    newChoice: 0,
+                    newScene: 43,
+                    newChoice: 24,
                     newImage: -1,
                     remove: false,
-                    key: "0",
-                    newSection: "Inside"
+                    key: "0"
                 }
             ],
             [ //11 (Poker sequence)
@@ -1663,12 +1622,11 @@ export function createChoices(chapterSection) {
             [ //16 (end of poker sequence)
                 {
                     label: "Continue",
-                    newScene: 0,
-                    newChoice: 0,
+                    newScene: 43,
+                    newChoice: 24,
                     newImage: -1,
                     remove: false,
-                    key: "0",
-                    newSection: "Inside"
+                    key: "0"
                 }
             ],
             [ //17
@@ -1860,8 +1818,1588 @@ export function createChoices(chapterSection) {
                     remove: false,
                     key: "0",
                 }
+            ],
+            [ //24
+                {
+                    label: "Continue",
+                    newScene: 0,
+                    newChoice: 0,
+                    newImage: 9,
+                    remove: false,
+                    key: "0",
+                    newSection: "Inside",
+                    song: "stop"
+                }
+            ],
+            [ //25
+                {
+                    label: "Continue",
+                    newScene: 1,
+                    newChoice: 0,
+                    newImage: 9,
+                    remove: false,
+                    key: "0",
+                    newSection: "Inside",
+                    song: "stop"
+                }
             ]
         ];
+    } else if (chapterSection == "Inside") {
+        return [
+            [ //0
+                {
+                    label: "\"Really, no one else?\"",
+                    newScene: 2,
+                    newChoice: 1,
+                    newImage: -1,
+                    remove: false,
+                    key: "0",
+                },
+                {
+                    label: "\"What exactly are you asking?\"",
+                    newScene: 3,
+                    newChoice: 1,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //1
+                {
+                    label: "Go with Ben",
+                    newScene: 4,
+                    newChoice: 2,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "Stay",
+                    newScene: 5,
+                    newChoice: 3,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //2 (leave with Ben)
+                {
+                    label: "Leave",
+                    newScene: 0,
+                    newChoice: 0,
+                    newImage: 12,
+                    remove: false,
+                    key: "0",
+                    newSection: "Ben"
+                }
+            ],
+            [ //3
+                {
+                    label: "\"Don't die\"",
+                    newScene: 6,
+                    newChoice: 4,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "\"Stay safe\"",
+                    newScene: 7,
+                    newChoice: 4,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                },
+                {
+                    label: "\"Have fun\"",
+                    newScene: 8,
+                    newChoice: 4,
+                    newImage: -1,
+                    remove: false,
+                    key: "2"
+                }
+            ],
+            [ //4
+                {
+                    label: "Continue",
+                    newScene: 9,
+                    newChoice: 5,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //5
+                {
+                    label: "Go to the hot tub",
+                    newScene: 10,
+                    newChoice: 6,
+                    newImage: 10,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "Go to the garage",
+                    newScene: 21,
+                    newChoice: 16,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                },
+                {
+                    label: "Go back to sleep",
+                    newScene: 37,
+                    newChoice: 26,
+                    newImage: -1,
+                    remove: false,
+                    key: "2"
+                }
+            ],
+            [ //6 (hot tub sequence)
+                {
+                    label: "Hear Roxy out",
+                    newScene: 11,
+                    newChoice: 7,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "Remain indifferent",
+                    newScene: 12,
+                    newChoice: 7,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //7
+                {
+                    label: "Continue",
+                    newScene: 13,
+                    newChoice: 8,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //8
+                {
+                    label: "Continue",
+                    newScene: 14,
+                    newChoice: 9,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //9
+                {
+                    label: "Watch the movie",
+                    newScene: 15,
+                    newChoice: 10,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "Stay in the tub",
+                    newScene: 17,
+                    newChoice: 12,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //10 
+                {
+                    label: "Continue",
+                    newScene: 16,
+                    newChoice: 11,
+                    newImage: 9,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //11 (goes into the garage sequence)
+                {
+                    label: "Continue",
+                    newScene: 32,
+                    newChoice: 23,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //12
+                {
+                    label: "Continue",
+                    newScene: 18,
+                    newChoice: 13,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //13
+                {
+                    label: "Continue",
+                    newScene: 19,
+                    newChoice: 14,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //14
+                {
+                    label: "Continue",
+                    newScene: 20,
+                    newChoice: 15,
+                    newImage: 9,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //15 (end of hot tub sequence) end transition of bed, tub and garage sequences
+                {
+                    label: "Continue",
+                    newScene: 39,
+                    newChoice: 28,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //16 (garage sequence)
+                {
+                    label: "Enter",
+                    newScene: 22,
+                    newChoice: 17,
+                    newImage: 11,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //17 
+                {
+                    label: "Ask about the game",
+                    newScene: 23,
+                    newChoice: 18,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "Walk to the table without asking",
+                    newScene: 26,
+                    newChoice: 18,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //18
+                {
+                    label: "Continue",
+                    newScene: 27,
+                    newChoice: 19,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //19
+                {
+                    label: "Continue",
+                    newScene: 28,
+                    newChoice: 20,
+                    newImage: 9,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //20
+                {
+                    label: "\"Where did you get this\"",
+                    newScene: 29,
+                    newChoice: 21,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "\"When did you guys start watching these?\"",
+                    newScene: 30,
+                    newChoice: 21,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //21
+                {
+                    label: "Continue",
+                    newScene: 31,
+                    newChoice: 22,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //22
+                {
+                    label: "Continue",
+                    newScene: 32,
+                    newChoice: 23,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //23
+                {
+                    label: "Try reassuring Roxy",
+                    newScene: 33,
+                    newChoice: 24,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "Do nothing",
+                    newScene: 34,
+                    newChoice: 24,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //24
+                {
+                    label: "Continue",
+                    newScene: 35,
+                    newChoice: 25,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //25
+                {
+                    label: "Continue",
+                    newScene: 36,
+                    newChoice: 15,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //26 (go back to sleep sequence)
+                {
+                    label: "Continue",
+                    newScene: 38,
+                    newChoice: 27,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //27 (links back to the last scene of the garage sequence)
+                {
+                    label: "Continue",
+                    newScene: 36,
+                    newChoice: 15,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //28 (mid act 2)
+                {
+                    label: "\"Good. Been fun\"",
+                    newScene: 40,
+                    newChoice: 29,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "\"Ok\"",
+                    newScene: 41,
+                    newChoice: 29,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //29
+                {
+                    label: "Continue",
+                    newScene: 42,
+                    newChoice: 30,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //30
+                {
+                    label: "\"Nothing\"",
+                    newScene: 43,
+                    newChoice: 31,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "\"Mention the girl\"",
+                    newScene: 44,
+                    newChoice: 31,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //31
+                {
+                    label: "Continue",
+                    newScene: 45,
+                    newChoice: 32,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //32
+                {
+                    label: "Give her the jacket",
+                    newScene: 46,
+                    newChoice: 33,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "Don't give her the jacket",
+                    newScene: 47,
+                    newChoice: 33,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //33
+                {
+                    label: "Continue",
+                    newScene: 50,
+                    newChoice: 34,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //34
+                {
+                    label: "",
+
+                    
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ]
+            
+        ]
+    } else if (chapterSection == "Ben") {
+        return[
+            [ //0
+                {
+                    label: "\"I figured\"",
+                    newScene: 1,
+                    newChoice: 1,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "\"I'm glad to be back too\"",
+                    newScene: 2,
+                    newChoice: 1,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //1
+                {
+                    label: "Continue",
+                    newScene: 3,
+                    newChoice: 2,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //2
+                {
+                    label: "Continue",
+                    newScene: 5,
+                    newChoice: 3,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //3
+                {
+                    label: "\"What is \'you?\'\"",
+                    newScene: 6,
+                    newChoice: 4,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "\"What do you mean by the 'culture?'\"",
+                    newScene: 7,
+                    newChoice: 4,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                },
+                { //4
+                    label: "\"...\"",
+                    newScene: 8,
+                    newChoice: 4,
+                    newImage: -1,
+                    remove: false,
+                    key: "2"
+                }
+            ],
+            [ //4
+                {
+                    label: "\"It's not you, we all change\"",
+                    newScene: 9,
+                    newChoice: 5,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "\"Have you talked to them about this?\"",
+                    newScene: 10,
+                    newChoice: 5,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                },
+                {
+                    label: "\"...\"",
+                    newScene: 11,
+                    newChoice: 6,
+                    newImage: -1,
+                    remove: false,
+                    key: "2"
+                }
+            ],
+            [ //5
+                {
+                    label: "\"Then leave\"",
+                    newScene: 12,
+                    newChoice: 6,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "\"Talk to them about it\"",
+                    newScene: 13,
+                    newChoice: 6,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                },
+                {
+                    label: "\"...\"",
+                    newScene: 11,
+                    newChoice: 6,
+                    newImage: -1,
+                    remove: false,
+                    key: "2"
+                }
+            ],
+            [ //6
+                {
+                    label: "Continue",
+                    newScene: 16,
+                    newChoice: 7,
+                    newImage: 13,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //7
+                {
+                    label: "Protest and stay behind",
+                    newScene: 17,
+                    newChoice: 8,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "Follow him",
+                    newScene: 18,
+                    newChoice: 8,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //8
+                {
+                    label: "Continue",
+                    newScene: 19,
+                    newChoice: 9,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //9
+                {
+                    label: "\"Fuck\"",
+                    newScene: 20,
+                    newChoice: 10,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "\"What do we do?\"",
+                    newScene: 21,
+                    newChoice: 11,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //10
+                {
+                    label: "Continue",
+                    newScene: 21,
+                    newChoice: 11,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //11
+                {
+                    label: "Wait a little for her parents",
+                    newScene: 26,
+                    newChoice: 15,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "Go back to the cabin",
+                    newScene: 23,
+                    newChoice: 12,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //12 (going back to cabin sequence)
+                {
+                    label: "Continue",
+                    newScene: 24,
+                    newChoice: 13,
+                    newImage: 12,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //13
+                {
+                    label: "Continue",
+                    newScene: 25,
+                    newChoice: 14,
+                    newImage: 9,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //14 (end of going back to cabin sequence)
+                {
+                    label: "Continue",
+                    newScene: 39,
+                    newChoice: 28,
+                    newImage: -1,
+                    remove: false,
+                    key: "0",
+                    newSection: "Inside"
+                }
+            ],
+            [ //15
+                {
+                    label: "Continue",
+                    newScene: 27,
+                    newChoice: 16,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //16
+                {
+                    label: "Give her your jacket",
+                    newScene: 28,
+                    newChoice: 17,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "Keep your jacket",
+                    newScene: 29,
+                    newChoice: 17,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //17
+                {
+                    label: "Continue",
+                    newScene: 30,
+                    newChoice: 18,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //18
+                {
+                    label: "\"You still sure about this?\"",
+                    newScene: 31,
+                    newChoice: 19,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "\"They're not coming\"",
+                    newScene: 32,
+                    newChoice: 19,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //19
+                {
+                    label: "Continue",
+                    newScene: 33,
+                    newChoice: 20,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //20
+                {
+                    label: "Head back to the cabin",
+                    newScene: 34,
+                    newChoice: 21,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "Wait another fifteen minutes",
+                    newScene: 35,
+                    newChoice: 22,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //21 (goes back to the 'go back to cabin sequence')
+                {
+                    label: "Continue",
+                    newScene: 24,
+                    newChoice: 13,
+                    newImage: 9,
+                    remove: false,
+                    key: "0"
+                },
+            ],
+            [ //22
+                {
+                    label: "Continue",
+                    newScene: 37,
+                    newChoice: 23,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //23
+                {
+                    label: "Continue",
+                    newScene: 38,
+                    newChoice: 24,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //24
+                {
+                    label: "Go into the bathroom",
+                    newScene: 39,
+                    newChoice: 25,
+                    newImage: 14,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //25
+                {
+                    label: "Continue",
+                    newScene: 40,
+                    newChoice: 26,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //26
+                {
+                    label: "\"Good. Been fun\"",
+                    newScene: 41,
+                    newChoice: 27,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "\"Ok\"",
+                    newScene: 42,
+                    newChoice: 27,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //27
+                {
+                    label: "\"Nothing\"",
+                    newScene: 43,
+                    newChoice: 28,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "Mention the girl",
+                    newScene: 44,
+                    newChoice: 28,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //28
+                {
+                    label: "Continue",
+                    newScene: 45,
+                    newChoice: 29,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //29 - play bang + phone fall soundeffect
+                {
+                    label: "Continue",
+                    newScene: 46,
+                    newChoice: 30,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //30
+                {
+                    label: "Continue",
+                    newScene: 47,
+                    newChoice: 31,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //31
+                {
+                    label: "Leave the bathroom",
+                    newScene: 48,
+                    newChoice: 32,
+                    newImage: 13,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "Stay in the bathroom",
+                    newScene: 65,
+                    newChoice: 49,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //32 (leaving the bathroom sequence)
+                {
+                    label: "Continue",
+                    newScene: 49,
+                    newChoice: 33,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //33
+                {
+                    label: "Continue",
+                    newScene: 50,
+                    newChoice: 34,
+                    newImage: 15,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //34
+                {
+                    label: "Run!",
+                    newScene: 51,
+                    newChoice: 35,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //35
+                {
+                    label: "Continue",
+                    newScene: 52,
+                    newChoice: 36,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //36
+                {
+                    label: "Continue",
+                    newScene: 53,
+                    newChoice: 37,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //37
+                {
+                    label: "Continue",
+                    newScene: 54,
+                    newChoice: 38,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //38
+                {
+                    label: "Continue",
+                    newScene: 56,
+                    newChoice: 39,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //39
+                {
+                    label: "Continue",
+                    newScene: 33,
+                    newChoice: 40,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //40
+                {
+                    label: "Help Ben",
+                    newScene: 57,
+                    newChoice: 41,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "Run away with Alicia",
+                    newScene: 61,
+                    newChoice: 45,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //41 (save Ben)
+                {
+                    label: "Continue",
+                    newScene: 58,
+                    newChoice: 42,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //42
+                {
+                    label: "Continue",
+                    newScene: 59,
+                    newChoice: 43,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //43
+                {
+                    label: "Continue",
+                    newScene: 60,
+                    newChoice: 44,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }    
+            ],
+            [ //44
+                {
+                    label: "Enter",
+                    newScene: 0,
+                    newChoice: 0,
+                    newImage: 9,
+                    remove: false,
+                    key: "0",
+                    newSection: "Panic"
+                }
+            ],
+            [ //45 (save Alicia)
+                {
+                    label: "Continue",
+                    newScene: 62,
+                    newChoice: 46,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //46
+                {
+                    label: "Continue",
+                    newScene: 63,
+                    newChoice: 47,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //47
+                {
+                    label: "Continue",
+                    newScene: 64,
+                    newChoice: 48,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //48
+                {
+                    label: "Enter",
+                    newScene: 20,
+                    newChoice: 15,
+                    newImage: 9,
+                    remove: false,
+                    key: "0",
+                    newSection: "Panic"
+                }
+            ],
+            [ //49 (stay in the bathroom)
+                {
+                    label: "Object",
+                    newScene: 66,
+                    newChoice: 50,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "Agree",
+                    newScene: 67,
+                    newChoice: 50,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //50
+                {
+                    label: "Continue",
+                    newScene: 68,
+                    newChoice: 51,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //51
+                {
+                    label: "Continue",
+                    newScene: 69,
+                    newChoice: 52,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //52
+                {
+                    label: "Continue",
+                    newScene: 70,
+                    newChoice: 53,
+                    newImage: 16,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //53 (ending 4)
+                {
+                    label: "Ending 4",
+
+                    
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ]
+        ];
+    } else if (chapterSection == "Panic") {
+        return [
+            [ //0 (saved Ben)
+                {
+                    label: "\"She's dead\"",
+                    newScene: 1,
+                    newChoice: 1,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "\"...\"",
+                    newScene: 2,
+                    newChoice: 1,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //1
+                {
+                    label: "Continue",
+                    newScene: 3,
+                    newChoice: 2,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //2
+                {
+                    label: "Continue",
+                    newScene: 4,
+                    newChoice: 3,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //3
+                {
+                    label: "Continue",
+                    newScene: 5,
+                    newChoice: 4,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //4
+                {
+                    label: "\"She wanted to help people\"",
+                    newScene: 6,
+                    newChoice: 5,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "\"She loved the law\"",
+                    newScene: 7,
+                    newChoice: 5,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                },
+                {
+                    label: "\"...\"",
+                    newScene: 8,
+                    newChoice: 5,
+                    newImage: -1,
+                    remove: false,
+                    key: "2"
+                }
+            ],
+            [ //5
+                {
+                    label: "Continue",
+                    newScene: 9,
+                    newChoice: 6,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //6
+                {
+                    label: "Continue",
+                    newScene: 11,
+                    newChoice: 7,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //7
+                {
+                    label: "Leave him alone",
+                    newScene: 12,
+                    newChoice: 8,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "Talk to Mort",
+                    newScene: 14,
+                    newChoice: 10,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //8
+                {
+                    label: "Continue",
+                    newScene: 13,
+                    newChoice: 9,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //9
+                {
+                    label: "Continue",
+
+
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //10 
+                {
+                    label: "Continue",
+                    newScene: 15,
+                    newChoice: 11,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //11
+                {
+                    label: "\"Yes\"",
+                    newScene: 16,
+                    newChoice: 12,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "\"No\"",
+                    newScene: 17,
+                    newChoice: 12,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //12
+                {
+                    label: "Continue",
+                    newScene: 18,
+                    newChoice: 13,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //13
+                {
+                    label: "Continue",
+                    newScene: 19,
+                    newChoice: 14,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //14
+                {
+                    label: "Continue",
+                    
+
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //15 (saved Alicia)
+                {
+                    label: "\"He's dead\"",
+                    newScene: 21,
+                    newChoice: 16,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "\"...\"",
+                    newScene: 22,
+                    newChoice: 16,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //16
+                {
+                    label: "Continue",
+                    newScene: 23,
+                    newChoice: 17,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //17
+                {
+                    label: "Continue",
+                    newScene: 24,
+                    newChoice: 18,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //18
+                {
+                    label: "Continue",
+                    newScene: 25,
+                    newChoice: 19,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //19
+                {
+                    label: "\"It's my fault\"",
+                    newScene: 26,
+                    newChoice: 20,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "\"I'm so sorry\"",
+                    newScene: 27,
+                    newChoice: 20,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                },
+                {
+                    label: "\"...\"",
+                    newScene: 28,
+                    newChoice: 20,
+                    newImage: -1,
+                    remove: false,
+                    key: "2"
+                }
+            ],
+            [ //20
+                {
+                    label: "Continue",
+                    newScene: 29,
+                    newChoice: 21,
+                    newImage: -1,
+                    remove: false,
+                    key: "0" 
+                }
+            ],
+            [ //21
+                {
+                    label: "\"It's not your fault\"",
+                    newScene: 30,
+                    newChoice: 22,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "\"He said he was glad to be back\"",
+                    newScene: 31,
+                    newChoice: 22,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                },
+                {
+                    label: "\"...\"",
+                    newScene: 32,
+                    newChoice: 22,
+                    newImage: -1,
+                    remove: false,
+                    key: "2"
+                }
+            ],
+            [ //22
+                {
+                    label: "Continue",
+                    newScene: 33,
+                    newChoice: 23,
+                    newImage: -1,
+                    remove: false,
+                    key: "0" 
+                }
+            ],
+            [ //23
+                {
+                    label: "Continue",
+                    newScene: 11,
+                    newChoice: 24,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //24
+                {
+                    label: "Leave him alone",
+                    newScene: 34,
+                    newChoice: 25,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "Talk to Mort",
+                    newScene: 35,
+                    newChoice: 26,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //25
+                {
+                    label: "Continue",
+
+
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //26
+                {
+                    label: "\"Yes\"",
+                    newScene: 16,
+                    newChoice: 27,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "\"No\"",
+                    newScene: 17,
+                    newChoice: 27,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //27
+                {
+                    label: "Continue",
+                    newScene: 36,
+                    newChoice: 28,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //28
+                {
+                    label: "Continue",
+                    newScene: 37,
+                    newChoice: 29,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //29
+                {
+                    label: "Continue",
+
+
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ]
+        ]
     } else {
         return[];
     }
