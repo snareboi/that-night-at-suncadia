@@ -62,7 +62,7 @@ export function createChoices(chapterSection) {
                     label: "The Bunkbed Room",
                     newScene: 20,
                     newChoice: 14,
-                    newImage: -1,
+                    newImage: 17,
                     remove: true,
                     key: "2"
                 },
@@ -73,14 +73,6 @@ export function createChoices(chapterSection) {
                     newImage: 3,
                     remove: true,
                     key: "3"
-                },
-                {
-                    label: "Back Porch",
-                    newScene: 40,
-                    newChoice: 31,
-                    newImage: 4,
-                    remove: true,
-                    key: "4"
                 }
             ],
 
@@ -260,7 +252,7 @@ export function createChoices(chapterSection) {
                     label: "Leave",
                     newScene: 4,
                     newChoice: 3,
-                    newImage: -1,
+                    newImage: 1,
                     remove: false,
                     key: "0"
                 },
@@ -399,7 +391,7 @@ export function createChoices(chapterSection) {
                     label: "Continue",
                     newScene: 4,
                     newChoice: 3,
-                    newImage: -1,
+                    newImage: 1,
                     remove: false,
                     key: "0"
                 }
@@ -464,7 +456,7 @@ export function createChoices(chapterSection) {
                     key: "0"
                 },
                 {
-                    label: "\"I'm glad to be back\"",
+                    label: "\"I'm glad to be here\"",
                     newScene: 38,
                     newChoice: 29,
                     newImage: -1,
@@ -1478,7 +1470,7 @@ export function createChoices(chapterSection) {
                     label: "Continue",
                     newScene: 7,
                     newChoice: 4,
-                    newImage: -1,
+                    newImage: 17,
                     remove: false,
                     key: "0"
                 }
@@ -2018,7 +2010,8 @@ export function createChoices(chapterSection) {
                     newChoice: 11,
                     newImage: 9,
                     remove: false,
-                    key: "0"
+                    key: "0",
+                    song: "/sfx/movie.mp3"
                 }
             ],
             [ //11 (goes into the garage sequence)
@@ -2026,7 +2019,7 @@ export function createChoices(chapterSection) {
                     label: "Continue",
                     newScene: 32,
                     newChoice: 23,
-                    newImage: -1,
+                    newImage: 18,
                     remove: false,
                     key: "0"
                 }
@@ -2114,7 +2107,7 @@ export function createChoices(chapterSection) {
                     label: "Continue",
                     newScene: 28,
                     newChoice: 20,
-                    newImage: 9,
+                    newImage: 18,
                     remove: false,
                     key: "0"
                 }
@@ -2144,7 +2137,8 @@ export function createChoices(chapterSection) {
                     newChoice: 22,
                     newImage: -1,
                     remove: false,
-                    key: "0"
+                    key: "0",
+                    song: "/sfx/movie.mp3"
                 }
             ],
             [ //22
@@ -2180,9 +2174,10 @@ export function createChoices(chapterSection) {
                     label: "Continue",
                     newScene: 35,
                     newChoice: 25,
-                    newImage: -1,
+                    newImage: 9,
                     remove: false,
-                    key: "0"
+                    key: "0",
+                    song: "stop"
                 }
             ],
             [ //25
@@ -2301,15 +2296,231 @@ export function createChoices(chapterSection) {
             ],
             [ //34
                 {
-                    label: "",
-
-                    
+                    label: "Continue",
+                    newScene: 51,
+                    newChoice: 35, 
                     newImage: -1,
                     remove: false,
                     key: "0"
                 }
+            ],
+            [ //35
+                {
+                    label: "\"Good!\" (Positive)",
+                    newScene: 53,
+                    newChoice: 36,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "\"Ok\" (Neutral)",
+                    newScene: 56,
+                    newChoice: 36,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                },
+                {
+                    label: "\"Could be better\"",
+                    newScene: 57,
+                    newChoice: 36,
+                    newImage: -1,
+                    remove: false,
+                    key: "2"
+                }
+            ],
+            [ //36
+                {
+                    label: "Continue",
+                    newScene: 58,
+                    newChoice: 37,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //37
+                {
+                    label: "Continue",
+                    newScene: 59,
+                    newChoice: 38,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //38
+                {
+                    label: "Continue",
+                    newScene: 60,
+                    newChoice: 39,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //39
+                {
+                    label: "Go with them",
+                    newScene: 61,
+                    newChoice: 40,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "Stay behind",
+                    newScene: 63,
+                    newChoice: 41,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //40
+                {
+                    label: "Leave",
+                    newScene: 0,
+                    newChoice: 0,
+                    newImage: 12,
+                    remove: false,
+                    key: "0",
+                    newSection: "Lodge"
+                }
+            ],
+            [ //41
+                {
+                    label: "Continue",
+                    newScene: 65,
+                    newChoice: 42,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //42
+                {
+                    label: "Go watch the movie",
+                    newScene: 67,
+                    newChoice: 43,
+                    newImage: 18,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "Go to sleep",
+                    newScene: 73,
+                    newChoice: 48,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //43 (watch movie sequence)
+                {
+                    label: "Continue",
+                    newScene: 68,
+                    newChoice: 44,
+                    newImage: -1,
+                    remove: false,
+                    key: "0",
+                    song: "/sfx/movie.mp3"
+                }
+            ],
+            [ //44
+                {
+                    label: "Continue",
+                    newScene: 72,
+                    newChoice: 47,
+                    newImage: -1,
+                    remove: false,
+                    key: "0",
+                    song: "stop",
+                    sfx: "/sfx/door banging.mp3",
+                    loop: false
+                }
+            ],
+            [ //45
+                {
+                    label: "\"You can't force yourself into his problems\"",
+                    newScene: 70,
+                    newChoice: 46,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "\"What do you suggest we do?\"",
+                    newScene: 71,
+                    newChoice: 46,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                },
+                {
+                    label: "\"...\"",
+                    newScene: 72,
+                    newChoice: 47,
+                    newImage: -1,
+                    remove: false,
+                    key: "2"
+                }
+            ],
+            [ //46 - door banging sfx
+                {
+                    label: "Continue",
+                    newScene: 72,
+                    newChoice: 47,
+                    newImage: -1,
+                    remove: false,
+                    key: "0",
+                    song: "stop",
+                    sfx: "/sfx/door banging.mp3",
+                    loop: false
+                }
+            ],
+            [ //47 (end of staying sequence)
+                {
+                    label: "Run downstairs",
+                    newScene: 38,
+                    newChoice: 30,
+                    newImage: 9,
+                    remove: false,
+                    key: "0",
+                    newSection: "Panic"
+                }
+            ],
+            [ //48 (go to sleep sequence)
+                {
+                    label: "Go to your room",
+                    newScene: 74,
+                    newChoice: 49,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //49
+                {
+                    label: "Sleep",
+                    newScene: 75,
+                    newChoice: 50,
+                    newImage: 19,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //50 - play door banging sfx (goes to choice end of watch movie sequence)
+                {
+                    label: "Continue",
+                    newScene: 76,
+                    newChoice: 47,
+                    newImage: 9,
+                    remove: false,
+                    key: "0"
+                }
             ]
-            
         ]
     } else if (chapterSection == "Ben") {
         return[
@@ -2323,7 +2534,7 @@ export function createChoices(chapterSection) {
                     key: "0"
                 },
                 {
-                    label: "\"I'm glad to be back too\"",
+                    label: "\"I'm glad to be here too\"",
                     newScene: 2,
                     newChoice: 1,
                     newImage: -1,
@@ -2731,7 +2942,9 @@ export function createChoices(chapterSection) {
                     newChoice: 30,
                     newImage: -1,
                     remove: false,
-                    key: "0"
+                    key: "0",
+                    sfx: "/sfx/shutdown bang.mp3",
+                    loop: false
                 }
             ],
             [ //30
@@ -2799,7 +3012,7 @@ export function createChoices(chapterSection) {
                     newChoice: 36,
                     newImage: -1,
                     remove: false,
-                    key: "0"
+                    key: "0",
                 }
             ],
             [ //36
@@ -2829,7 +3042,9 @@ export function createChoices(chapterSection) {
                     newChoice: 39,
                     newImage: -1,
                     remove: false,
-                    key: "0"
+                    key: "0",
+                    sfx: "/sfx/monster noises.mp3",
+                    loop: true
                 }
             ],
             [ //39
@@ -2887,7 +3102,9 @@ export function createChoices(chapterSection) {
                     newChoice: 44,
                     newImage: -1,
                     remove: false,
-                    key: "0"
+                    key: "0",
+                    sfx: "/sfx/door banging.mp3",
+                    loop: false
                 }    
             ],
             [ //44
@@ -2928,7 +3145,9 @@ export function createChoices(chapterSection) {
                     newChoice: 48,
                     newImage: -1,
                     remove: false,
-                    key: "0"
+                    key: "0",
+                    sfx: "/sfx/door banging.mp3",
+                    loop: false
                 }
             ],
             [ //48
@@ -3128,11 +3347,13 @@ export function createChoices(chapterSection) {
             [ //9
                 {
                     label: "Continue",
-
-
+                    newScene: 60,
+                    newChoice: 43,
                     newImage: -1,
                     remove: false,
-                    key: "0"
+                    key: "0",
+                    sfx: "/sfx/double pound.mp3",
+                    loop: true
                 }
             ],
             [ //10 
@@ -3186,11 +3407,13 @@ export function createChoices(chapterSection) {
             [ //14
                 {
                     label: "Continue",
-                    
-
+                    newScene: 60,
+                    newChoice: 43,
                     newImage: -1,
                     remove: false,
-                    key: "0"
+                    key: "0",
+                    sfx: "/sfx/double pound.mp3",
+                    loop: true
                 }
             ],
             [ //15 (saved Alicia)
@@ -3251,7 +3474,7 @@ export function createChoices(chapterSection) {
                     key: "0"
                 },
                 {
-                    label: "\"I'm so sorry\"",
+                    label: "\"He said he was happy to be here\"",
                     newScene: 27,
                     newChoice: 20,
                     newImage: -1,
@@ -3344,11 +3567,13 @@ export function createChoices(chapterSection) {
             [ //25
                 {
                     label: "Continue",
-
-
+                    newScene: 60,
+                    newChoice: 43,
                     newImage: -1,
                     remove: false,
-                    key: "0"
+                    key: "0",
+                    sfx: "/sfx/double pound.mp3",
+                    loop: true
                 }
             ],
             [ //26
@@ -3392,11 +3617,1061 @@ export function createChoices(chapterSection) {
             [ //29
                 {
                     label: "Continue",
-
+                    newScene: 60,
+                    newChoice: 43,
+                    newImage: -1,
+                    remove: false,
+                    key: "0",
+                    sfx: "/sfx/double pound.mp3",
+                    loop: true
+                }
+            ],
+            [ //30 (stayed in the cabin while Alicia, Ben and Mort went to the lodge)
+                {
+                    label: "Continue",
+                    newScene: 39,
+                    newChoice: 31,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //31
+                {
+                    label: "Grab your keys",
+                    newScene: 40,
+                    newChoice: 32,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //32
+                {
+                    label: "\"It's not your fault\"",
+                    newScene: 30,
+                    newChoice: 33,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                "",
+                {
+                    label: "\"...\"",
+                    newScene: 32,
+                    newChoice: 33,
+                    newImage: -1,
+                    remove: false,
+                    key: "2"
+                }
+            ],
+            [ //33
+                {
+                    label: "Continue",
+                    newScene: 42,
+                    newChoice: 34,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //34
+                {
+                    label: "Try comforting Mabel",
+                    newScene: 43,
+                    newChoice: 35,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "Stay put",
+                    newScene: 48,
+                    newChoice: 36,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //35
+                {
+                    label: "You have to be strong",
+                    newScene: 44,
+                    newChoice: 36,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "We're going to protect you",
+                    newScene: 46,
+                    newChoice: 36,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                },
+                {
+                    label: "\"...\"",
+                    newScene: 47,
+                    newChoice: 36,
+                    newImage: -1,
+                    remove: false,
+                    key: "2"
+                },
+            ],
+            [ //36 (links to the Alicia version of Mort's notebook sequence)
+                {
+                    label: "Continue",
+                    newScene: 49,
+                    newChoice: 23,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //37 (saved Ben at lodge)
+                {
+                    label: "\"She's dead\"",
+                    newScene: 51,
+                    newChoice: 38,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "\"...\"",
+                    newScene: 52,
+                    newChoice: 38,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //38
+                {
+                    label: "Continue",
+                    newScene: 53,
+                    newChoice: 39,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //39 (goes to Sayori/Roxy grief sequence and comforting Mabel)
+                {
+                    label: "Grab keys",
+                    newScene: 5,
+                    newChoice: 4,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //40
+                {
+                    label: "Continue",
+                    newScene: 54,
+                    newChoice: 6,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //41 (saved Ben at lodge)
+                {
+                    label: "\"He's dead\"",
+                    newScene: 56,
+                    newChoice: 38,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "\"...\"",
+                    newScene: 57,
+                    newChoice: 38,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //42
+                {
+                    label: "Continue",
+                    newScene: 59,
+                    newChoice: 23,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //43 (universal beginning of hiding sequence)
+                {
+                    label: "Continue",
+                    newScene: 63,
+                    newChoice: 44,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //44 - (door banging + double bang)
+                {
+                    label: "Continue",
+                    newScene: 64,
+                    newChoice: 45,
+                    newImage: -1,
+                    remove: false,
+                    key: "0",
+                    sfx: "/sfx/double bang and door bang.mp3",
+                    loop: true
+                }
+            ],
+            [ //45
+                {
+                    label: "Continue",
+                    newScene: 66,
+                    newChoice: 46,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //46 (by default this goes to the hiding spots options)
+                {
+                    label: "Continue",
+                    newScene: 69,
+                    newChoice: 51,
+                    newImage: 23,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //47
+                {
+                    label: "Continue",
+                    newScene: 70,
+                    newChoice: 48,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //48
+                {
+                    label: "Turn it off",
+                    newScene: 71,
+                    newChoice: 51,
+                    newImage: 23,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "Object and keep it on",
+                    newScene: 72,
+                    newChoice: 49,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //49
+                {
+                    label: "\"Yes I'm sure\" (keep the lights on)",
+                    newScene: 74,
+                    newChoice: 51,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "\"No, I'm not sure\" (turn the lights off)",
+                    newScene: 75,
+                    newChoice: 50,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //50
+                {
+                    label: "Continue",
+                    newScene: 76,
+                    newChoice: 51,
+                    newImage: 23,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //51
+                {
+                    label: "Continue",
+                    newScene: 77,
+                    newChoice: 52,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //52
+                {
+                    label: "Under your bed",
+                    newScene: 78,
+                    newChoice: 53,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "In the garage",
+                    newScene: 79,
+                    newChoice: 53,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                },
+                {
+                    label: "In a nook",
+                    newScene: 80,
+                    newChoice: 53,
+                    newImage: -1,
+                    remove: false,
+                    key: "2"
+                }
+            ],
+            [ //53
+                {
+                    label: "Wait",
+                    newScene: 81,
+                    newChoice: 54,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //54
+                {
+                    label: "Wait",
+                    newScene: 82,
+                    newChoice: 55,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //55
+                {
+                    label: "Wait",
+                    newScene: 83,
+                    newChoice: 56,
+                    newImage: 19,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //56
+                {
+                    label: "Wait",
+                    newScene: 87,
+                    newChoice: 57,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //57
+                {
+                    label: "Wait",
+                    newScene: 83,
+                    newChoice: 58,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //58
+                {
+                    label: "Wait",
+                    newScene: 87,
+                    newChoice: 59,
+                    newImage: -1,
+                    remove: false,
+                    key: "0",
+                    sfx: "stop"
+                }
+            ],
+            [ //59
+                {
+                    label: "...",
+                    newScene: 83,
+                    newChoice: 60,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //60
+                {
+                    label: "...",
+                    newScene: 84,
+                    newChoice: 61,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //61
+                {
+                    label: "...",
+                    newScene: 85,
+                    newChoice: 62,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //62
+                {
+                    label: "Three",
+                    newScene: 83,
+                    newChoice: 63,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //63
+                {
+                    label: "Two",
+                    newScene: 87,
+                    newChoice: 64,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //64
+                {
+                    label: "One",
+                    newScene: 83,
+                    newChoice: 65,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //65
+                {
+                    label: "Open!",
+                    newScene: 87,
+                    newChoice: 66,
+                    newImage: 23,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //66
+                {
+                    label: "...",
+                    newScene: 86,
+                    newChoice: 67,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //67
+                {
+                    label: "Continue",
+                    newScene: 87,
+                    newChoice: 68,
+                    newImage: -1,
+                    remove: false,
+                    key: "0",
+                    sfx: "/sfx/Roxy and monster scream.mp3",
+                    loop: false
+                }
+            ],
+            [ //68
+                {
+                    label: "...",
+                    newScene: 88,
+                    newChoice: 69,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //69
+                {
+                    label: "...",
+                    newScene: 89,
+                    newChoice: 70,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //70
+                {
+                    label: "...",
+                    newScene: 90,
+                    newChoice: 71,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //71
+                {
+                    label: "...",
+                    newScene: 83,
+                    newChoice: 72,
+                    newImage: -1,
+                    remove: false,
+                    key: "0",
+                    sfx: "/sfx/smack.mp3",
+                    loop: false
+                }
+            ],
+            [ //72
+                {
+                    label: "...",
+                    newScene: 91,
+                    newChoice: 73,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //73
+                {
+                    label: "Continue",
+                    newScene: 92,
+                    newChoice: 74,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //74
+                {
+                    label: "Continue",
+                    newScene: 93,
+                    newChoice: 75,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //75
+                {
+                    label: "Continue",
+                    newScene: 94,
+                    newChoice: 76,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //76
+                {
+                    label: "Come out",
+                    newScene: 96,
+                    newChoice: 78,
+                    newImage: 9,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //77
+                {
+                    label: "Continue",
+                    newScene: 97,
+                    newChoice: 78,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //78
+                {
+                    label: "Continue",
+                    newScene: 98,
+                    newChoice: 79,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //79
+                {
+                    label: "Continue",
+                    newScene: 99,
+                    newChoice: 80,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //80
+                {
+                    label: "Continue",
+                    newScene: 102,
+                    newChoice: 81,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //81
+                {
+                    label: "Continue",
+                    newScene: 103,
+                    newChoice: 82,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //82
+                {
+                    label: "Continue",
+                    newScene: 105,
+                    newChoice: 83,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [
+                {
+                    label: "",
 
                     newImage: -1,
                     remove: false,
                     key: "0"
+                }
+            ]
+        ]
+    } else if (chapterSection == "Lodge") {
+        return [
+            [ //0
+                {
+                    label: "Continue",
+                    newScene: 1,
+                    newChoice: 1,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //1
+                {
+                    label: "Continue",
+                    newScene: 3,
+                    newChoice: 2,
+                    newImage: 20,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //2 - change to lodge pic
+                {
+                    label: "Leave",
+                    newScene: 4,
+                    newChoice: 3,
+                    newImage: 21,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //3
+                {
+                    label: "Continue",
+                    newScene: 5,
+                    newChoice: 4,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //4
+                {
+                    label: "Go to the fire pit",
+                    newScene: 6,
+                    newChoice: 5,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //5
+                {
+                    label: "\"How did he not see it?\"",
+                    newScene: 7,
+                    newChoice: 6,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "\"Thank god for Sayori\"",
+                    newScene: 8,
+                    newChoice: 6,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                },
+                {
+                    label: "\"...\"",
+                    newScene: 9,
+                    newChoice: 7,
+                    newImage: -1,
+                    remove: false,
+                    key: "2"
+                }
+            ],
+            [ //6
+                {
+                    label: "Continue",
+                    newScene: 9,
+                    newChoice: 7,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //7
+                {
+                    label: "\"Maybe you should tell it to the parents when they get out\"",
+                    newScene: 10,
+                    newChoice: 8,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "\"Maybe there's something more we don't know\"",
+                    newScene: 11,
+                    newChoice: 8,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                },
+                {
+                    label: "\"I can see why Mort's so done with his family\"",
+                    newScene: 12,
+                    newChoice: 8,
+                    newImage: -1,
+                    remove: false,
+                    key: "2"
+                },
+                {
+                    label: "\"...\"",
+                    newScene: 13,
+                    newChoice: 9,
+                    newImage: -1,
+                    remove: false,
+                    key: "3"
+                }
+            ],
+            [ //8 
+                {
+                    label: "Continue",
+                    newScene: 13,
+                    newChoice: 9,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //9 - play bang sound, same as the bathroom one
+                {
+                    label: "Walk back to the car",
+                    newScene: 14,
+                    newChoice: 10,
+                    newImage: -1,
+                    remove: false,
+                    key: "0",
+                    sfx: "/sfx/shutdown bang.mp3",
+                    loop: false
+                }
+            ],
+            [ //10
+                {
+                    label: "\"I agree\"",
+                    newScene: 15,
+                    newChoice: 11,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "\"We should keep looking\"",
+                    newScene: 16,
+                    newChoice: 11,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //11
+                {
+                    label: "Keep looking",
+                    newScene: 17,
+                    newChoice: 12,
+                    newImage: 15,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //12
+                {
+                    label: "Continue",
+                    newScene: 18,
+                    newChoice: 13,
+                    newImage: 21,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //13
+                {
+                    label: "Head to the car",
+                    newScene: 19,
+                    newChoice: 14,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //14 - play car collision
+                {
+                    label: "Continue",
+                    newScene: 20,
+                    newChoice: 15,
+                    newImage: -1,
+                    remove: false,
+                    key: "0",
+                    sfx: "/sfx/car collision.mp3",
+                    loop: false
+                }
+            ],
+            [ //15
+                {
+                    label: "Look",
+                    newScene: 21,
+                    newChoice: 16,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //16
+                {
+                    label: "\"Behind the car!\"",
+                    newScene: 22,
+                    newChoice: 17,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "\"The fuck is that!\"",
+                    newScene: 23,
+                    newChoice: 17,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //17
+                {
+                    label: "Continue",
+                    newScene: 24,
+                    newChoice: 18,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //18
+                {
+                    label: "Search around",
+                    newScene: 25,
+                    newChoice: 19,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //19
+                {
+                    label: "Continue",
+                    newScene: 26,
+                    newChoice: 20,
+                    newImage: 22,
+                    remove: false,
+                    key: "0",
+                }
+            ],
+            [ //20
+                {
+                    label: "Continue",
+                    newScene: 27,
+                    newChoice: 21,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //21
+                {
+                    label: "RUN!",
+                    newScene: 28,
+                    newChoice: 22,
+                    newImage: -1,
+                    remove: false,
+                    key: "0",
+                    sfx: "/sfx/monster noises.mp3",
+                    loop: true
+                }
+            ],
+            [ //22
+                {
+                    label: "Look",
+                    newScene: 29,
+                    newChoice: 23,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //23
+                {
+                    label: "Continue",
+                    newScene: 31,
+                    newChoice: 24,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //24
+                {
+                    label: "Continue",
+                    newScene: 32,
+                    newChoice: 25,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //25
+                {
+                    label: "Let her go and help Ben",
+                    newScene: 33,
+                    newChoice: 26,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "Flee with Alicia",
+                    newScene: 37,
+                    newChoice: 30,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //26 (save Ben sequence)
+                {
+                    label: "Run to the car",
+                    newScene: 34,
+                    newChoice: 27,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //27
+                {
+                    label: "Continue",
+                    newScene: 35,
+                    newChoice: 28,
+                    newImage: 20,
+                    remove: false,
+                    key: "0",
+                    sfx: "stop"
+                }
+            ],
+            [ //28 
+                {
+                    label: "Continue",
+                    newScene: 36,
+                    newChoice: 29,
+                    newImage: 12,
+                    remove: false,
+                    key: "0",
+                    sfx: "door banging.mp3",
+                    loop: false
+                }
+            ],
+            [ //29 - play door banging sfx
+                {
+                    label: "Run in",
+                    newScene: 50,
+                    newChoice: 37,
+                    newImage: 9,
+                    remove: false,
+                    key: "0",
+                    newSection: "Panic"
+                }
+            ],
+            [ //30 (save Alicia sequence)
+                {
+                    label: "Run to the car",
+                    newScene: 38,
+                    newChoice: 31,
+                    newImage: -1,
+                    remove: false,
+                    key: "0",
+                }
+            ],
+            [ //31
+                {
+                    label: "Continue",
+                    newScene: 39,
+                    newChoice: 32,
+                    newImage: 20,
+                    remove: false,
+                    key: "0",
+                    sfx: "stop"
+                }
+            ],
+            [ //32 - play door banging sfx
+                {
+                    label: "Continue",
+                    newScene: 40,
+                    newChoice: 33,
+                    newImage: 12,
+                    remove: false,
+                    key: "0",
+                    sfx: "/sfx/door banging.mp3",
+                    loop: false
+                }
+            ],
+            [ //33
+                {
+                    label: "Run in",
+                    newScene: 55,
+                    newChoice: 41,
+                    newImage: 9,
+                    remove: false,
+                    key: "0",
+                    newSection: "Panic"
                 }
             ]
         ]

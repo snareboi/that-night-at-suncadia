@@ -48,7 +48,7 @@ export default function MainContent() {
                 ))}
                 <br/>
                 
-                <Link href="./Game/ChapterOne/Intro"className="text-1.5xl text-red-500 font-bold md:hover:underline">Begin!</Link>
+                <Link href="./Game"className="text-1.5xl text-red-500 font-bold md:hover:underline">Begin!</Link>
             </div>            
         )}
       <br/>

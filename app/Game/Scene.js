@@ -7,16 +7,22 @@ import { useEffect, useState } from "react";
 import { createChoices } from "./choices";
 import { Howler } from "howler";
 
- let ambience = new Howl({
+  let ambience = new Howl({
     src:[""],
     loop: true,
-    volume: 0.2,
+    volume: 0.5,
   })
+
   ambience.play();
+
+  let sfxPlayer = new Howl({
+    src:[""],
+    loop: false,
+    volume: 0.5,
+  })
 
   function changeSong(song) {
     if (song == "stop") {
-      console.log("");
       ambience.stop();
     } else if (song != null) {
       ambience.stop();
@@ -28,22 +34,41 @@ import { Howler } from "howler";
       ambience.play();
     }
   }
+
+  function playSFX(sfx, loop) {
+    
+    if (sfx == "stop") {
+      sfxPlayer.stop();
+    } else if (sfx != null) {
+      sfxPlayer.stop();
+      sfxPlayer = new Howl({
+        src:[sfx],
+        loop: loop,
+        volume: 0.5,
+      })
+      
+      sfxPlayer.play();
+    }
+  }
+
+
 const builder = imageUrlBuilder(client);
 export default function Scene() {
     const playerName = localStorage.getItem("playerName");
 
-    const [scene, updateScene] = useState(33);
-    const [currChoices, updateChoices] = useState(20);
-    const [currSection, updateSection] = useState("Ben");
+    const [scene, updateScene] = useState(0);
+    const [currChoices, updateChoices] = useState(0);
+    const [currSection, updateSection] = useState("Inside");
     
     const [choices, modifyChoices] = useState(createChoices(currSection));
     const [text, updateText] = useState(null);
 
     const [images, setImages] = useState(null);
-    const [currImage, changeImage] = useState(13);
+    const [currImage, changeImage] = useState(9);
 
+    const [tempScene, setTemp] = useState(null);
    
-    
+    //default values for numbers are always 0
     const [conditions, updateConditions] = useState([
       //Chapter 1
       //0
@@ -78,13 +103,25 @@ export default function Scene() {
       0, //give Mabel your jacket? 0 - neutral, 1 - no, 2 - yes
 
       //10
-      false, //comforted Mabel?
+      false, //told Mabel to be brave?
 
       //11
-      false, //know about the monster?
+      false, //see the monster?
 
       //12
       false, //hear Roxy out in the tub?
+
+      //13
+      false, //did you go to the lodge with Mort, Alicia and Ben?
+
+      //14
+      0, //who did you save in the first monster encounter? 0 - weren't there, 1 - Ben, 2 - Alicia
+
+      //15
+      false, //did you go to the bathroom in the park?
+
+      //16
+      false, //did you keep the lights on?
     ]);
 
     const pictureStyle = {
@@ -105,6 +142,9 @@ export default function Scene() {
           
           const content = await client.fetch(query, {currSection});
           updateText(content);
+          if(tempScene != null) {
+            updateScene(tempScene);
+          }   
       }
 
       //Fetches the pictures from the sanity and puts them in the images hook
@@ -134,15 +174,19 @@ export default function Scene() {
         changeImage(choice.newImage);
       }
       
-      updateScene(choice.newScene);
-      updateChoices(choice.newChoice);
-      modifyConditions(choice.newScene);
-      checkSpecialCondition(choice.newScene);
+      
       if (choice.newSection != null) {
         updateSection(choice.newSection);
         modifyChoices(createChoices(choice.newSection));
+        setTemp(choice.newScene);
+      } else {
+        updateScene(choice.newScene);
       }
       changeSong(choice.song);
+      playSFX(choice.sfx, choice.loop);
+      updateChoices(choice.newChoice);
+      modifyConditions(choice.newScene);
+      checkSpecialCondition(choice.newScene);
     }
 
 
@@ -197,6 +241,8 @@ export default function Scene() {
           conditions[7] = 4;
         } else if (scene == 11) {
           conditions[12] = true;
+        } else if (scene == 61) {
+          conditions[13] = true;
         }
       } else if (currSection == "Ben") {
         if (scene == 6 || scene == 7) {
@@ -207,6 +253,27 @@ export default function Scene() {
           conditions[9] = 2;
         } else if (scene == 29) {
           conditions[9] = 1;
+        } else if (scene == 39) {
+          conditions[15] = true;
+          conditions[11] = true;
+        } else if (scene == 57) {
+          conditions[14] = 1;
+        } else if (scene == 61) {
+          conditions[14] = 2;
+        }
+      } else if (currSection == "Panic") {
+        if (scene == 44 || scene == 45) {
+          conditions[10] = true;
+        } else if (scene == 74) {
+          conditions[16] = true;
+        }
+      } else if (currSection == "Lodge") {
+        if (scene == 33) {
+          conditions[14] = 1;
+        } else if (scene == 37) {
+          conditions[14] = 2;
+        } else if (scene == 0) {
+          conditions[11] = true;
         }
       }
       
@@ -226,7 +293,7 @@ export default function Scene() {
           };
         } 
         if (choices[3][0] == "" && choices[3][1] == "" && choices[3][2] == "" && 
-          choices[3][3] == "" && choices[3][4] == "" && scene == 4) {
+          choices[3][3] == "" && scene == 4) {
           updateScene(42);
           updateChoices(33);
         }
@@ -306,8 +373,33 @@ export default function Scene() {
 
         if (conditions[9] == 1) {
           choices[31][0].newScene = 49;
-        } else if (conditions[9] == 2){
+        } else if (conditions[9] == 2) {
           choices[31][0].newScene = 48;
+          choices[31][0].newChoice = 33;
+          
+          choices[39][1].newScene = 62;
+        }
+
+        if (conditions[6] == 4) {
+          choices[35][0].newScene = 52;
+        } else if (conditions[6] == 1) {
+          choices[35][0].newScene = 54;
+        } else if (conditions[6] == 3) {
+          choices[35][0].newScene = 55;
+        }
+
+        if (conditions[7] == 1 || conditions[7] == 4) {
+          choices[41][0].newScene = 64;
+          
+          choices[42][0].label = "Continue watching the movie",
+          choices[42][0].newScene = 66;
+        }
+
+        if (conditions[12]) {
+          choices[44][0].newScene = 69;
+          choices[44][0].newChoice = 45;
+          choices[44][0].song = null;
+          choices[44][0].sfx = "";
         }
       } else if (currSection == "Ben") {
         if (conditions[3]) {
@@ -330,10 +422,90 @@ export default function Scene() {
       } else if (currSection == "Panic") {
         if (conditions[0]) {
           choices[6][0].newScene = 10;
+          choices[23][0].newScene = 10;
+        }
+
+        if (conditions[7] == 3) {
+          choices[32][1] = {
+              label: "\"He said he was happy to be here\"",
+              newScene: 31,
+              newChoice: 33,
+              newImage: -1,
+              remove: false,
+              key: "1"
+          };
+        }
+
+        if (conditions[9] == 2) {
+          choices[33][0].newScene = 41;
+          choices[35][0].newScene = 45;
+        }
+
+        if (conditions[14] == 1) {
+          choices[5][0].newScene = 42;
+          choices[5][0].newChoice = 34;
+
+          choices[36][0] = choices[40][0];
+          
+          choices[45][0].newScene = 65;
+        } else if (conditions[14] == 2) {
+          choices[38][0].newScene = 58;
+          
+          choices[36][0] = choices[42][0];
+
+          choices[39][0].newScene = 40;
+          choices[39][0].newChoice = 32;
+        }
+
+        if (conditions[15]) {
+          choices[9][0].newScene = 61;
+          choices[14][0].newScene = 61;
+          choices[25][0].newScene = 61;
+          choices[29][0].newScene = 61;
+
+          choices[46][0].newScene = 67;
+          choices[46][0].newChoice = 47;
+          choices[46][0].newImage = -1;
+
+          choices[80][0].newScene = 101;
+        } else if (conditions[13]) {
+          choices[9][0].newScene = 62;
+          choices[14][0].newScene = 62;
+          choices[25][0].newScene = 62;
+          choices[29][0].newScene = 62;
+
+          choices[46][0].newScene = 68;
+          choices[46][0].newChoice = 47;
+          choices[46][0].newImage = -1;
+
+          choices[48][1].newScene = 73;
+        }
+
+        if (conditions[16]) {
+          choices[65][0].newImage = 9;
+          
+          choices[66][0].newChoice = 71;
+
+          choices[75][0].newScene = 95;
+          choices[76][0].newScene = 97;
+
+          choices[78][0].newChoice = 80;
+          choices[81][0].newScene = 104;
+        }
+
+        if (conditions[14] == 1 && !conditions[16]) {
+          choices[79][0].newScene = 100;
+        }
+      } else if (currSection == "Lodge") {
+        if (conditions[7] == 3) {
+          choices[1][0].newScene = 2;
+        }
+        
+        if (conditions[8]) {
+          choices[23][0].newScene = 30;
         }
       }
     }
-
 
 
 

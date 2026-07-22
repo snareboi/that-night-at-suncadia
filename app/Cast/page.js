@@ -123,7 +123,7 @@ function Roxy() {
                 She came from a poor rural family and worked tirelessly to get one of the highest scholarships the school had to offer. She is the strangest in the group, and is also a hothead, which was probably the first thing Ben was attracted to.
             </p>
             <p>
-                What many in the gang do admire her for is her undying loyalty. She's never missed a hangout and talks very highly when with her other smaller friend cricles, sometimes inviting them to PowerPoint Nights.
+                What many in the gang do admire her for is her undying loyalty. She's never missed a hangout and talks very highly when with her other smaller friend cricles, sometimes inviting them to PowerPoint Nights. This will be her first trip to Suncadia as the year previous she was on a family trip.
             </p>
         </>
     )
