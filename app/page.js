@@ -10,7 +10,7 @@ function WhiteBox() {
         <div className="max-w-7xl p-10 mx-auto flex-col text-center">
           <h1 className="text-4xl font-bold m-2">That Night At Suncadia</h1>
           <p>
-            Welcome to That Night At Suncadia, an interactive choose your own adventure game. The story progresses through a series of webpages like the game "The Uncle Who Works for Nintendo." Press "cast" to see information about the characters. Press "Start Game" to begin your adventure.
+            Welcome to That Night At Suncadia, an interactive choose your own adventure game. The story progresses through a series of webpages like the game &quot;The Uncle Who Works for Nintendo.&quot; Press &quot;cast&quot; to see information about the characters. Press &quot;Start Game&quot; to begin your adventure.
           </p>
           <ul className="spaced-x-4 text-medium font-bold text-2xl text-red-500 m-5">
             <li className="md:hover:underline m-4">

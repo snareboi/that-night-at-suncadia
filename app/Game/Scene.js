@@ -54,17 +54,16 @@ import { Howler } from "howler";
 
 const builder = imageUrlBuilder(client);
 export default function Scene() {
-    const playerName = localStorage.getItem("playerName");
-
+    const [playerName, updateName] = useState("");
     const [scene, updateScene] = useState(0);
     const [currChoices, updateChoices] = useState(0);
-    const [currSection, updateSection] = useState("Inside");
+    const [currSection, updateSection] = useState("Intro");
     
     const [choices, modifyChoices] = useState(createChoices(currSection));
     const [text, updateText] = useState(null);
 
     const [images, setImages] = useState(null);
-    const [currImage, changeImage] = useState(9);
+    const [currImage, changeImage] = useState(0);
 
     const [tempScene, setTemp] = useState(null);
    
@@ -78,7 +77,7 @@ export default function Scene() {
       0, //the game you chose (1 = JackBox, 2 = Telestrations, 3 = Poker
       
       //2 
-      false, //engage with Ben at least once? (chapter 2)
+      false, //engage with Ben at least once? (Act 2)
       
       //3
       false, //know in depth Ben's situation with the group
@@ -92,7 +91,7 @@ export default function Scene() {
       //6
       0, //what you did instead of volleyball (0 = volleyball, 1 = cook, 2 = talk to Alicia, 3 = anything else, 4 = hot tub)
 
-      //Chapter 2
+      //Act 2
       //7
       0, //what did you do at the start of the act? (0 - sleep, 1 - garage/movie, 2 - pool, 3 - Ben, 4 - pool then movie)
       
@@ -115,19 +114,52 @@ export default function Scene() {
       false, //did you go to the lodge with Mort, Alicia and Ben?
 
       //14
-      0, //who did you save in the first monster encounter? 0 - weren't there, 1 - Ben, 2 - Alicia
+      1, //who did you save in the first monster encounter? 0 - weren't there, 1 - Ben, 2 - Alicia
 
       //15
       false, //did you go to the bathroom in the park?
 
       //16
-      false, //did you keep the lights on?
+      true, //did you keep the lights on?
+
+      //Act 3
+      //17
+      false, //did you call your mom?
+
+      //18
+      false, //did you check on Pepper?
+
+      //19
+      false, //did Ben talk to the group about his feelings?
+
+      //20
+      false, //did you go out to find your friends?
+
+      //21
+      0, //convince points. If above at least 3 you convinced Pepper and Roxy
     ]);
 
     const pictureStyle = {
       opacity: 0.8
     }
-    
+
+    //grabs the player's name only once on the first render
+    useEffect(() => {
+      //Fetches the pictures from the sanity and puts them in the images hook
+      async function getPictures() {
+        const query = `*[_type == "photo"] | order(id) {
+          description,
+          image
+        }`;
+        
+        const pictures = await client.fetch(query);
+        setImages(pictures);
+      }
+      getPictures();
+      updateName(localStorage.getItem("playerName"));
+
+    }, []);
+
     useEffect (() => {
       //Grabs the array of scenes from choices.js file from the if statement that matches the 
       //section currently on
@@ -143,28 +175,24 @@ export default function Scene() {
           const content = await client.fetch(query, {currSection});
           updateText(content);
           if(tempScene != null) {
-            updateScene(tempScene);
+            let newChoices = createChoices(tempScene.newSection);
+            checkSpecialCondition(newChoices, tempScene.newScene);
+            modifyChoices(newChoices);
+            updateScene(tempScene.newScene);
+            updateChoices(tempScene.newChoice);
+            modifyConditions(tempScene.newScene);
+            
           }   
       }
-
-      //Fetches the pictures from the sanity and puts them in the images hook
-      async function getPictures() {
-        const query = `*[_type == "photo"] | order(id) {
-          description,
-          image
-        }`;
-        
-        const pictures = await client.fetch(query);
-        setImages(pictures);
-      }
       getScenes();
-      getPictures();
-    }, [currSection]);
+    }, [currSection, tempScene]);
 
 
     //Changes the scene and choices displayed. Also updates the picture, removes choices from 
     //recurring scenes, updates any conditions and updates choices according to special conditions
     function changeScene(choice) {
+      changeSong(choice.song);
+      playSFX(choice.sfx, choice.loop);
       let column = parseInt(choice.key);
       if (choice.remove) {
         choices[currChoices][column] = ""; 
@@ -177,17 +205,16 @@ export default function Scene() {
       
       if (choice.newSection != null) {
         updateSection(choice.newSection);
-        modifyChoices(createChoices(choice.newSection));
-        setTemp(choice.newScene);
+        setTemp(choice);
       } else {
         updateScene(choice.newScene);
-      }
-      changeSong(choice.song);
-      playSFX(choice.sfx, choice.loop);
-      updateChoices(choice.newChoice);
-      modifyConditions(choice.newScene);
-      checkSpecialCondition(choice.newScene);
+        updateChoices(choice.newChoice);
+        modifyConditions(choice.newScene);
+        checkSpecialCondition(choices, choice.newScene);
+      }      
     }
+
+    
 
 
     //checks if a certain scene is picked to modify a condition
@@ -275,13 +302,23 @@ export default function Scene() {
         } else if (scene == 0) {
           conditions[11] = true;
         }
+      } else if (currSection == "After") { //Chapter 3
+        if (scene == 21) {
+          conditions[17] = true;
+        } else if (scene == 67) {
+          conditions[18] = true;
+        } else if (scene == 111) {
+          conditions[19] = true;
+        } else if (scene == 186 || scene == 194) {
+          conditions[20] = true;
+        }
       }
       
     }
 
     //all of the special condition events happen here
-    function checkSpecialCondition(scene) {
-      if(currSection == "Intro") {
+    function checkSpecialCondition(choices, scene) {
+      if (currSection == "Intro") {
         if(conditions[0]) {
           choices[20][0] = {
               label: "Ask about Mort's notebook",
@@ -504,6 +541,173 @@ export default function Scene() {
         if (conditions[8]) {
           choices[23][0].newScene = 30;
         }
+      } else if (currSection == "After") {
+        if ((conditions[14] == 0 || conditions[14] == 2) && conditions[16]) { //if Alicia and Roxy alive
+          choices[1][0].newScene = 3;
+          choices[29][0].newScene = 49;
+          choices[38][0].newScene = 63;
+
+          choices[40][1].newScene = 91;
+          choices[53][0].newScene = 92;
+          choices[55][0].newScene = 93;
+          choices[57][0].newScene = 94;
+          choices[59][0].newScene = 95;
+          choices[61][0].newScene = 96;
+
+          choices[75][0].newScene = 123;
+          choices[89][0].newScene = 151;
+          choices[91][1].newScene = 152;
+
+          choices[95][0].newScene = 159;
+          choices[96][0].newScene = 160;
+          choices[97][0].newScene = 161;
+          choices[98][0].newScene = 162;
+
+          choices[104][1].newScene = 189;
+          choices[105][0].newScene = 193;
+        } else if (conditions[14] == 1 && !conditions[16]) { //if Ben alive, Roxy dead
+          choices[1][0].newScene = 4;
+          choices[29][0].newScene = 50;
+          choices[38][0].newScene = 64;
+
+          choices[40][1].newScene = 97;
+          choices[53][0].newScene = 98;
+          choices[55][0].newScene = 99;
+          choices[57][0].newScene = 100;
+          choices[59][0].newScene = 101;
+          choices[61][0].newScene = 102;
+
+          choices[75][0].newScene = 124;
+          choices[89][0].newScene = 163;
+          choices[91][1].newScene = 166;
+
+          choices[105][0].newScene = 195;
+        } else if (conditions[14] == 1 && conditions[16]) { //if Ben and Roxy alive
+          choices[1][0].newScene = 5;
+          choices[29][0].newScene = 51;
+          choices[38][0].newScene = 65;
+
+          choices[40][1].newScene = 103;
+          choices[53][0].newScene = 104;
+          choices[55][0].newScene = 105;
+          choices[57][0].newScene = 106;
+          choices[59][0].newScene = 107;
+          choices[61][0].newScene = 108;
+
+          choices[75][0].newScene = 125;
+          choices[89][0].newScene = 170;
+          choices[91][1].newScene = 168;
+
+          choices[104][1].newScene = 189;
+          choices[105][0].newScene = 196;
+        }
+
+
+        if (conditions[14] == 1) { //if Ben's alive
+          choices[2][0].newScene = 7;
+          choices[10][0].newScene = 19;
+          choices[14][0].newScene = 27;
+
+          choices[86][0].newScene = 140;
+          choices[87][0].newScene = 141;
+          choices[88][0].newScene = 142;
+          choices[88][1].label = "\"Ben stop!\""
+          choices[88][1].newScene = 143;
+          choices[88][2].newScene = 144;
+          choices[90][0].newScene = 164;
+          choices[91][0].newScene = 165;
+          
+          choices[91][2].newScene = 167;
+          choices[91][3].newScene = 165;
+          choices[92][0].newScene = 169;
+          if (conditions[18]) {
+            choices[61][0].newChoice = 64;
+          } else {
+            choices[61][0].newChoice = 66;
+          }
+
+          if (conditions[19] && conditions[16]) { //did Ben confess and is Roxy alive?
+            choices[94][1].newScene = 179;
+            choices[94][1].newChoice = 100;
+
+            choices[100][0].newScene = 181;
+            choices[101][2].newScene = 185;
+            choices[102][0].newScene = 185;
+
+            choices[94][0].newScene = 197;
+            choices[94][0].newChoice = 107;
+            choices[107][0].newScene = 199;
+          } else if (conditions[19]) { //did Ben confess but is Roxy dead?
+            choices[94][1].newScene = 179;
+            choices[94][1].newChoice = 100;
+
+            choices[94][0].newScene = 197;
+            choices[94][0].newChoice = 107;
+          } else if (conditions[16]) { //did Ben not confess and is Roxy alive?
+            choices[95][0].newScene = 175;
+            choices[96][0].newScene = 176;
+            choices[97][0].newScene = 177;
+            choices[98][0].newScene = 178;
+
+            choices[94][0].newScene = 194;
+          } else { //did Ben not confess and is Roxy dead?
+            choices[95][0].newScene = 171;
+            choices[96][0].newScene = 172;
+            choices[97][0].newScene = 173;
+            choices[98][0].newScene = 174;
+            
+            choices[94][0].newScene = 194;
+          }
+        }
+
+        if (conditions[16]) { //if Roxy's alive
+          choices[3][0].newScene = 9;
+          choices[3][0].newChoice = 4;
+          choices[6][0].newScene = 13;
+          choices[17][0].newChoice = 19;
+          choices[27][0].newScene = 42;
+          choices[37][0].newScene = 60;
+
+          choices[67][0].newScene = 113;
+          choices[70][0].newScene = 117;
+
+          choices[106][0].label = "Try to convince them to come";
+          choices[108][0].label = "Try to convince them to come";
+        }
+
+        if (conditions[15]) { //if you made it to the park bathroom (don't know Mabel's name)
+          choices[13][0].newScene = 25;
+          choices[30][0].newScene = 53;
+        }
+
+        if (conditions[11]) { //if you saw the monster
+          choices[14][0].newChoice = 15;
+        }
+
+        if (conditions[17]) { //if you called your mom
+          choices[26][0].newScene = 41;
+          choices[28][0].newScene = 45;
+          choices[84][0].newScene = 133;
+        }
+
+        if (conditions[5]) { //if you read the notebook earlier
+          choices[51][0].newScene = 79;
+        }
+
+        if (conditions[8]) { //if you helped Ben through his problems
+          choices[66][0].newScene = 111;
+          choices[66][0].newChoice = 67;
+          choices[66][0].song = "/audio/Hug Energy.mp3";
+          choices[66][0].sfx = "";
+        }
+
+        if (conditions[18]) { //if you checked on Pepper
+          choices[72][0].newChoice = 74;
+        }
+        
+        if (conditions[20]) { //if you went to find your friends
+          choices[97][0].newChoice = 105;
+        }
       }
     }
 
@@ -520,7 +724,7 @@ export default function Scene() {
           />
         )}
         <section className="bg-gray-200 ml-auto mr-auto mt-10 max-w-3xl min-w-1 opacity-90
-         text-black">
+         text-black pb-5">
           <div className="mx-auto max-w-prose space-y-8 py-13 p-1 text-left">
             <div className="fade-in" key={scene}>
               <article className="p-2 prose md:prose-md prose-primary mx-auto max-h-125 overflow-y-scroll">

@@ -1,5 +1,5 @@
 export function createChoices(chapterSection) {
-    if (chapterSection == "Intro") {
+    if (chapterSection == "Intro") { //Act 1
         return [
             [ //0
                 {
@@ -7,7 +7,6 @@ export function createChoices(chapterSection) {
                     newScene: 1,
                     newChoice: 1,
                     newPicture: -1,
-                    remove: false,
                     key: "0",
                 },
                 {
@@ -15,7 +14,6 @@ export function createChoices(chapterSection) {
                     newScene: 2,
                     newChoice: 1,
                     newPicture: -1,
-                    remove: false,
                     key: "1",
                 }
             ],
@@ -25,7 +23,6 @@ export function createChoices(chapterSection) {
                     newScene: 3,
                     newChoice: 2,
                     newImage: 1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -35,7 +32,6 @@ export function createChoices(chapterSection) {
                     newScene: 4,
                     newChoice: 3,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -83,7 +79,6 @@ export function createChoices(chapterSection) {
                     newScene: 6,
                     newChoice: 5,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -93,7 +88,6 @@ export function createChoices(chapterSection) {
                     newScene: 7,
                     newChoice: 6,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -111,7 +105,6 @@ export function createChoices(chapterSection) {
                 newScene: 8,
                 newChoice: 7,
                 newImage: -1,
-                remove: false,
                 key: "0"
                 }
             ],
@@ -121,7 +114,6 @@ export function createChoices(chapterSection) {
                     newScene: 9,
                     newChoice: 8,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -129,7 +121,6 @@ export function createChoices(chapterSection) {
                     newScene: 10,
                     newChoice: 8,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 },
                 {
@@ -137,7 +128,6 @@ export function createChoices(chapterSection) {
                     newScene: 11,
                     newChoice: 8,
                     newImage: -1,
-                    remove: false,
                     key: "2"
                 }
             ],
@@ -147,7 +137,6 @@ export function createChoices(chapterSection) {
                     newScene: 12,
                     newChoice: 9,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -155,7 +144,6 @@ export function createChoices(chapterSection) {
                     newScene: 13,
                     newChoice: 9,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -165,7 +153,6 @@ export function createChoices(chapterSection) {
                     newScene: 4,
                     newChoice: 3,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -405,7 +392,7 @@ export function createChoices(chapterSection) {
                     newChoice: 25,
                     newImage: -1,
                     remove: false,
-                    key: "0"
+                    key: "0",
                 },
                 {
                     label: "Give up",
@@ -1121,7 +1108,7 @@ export function createChoices(chapterSection) {
                     newImage: 1,
                     remove: false,
                     key: "0",
-                    newSection: "Evening"
+                    newSection: "Evening",
                 }
             ],
             [ //doing something else (12)
@@ -1230,7 +1217,7 @@ export function createChoices(chapterSection) {
                     newImage: 1,
                     remove: false,
                     key: "0",
-                    newSection: "Evening"
+                    newSection: "Evening",
                 }
             ]
         ];
@@ -1836,7 +1823,7 @@ export function createChoices(chapterSection) {
                 }
             ]
         ];
-    } else if (chapterSection == "Inside") {
+    } else if (chapterSection == "Inside") { //Act 2
         return [
             [ //0
                 {
@@ -1882,7 +1869,9 @@ export function createChoices(chapterSection) {
                     newImage: 12,
                     remove: false,
                     key: "0",
-                    newSection: "Ben"
+                    newSection: "Ben",
+                    sfx: "/sfx/crickets.mp3",
+                    loop: true
                 }
             ],
             [ //3
@@ -1928,7 +1917,9 @@ export function createChoices(chapterSection) {
                     newChoice: 6,
                     newImage: 10,
                     remove: false,
-                    key: "0"
+                    key: "0",
+                    sfx: "/sfx/hot tub.mp3",
+                    loop: true
                 },
                 {
                     label: "Go to the garage",
@@ -1992,7 +1983,8 @@ export function createChoices(chapterSection) {
                     newChoice: 10,
                     newImage: -1,
                     remove: false,
-                    key: "0"
+                    key: "0",
+                    song: "stop"
                 },
                 {
                     label: "Stay in the tub",
@@ -2011,7 +2003,8 @@ export function createChoices(chapterSection) {
                     newImage: 9,
                     remove: false,
                     key: "0",
-                    song: "/sfx/movie.mp3"
+                    sfx: "/sfx/movie.mp3",
+                    loop: true
                 }
             ],
             [ //11 (goes into the garage sequence)
@@ -2046,12 +2039,13 @@ export function createChoices(chapterSection) {
             ],
             [ //14
                 {
-                    label: "Continue",
+                    label: "Get out",
                     newScene: 20,
                     newChoice: 15,
                     newImage: 9,
                     remove: false,
-                    key: "0"
+                    key: "0",
+                    song: "stop"
                 }
             ],
             [ //15 (end of hot tub sequence) end transition of bed, tub and garage sequences
@@ -2138,7 +2132,8 @@ export function createChoices(chapterSection) {
                     newImage: -1,
                     remove: false,
                     key: "0",
-                    song: "/sfx/movie.mp3"
+                    sfx: "/sfx/movie.mp3",
+                    loop: true
                 }
             ],
             [ //22
@@ -2425,7 +2420,8 @@ export function createChoices(chapterSection) {
                     newImage: -1,
                     remove: false,
                     key: "0",
-                    song: "/sfx/movie.mp3"
+                    sfx: "/sfx/movie.mp3",
+                    loop: true
                 }
             ],
             [ //44
@@ -2518,7 +2514,8 @@ export function createChoices(chapterSection) {
                     newChoice: 47,
                     newImage: 9,
                     remove: false,
-                    key: "0"
+                    key: "0",
+                    sfx: "/sfx/door banging.mp3"
                 }
             ]
         ]
@@ -2564,7 +2561,7 @@ export function createChoices(chapterSection) {
             ],
             [ //3
                 {
-                    label: "\"What is \'you?\'\"",
+                    label: "\"What would align with 'you?'\"",
                     newScene: 6,
                     newChoice: 4,
                     newImage: -1,
@@ -2741,7 +2738,8 @@ export function createChoices(chapterSection) {
                     newChoice: 14,
                     newImage: 9,
                     remove: false,
-                    key: "0"
+                    key: "0",
+                    song: "stop"
                 }
             ],
             [ //14 (end of going back to cabin sequence)
@@ -2846,7 +2844,8 @@ export function createChoices(chapterSection) {
                     newChoice: 13,
                     newImage: 9,
                     remove: false,
-                    key: "0"
+                    key: "0",
+                    song: "stop"
                 },
             ],
             [ //22
@@ -2876,7 +2875,9 @@ export function createChoices(chapterSection) {
                     newChoice: 25,
                     newImage: 14,
                     remove: false,
-                    key: "0"
+                    key: "0",
+                    sfx: "/sfx/fluorescent lights.mp3",
+                    loop: true
                 }
             ],
             [ //25
@@ -2964,7 +2965,9 @@ export function createChoices(chapterSection) {
                     newChoice: 32,
                     newImage: 13,
                     remove: false,
-                    key: "0"
+                    key: "0",
+                    sfx: "/sfx/crickets.mp3",
+                    loop: true
                 },
                 {
                     label: "Stay in the bathroom",
@@ -2992,7 +2995,8 @@ export function createChoices(chapterSection) {
                     newChoice: 34,
                     newImage: 15,
                     remove: false,
-                    key: "0"
+                    key: "0",
+                    song: "stop"
                 }
             ],
             [ //34
@@ -4244,13 +4248,15 @@ export function createChoices(chapterSection) {
                     key: "0"
                 }
             ],
-            [
+            [ //83
                 {
-                    label: "",
-
+                    label: "Continue",
+                    newScene: 0,
+                    newChoice: 0,
                     newImage: -1,
                     remove: false,
-                    key: "0"
+                    key: "0",
+                    newSection: "After",
                 }
             ]
         ]
@@ -4615,7 +4621,7 @@ export function createChoices(chapterSection) {
                     newImage: 12,
                     remove: false,
                     key: "0",
-                    sfx: "door banging.mp3",
+                    sfx: "/sfx/door banging.mp3",
                     loop: false
                 }
             ],
@@ -4675,6 +4681,1202 @@ export function createChoices(chapterSection) {
                 }
             ]
         ]
+    } else if (chapterSection == "After") { //Act 3
+        return [
+            [ //0
+                {
+                    label: "Continue",
+                    newScene: 1,
+                    newChoice: 1,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //1
+                {
+                    label: "Continue",
+                    newScene: 2,
+                    newChoice: 2,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //2
+                {
+                    label: "Continue",
+                    newScene: 6,
+                    newChoice: 3,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //3
+                {
+                    label: "...",
+                    newScene: 8,
+                    newChoice: 25,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //4
+                {
+                    label: "Continue",
+                    newScene: 10,
+                    newChoice: 5,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //5
+                {
+                    label: "Help calm Pepper as she calls 911",
+                    newScene: 11,
+                    newChoice: 6,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "Call someone else for help",
+                    newScene: 21,
+                    newChoice: 12,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //6 (help Pepper call 911)
+                {
+                    label: "Continue",
+                    newScene: 12,
+                    newChoice: 26,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //7 (check out the blood trail)
+                {
+                    label: "Look in the pantry",
+                    newScene: 15,
+                    newChoice: 8,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //8
+                {
+                    label: "Look",
+                    newScene: 16,
+                    newChoice: 9,
+                    newImage: 24,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //9
+                {
+                    label: "Grab phone",
+                    newScene: 17,
+                    newChoice: 10,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //10
+                {
+                    label: "Leave the pantry",
+                    newScene: 18,
+                    newChoice: 11,
+                    newImage: 9,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //11
+                {
+                    label: "Continue",
+                    newScene: 20,
+                    newChoice: 5,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //12 (call someone)
+                {
+                    label: "\"I'm scared\"",
+                    newScene: 22,
+                    newChoice: 13,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "\"We need help\"",
+                    newScene: 23,
+                    newChoice: 13,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                }
+            ],
+            [ //13
+                {
+                    label: "Explain",
+                    newScene: 24,
+                    newChoice: 14,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //14
+                {
+                    label: "Explain",
+                    newScene: 26,
+                    newChoice: 16,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //15
+                {
+                    label: "Explain",
+                    newScene: 28,
+                    newChoice: 16,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //16
+                {
+                    label: "Explain",
+                    newScene: 29,
+                    newChoice: 17,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //17
+                {
+                    label: "Explain",
+                    newScene: 30,
+                    newChoice: 18,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //18
+                {
+                    label: "Explain",
+                    newScene: 31,
+                    newChoice: 19,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //19
+                {
+                    label: "Explain",
+                    newScene: 32,
+                    newChoice: 20,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //20
+                {
+                    label: "Explain",
+                    newScene: 33,
+                    newChoice: 21,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //21
+                {
+                    label: "...",
+                    newScene: 34,
+                    newChoice: 22,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //22
+                {
+                    label: "...",
+                    newScene: 35,
+                    newChoice: 23,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //23
+                {
+                    label: "\"No don't!\"",
+                    newScene: 36,
+                    newChoice: 24,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                },
+                {
+                    label: "\"Thank you so much\"",
+                    newScene: 37,
+                    newChoice: 24,
+                    newImage: -1,
+                    remove: false,
+                    key: "1"
+                },
+                {
+                    label: "\"I love you\"",
+                    newScene: 38,
+                    newChoice: 24,
+                    newImage: -1,
+                    remove: false,
+                    key: "2"
+                }
+            ],
+            [ //24
+                {
+                    label: "Continue",
+                    newScene: 39,
+                    newChoice: 26,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //25
+                {
+                    label: "Follow her",
+                    newScene: 14,
+                    newChoice: 7,
+                    newImage: -1,
+                    remove: false,
+                    key: "0"
+                }
+            ],
+            [ //26 (service lost)
+                {
+                    label: "Continue",
+                    newScene: 40,
+                    newChoice: 27,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //27
+                {
+                    label: "Continue",
+                    newScene: 43,
+                    newChoice: 28,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //28
+                {
+                    label: "\"We wait\"",
+                    newScene: 44,
+                    newChoice: 29,
+                    newImage: -1,
+                    key: "0"
+                },
+                {
+                    label: "\"Survive\"",
+                    newScene: 46,
+                    newChoice: 29,
+                    newImage: -1,
+                    key: "1"
+                },
+                {
+                    label: "\"...\"",
+                    newScene: 47,
+                    newChoice: 29,
+                    newImage: -1,
+                    key: "2"
+                }
+            ],
+            [ //29
+                {
+                    label: "Continue",
+                    newScene: 48,
+                    newChoice: 30,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //30
+                {
+                    label: "Continue",
+                    newScene: 52,
+                    newChoice: 31,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //31
+                {
+                    label: "...",
+                    newScene: 54,
+                    newChoice: 32,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //32
+                {
+                    label: "Help!",
+                    newScene: 55,
+                    newChoice: 33,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //33
+                {
+                    label: "Help!",
+                    newScene: 56,
+                    newChoice: 34,
+                    newImage: 22, //very creepy distorted image
+                    key: "0"
+                }
+            ],
+            [ //34
+                {
+                    label: "Help me!",
+                    newScene: 57,
+                    newChoice: 35,
+                    newImage: 9,
+                    key: "0"
+                }
+            ],
+            [ //35
+                {
+                    label: "...",
+                    newScene: 58,
+                    newChoice: 36,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //36
+                {
+                    label: "...",
+                    newScene: 59,
+                    newChoice: 37,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //37
+                {
+                    label: "Pick it up",
+                    newScene: 61,
+                    newChoice: 38,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //38
+                {
+                    label: "Go upstairs",
+                    newScene: 62,
+                    newChoice: 39,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //39
+                {
+                    label: "Continue",
+                    newScene: 66,
+                    newChoice: 40,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //40
+                {
+                    label: "Check on Pepper",
+                    newScene: 67,
+                    newChoice: 41,
+                    newImage: -1,
+                    remove: true,
+                    key: "0"
+                },
+                {
+                    label: "Go into the bunkbed room",
+                    newScene: 73,
+                    newChoice: 47,
+                    newImage: 18,
+                    key: "1"
+                },
+                {
+                    label: "Go to your room",
+                    newScene: 68,
+                    newChoice: 42,
+                    newImage: -1,
+                    key: "2"
+                }
+            ],
+            [ //41 (check on Pepper)
+                {
+                    label: "Walk away",
+                    newScene: 66,
+                    newChoice: 40,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //42 (go to your room)
+                {
+                    label: "Enter your room",
+                    newScene: 69,
+                    newChoice: 43,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //43
+                {
+                    label: "Continue",
+                    newScene: 70,
+                    newChoice: 44,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //44
+                {
+                    label: "Continue",
+                    newScene: 71,
+                    newChoice: 45,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //45
+                {
+                    label: "...",
+                    newScene: 72,
+                    newChoice: 46,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //46
+                {
+                    label: "...",
+                    newScene: 34,  
+                    newChoice: 71,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //47 (go to bunkbed room)
+                {
+                    label: "Continue",
+                    newScene: 74,
+                    newChoice: 48,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //48
+                {
+                    label: "Read the notebook",
+                    newScene: 77,
+                    newChoice: 51,
+                    newImage: -1,
+                    key: "0"
+                },
+                {
+                    label: "Don't read the notebook",
+                    newScene: 75,
+                    newChoice: 49,
+                    newImage: -1,
+                    key: "1"
+                }
+            ],
+            [ //49 (don't read it)
+                {
+                    label: "Continue",
+                    newScene: 76,
+                    newChoice: 50,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //50
+                { 
+                    label: "...",
+                    newScene: 34,  
+                    newChoice: 71,
+                    newImage: -1,
+                    key: "0",
+                    sfx: "/sfx/sirens.mp3",
+                    loop: true
+                }
+            ],
+            [ //51 (read it)
+                {
+                    label: "Continue",
+                    newScene: 78,
+                    newChoice: 52,
+                    newImage: -1,
+                    key: "0",
+                }
+            ],
+            [ //52
+                {
+                    label: "Read",
+                    newScene: 80,
+                    newChoice: 53,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //53
+                {
+                    label: "\"...\"",
+                    newScene: 81,
+                    newChoice: 54,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //54
+                {
+                    label: "Read",
+                    newScene: 82,
+                    newChoice: 55,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //55
+                {
+                    label: "\"...\"",
+                    newScene: 83,
+                    newChoice: 56,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //56
+                {
+                    label: "Read",
+                    newScene: 84,
+                    newChoice: 57,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //57
+                {
+                    label: "\"...\"",
+                    newScene: 85,
+                    newChoice: 58,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //58
+                {
+                    label: "Read",
+                    newScene: 86,
+                    newChoice: 59,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //59
+                {
+                    label: "\"...\"",
+                    newScene: 87,
+                    newChoice: 60,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //60
+                {
+                    label: "Read",
+                    newScene: 88,
+                    newChoice: 61,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //61
+                {
+                    label: "\"...\"",
+                    newScene: 89,
+                    newChoice: 62,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //62 (can be changed to Pepper entering)
+                {
+                    label: "Continue",
+                    newScene: 90,
+                    newChoice: 63,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //63 
+                {
+                    label: "\"...\"",
+                    newScene: 34,  
+                    newChoice: 71,
+                    newImage: -1,
+                    key: "0",
+                    song: "stop",
+                    sfx: "/sfx/sirens.mp3",
+                    loop: true
+                }
+            ],
+            [ //64
+                {
+                    label: "Continue",
+                    newScene: 109,
+                    newChoice: 65,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //65
+                {
+                    label: "Continue",
+                    newScene: 110,
+                    newChoice: 66,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //66 (can be changed to Ben explaining his problems)
+                {
+                    label: "Continue",
+                    newScene: 34,  
+                    newChoice: 71,
+                    newImage: -1,
+                    key: "0",
+                    song: "stop",
+                    sfx: "/sfx/sirens.mp3",
+                    loop: true
+                }
+            ],
+            [ //67
+                {
+                    label: "\"...\"",
+                    newScene: 112,
+                    newChoice: 68,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //68
+                {
+                    label: "\"...\"",
+                    newScene: 114,
+                    newChoice: 69,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //69
+                {
+                    label: "\"...\"",
+                    newScene: 115,
+                    newChoice: 70,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //70
+                {
+                    label: "\"...\"",
+                    newScene: 116,
+                    newChoice: 63,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //71 (police arrive)
+                {
+                    label: "...",
+                    newScene: 118,
+                    newChoice: 72,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //72
+                {
+                    label: "Continue",
+                    newScene: 119,
+                    newChoice: 73,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //73
+                {
+                    label: "Continue",
+                    newScene: 120,
+                    newChoice: 74,
+                    newImage: -1,
+                    key: "0",
+                    song: "stop",
+                    sfx: "/sfx/sirens.mp3",
+                    loop: true
+                }
+            ],
+            [ //74
+                {
+                    label: "Look",
+                    newScene: 121,
+                    newChoice: 75,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //75
+                {
+                    label: "Continue",
+                    newScene: 122,
+                    newChoice: 76,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //76
+                {
+                    label: "Continue",
+                    newScene: 126,
+                    newChoice: 77,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //77 (disaster)
+                {
+                    label: "\"...\"",
+                    newScene: 34,
+                    newChoice: 78,
+                    newImage: -1,
+                    key: "0",
+                    sfx: "/sfx/police disaster.mp3",
+                    loop: false
+                }
+            ],
+            [ //78
+                {
+                    label: "\"...\"",
+                    newScene: 127,
+                    newChoice: 79,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //79
+                {
+                    label: "\"...\"",
+                    newScene: 128,
+                    newChoice: 80,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //80
+                {
+                    label: "\"...\"",
+                    newScene: 129,
+                    newChoice: 81,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //81
+                {
+                    label: "\"...\"",
+                    newScene: 34,
+                    newChoice: 82,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //82
+                {
+                    label: "\"...\"",
+                    newScene: 130,
+                    newChoice: 83,
+                    newImage: -1,
+                    key: "0",
+                    sfx: "/sfx/sirens.mp3",
+                    loop: true
+                }
+            ],
+            [ //83
+                {
+                    label: "\"...\"",
+                    newScene: 131,
+                    newChoice: 84,
+                    newImage: -1,
+                    key: "0",
+                    sfx: "/sfx/police disaster2.mp3",
+                    loop: false
+                }
+            ],
+            [ //84
+                {
+                    label: "\"...\"",
+                    newScene: 132,
+                    newChoice: 85,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //85
+                {
+                    label: "\"...\"",
+                    newScene: 134,
+                    newChoice: 86,
+                    newImage: 25,
+                    key: "0"
+                }
+            ],
+            [ //86
+                {
+                    label: "\"...\"",
+                    newScene: 135,
+                    newChoice: 87,
+                    newImage: 18,
+                    key: "0"
+                }
+            ],
+            [ //87
+                {
+                    label: "\"...\"",
+                    newScene: 136,
+                    newChoice: 88,
+                    newImage: 9,
+                    key: "0"
+                }
+            ],
+            [ //88
+                {
+                    label: "\"What are you doing\"",
+                    newScene: 137,
+                    newChoice: 89,
+                    newImage: -1,
+                    key: "0"
+                },
+                {
+                    label: "\"Alicia stop!\"",
+                    newScene: 138,
+                    newChoice: 89,
+                    newImage: -1,
+                    key: "1"
+                },
+                {
+                    label: "\"...\"",
+                    newScene: 139,
+                    newChoice: 89,
+                    newImage: -1,
+                    key: "2"
+                }
+            ],
+            [ //89
+                {
+                    label: "Continue",
+                    newScene: 145,
+                    newChoice: 90,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ ///90
+                {
+                    label: "Continue",
+                    newScene: 146,
+                    newChoice: 91,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //91
+                {
+                    label: "\"Sayori's right\"",
+                    newScene: 147,
+                    newChoice: 92,
+                    newImage: -1,
+                    key: "0"
+                },
+                {
+                    label: "\"It's safe in here\"",
+                    newScene: 148,
+                    newChoice: 92,
+                    newImage: -1,
+                    key: "1"
+                },
+                {
+                    label: "\"They may already be dead\"",
+                    newScene: 149,
+                    newChoice: 92,
+                    newImage: -1,
+                    key: "2"
+                },
+                {
+                    label: "\"...\"",
+                    newScene: 147,
+                    newChoice: 92,
+                    newImage: -1,
+                    key: "3"
+                }
+            ],
+            [ //92
+                {
+                    label: "\"...\"",
+                    newScene: 150,
+                    newChoice: 93,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //93
+                {
+                    label: "\"...\"",
+                    newScene: 153,
+                    newChoice: 94,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //94
+                {
+                    label: "Go with them",
+                    newScene: 186,
+                    newChoice: 104,
+                    newImage: -1,
+                    key: "0"
+                },
+                {
+                    label: "Stay behind",
+                    newScene: 154,
+                    newChoice: 95,
+                    newImage: -1,
+                    key: "1"
+                }
+            ],
+            [ //95 (stay behind)
+                {
+                    label: "\"...\"",
+                    newScene: 155,
+                    newChoice: 96,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //96
+                {
+                    label: "\"...\"",
+                    newScene: 156,
+                    newChoice: 97,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //97
+                {
+                    label: "\"...\"",
+                    newScene: 157,
+                    newChoice: 98,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //98
+                {
+                    label: "\"...\"",
+                    newScene: 158,
+                    newChoice: 99,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //99
+                {
+                    label: "",
+
+
+                    newImage: -1,
+                    key: "0",
+                    newSection: "Stay"
+                }
+            ],
+            [ //100 (if Ben did confess his problems)
+                {
+                    label: "\"...\"",
+                    newScene: 180,
+                    newChoice: 101,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //101
+                {
+                    label: "\"Stay safe and good luck\"",
+                    newScene: 182,
+                    newChoice: 102,
+                    newImage: -1,
+                    key: "0"
+                },
+                {
+                    label: "\"May we meet again\"",
+                    newScene: 183,
+                    newChoice: 102,
+                    newImage: -1,
+                    key: "1"
+                },
+                {
+                    label: "\"...\"",
+                    newScene: 184,
+                    newChoice: 103,
+                    newImage: -1,
+                    key: "2"
+                }
+            ],
+            [ //102
+                {
+                    label: "\"...\"",
+                    newScene: 184,
+                    newChoice: 103,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //103
+                {
+                    label: "",
+
+
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //104 (go with them)
+                {
+                    label: "\"I have to, for our friends\"",
+                    newScene: 187,
+                    newChoice: 95,
+                    newImage: -1,
+                    key: "0"
+                },
+                {
+                    label: "\"I don't care\"",
+                    newScene: 188,
+                    newChoice: 95,
+                    newImage: -1,
+                    key: "1"
+                },
+                {
+                    label: "\"Come with us. You'll be safe together\"",
+                    newScene: 190,
+                    newChoice: 95,
+                    newImage: -1,
+                    key: "2"
+                },
+                {
+                    label: "\"...\"",
+                    newScene: 191,
+                    newChoice: 95,
+                    newImage: -1,
+                    key: "3"
+                }
+            ],
+            [ //105
+                {
+                    label: "\"...\"",
+                    newScene: 192,
+                    newChoice: 106,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //106
+                {
+                    label: "Try to convince Pepper to come",
+
+                    newImage: -1,
+                    key: "0",
+                    newSection: "Convince"
+                },
+                {
+                    label: "Leave",
+
+                    newImage: 12,
+                    key: "1",
+                    newSection: "Search"
+                }
+            ],
+            [ //107 (if Ben confessed his problems)
+                {
+                    label: "Continue",
+                    newScene: 198,
+                    newChoice: 108,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //108
+                {
+                    label: "Continue",
+                    newScene: 153,
+                    newChoice: 108,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //108
+                {
+                    label: "Try to convince Pepper to come",
+
+                    newImage: -1,
+                    key: "0",
+                    newSection: "Convince"
+                },
+                {
+                    label: "Leave",
+
+                    newImage: 12,
+                    key: "1",
+                    newSection: "Search"
+                }
+            ],
+        ];
     } else {
         return[];
     }
