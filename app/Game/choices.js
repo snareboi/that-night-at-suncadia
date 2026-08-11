@@ -69,6 +69,13 @@ export function createChoices(chapterSection) {
                     newImage: 3,
                     remove: true,
                     key: "3"
+                },
+                {
+                    label: "Stop exploring and settle in",
+                    newScene: 40,
+                    newChoice: 31,
+                    newImage: -1,
+                    key: "4"
                 }
             ],
 
@@ -95,7 +102,6 @@ export function createChoices(chapterSection) {
                     newScene: 4,
                     newChoice: 3,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -149,7 +155,7 @@ export function createChoices(chapterSection) {
             ],
             [ //9
                 {
-                    label: "Continue",
+                    label: "Leave",
                     newScene: 4,
                     newChoice: 3,
                     newImage: -1,
@@ -164,7 +170,6 @@ export function createChoices(chapterSection) {
                     newScene: 15,
                     newChoice: 11,
                     newImage: 2,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -174,7 +179,6 @@ export function createChoices(chapterSection) {
                     newScene: 16,
                     newChoice: 12,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -182,7 +186,6 @@ export function createChoices(chapterSection) {
                     newScene: 19,
                     newChoice: 13,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -192,7 +195,6 @@ export function createChoices(chapterSection) {
                     newScene: 17,
                     newChoice: 13,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -200,7 +202,6 @@ export function createChoices(chapterSection) {
                     newScene: 18,
                     newChoice: 13,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 },
                 {
@@ -208,17 +209,15 @@ export function createChoices(chapterSection) {
                     newScene: 4,
                     newChoice: 3,
                     newImage: 1,
-                    remove: false,
                     key: "2"
                 }
             ],
             [ //13
                 {
-                    label: "Continue",
+                    label: "Leave",
                     newScene: 4,
                     newChoice: 3,
                     newImage: 1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -230,7 +229,6 @@ export function createChoices(chapterSection) {
                     newScene: 21,
                     newChoice: 15,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -240,7 +238,6 @@ export function createChoices(chapterSection) {
                     newScene: 4,
                     newChoice: 3,
                     newImage: 1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -266,7 +263,6 @@ export function createChoices(chapterSection) {
                     newScene: 21,
                     newChoice: 15,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -274,7 +270,6 @@ export function createChoices(chapterSection) {
                     newScene: 31,
                     newChoice: 24,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -286,7 +281,6 @@ export function createChoices(chapterSection) {
                     newScene: 24,
                     newChoice: 18,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -294,7 +288,6 @@ export function createChoices(chapterSection) {
                     newScene: 21,
                     newChoice: 15,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -304,7 +297,6 @@ export function createChoices(chapterSection) {
                     newScene: 25,
                     newChoice: 19,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -312,7 +304,6 @@ export function createChoices(chapterSection) {
                     newScene: 21,
                     newChoice: 15,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -322,7 +313,6 @@ export function createChoices(chapterSection) {
                     newScene: 26,
                     newChoice: 20,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }, 
                 {
@@ -330,7 +320,6 @@ export function createChoices(chapterSection) {
                     newScene: 21,
                     newChoice: 15,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -341,7 +330,6 @@ export function createChoices(chapterSection) {
                     newScene: 21,
                     newChoice: 15,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -351,7 +339,6 @@ export function createChoices(chapterSection) {
                     newScene: 28, 
                     newChoice: 22,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -359,7 +346,6 @@ export function createChoices(chapterSection) {
                     newScene: 29,
                     newChoice: 22, 
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -369,17 +355,15 @@ export function createChoices(chapterSection) {
                     newScene: 30,
                     newChoice: 23,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
             [ //23
                 {
-                    label: "Continue",
+                    label: "Leave",
                     newScene: 4,
                     newChoice: 3,
                     newImage: 1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -391,15 +375,15 @@ export function createChoices(chapterSection) {
                     newScene: 32,
                     newChoice: 25,
                     newImage: -1,
-                    remove: false,
                     key: "0",
+                    condition: 0,
+                    type: "boolean"
                 },
                 {
                     label: "Give up",
                     newScene: 33,
                     newChoice: 25,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -409,7 +393,6 @@ export function createChoices(chapterSection) {
                     newScene: 21,
                     newChoice: 15,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -421,7 +404,6 @@ export function createChoices(chapterSection) {
                     newScene: 35,
                     newChoice: 27,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -429,7 +411,6 @@ export function createChoices(chapterSection) {
                     newScene: 4,
                     newChoice: 3,
                     newImage: 1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -439,7 +420,6 @@ export function createChoices(chapterSection) {
                     newScene: 36,
                     newChoice: 28,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -447,7 +427,6 @@ export function createChoices(chapterSection) {
                     newScene: 38,
                     newChoice: 29,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 },
                 {
@@ -455,7 +434,6 @@ export function createChoices(chapterSection) {
                     newScene: 37,
                     newChoice: 29,
                     newImage: -1,
-                    remove: false,
                     key: "2"
                 }
             ],
@@ -465,7 +443,6 @@ export function createChoices(chapterSection) {
                     newScene: 38,
                     newChoice: 29,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
             ],
@@ -475,7 +452,6 @@ export function createChoices(chapterSection) {
                     newScene: 39,
                     newChoice: 30,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
             ],
@@ -485,42 +461,38 @@ export function createChoices(chapterSection) {
                     newScene: 4,
                     newChoice: 3,
                     newImage: 1,
-                    remove: false,
                     key: "0"
                 }
             ],
 
             //back porch sequence
-            [
+            [ //31
                 {
                     label: "Continue",
                     newScene: 41,
                     newChoice: 32,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
-            [
+            [ //32
                 {
                     label: "Leave",
-                    newScene: 4,
-                    newChoice: 3,
+                    newScene: 42,
+                    newChoice: 33,
                     newImage: 1,
-                    remove: false,
                     key: "0"
                 }
             ],
 
 
             //Leaving for activity (33)
-            [
+            [ //33
                 {
                     label: "Continue",
                     newScene: 43,
                     newChoice: 34,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -530,7 +502,6 @@ export function createChoices(chapterSection) {
                     newScene: 44,
                     newChoice: 37,
                     newImage: -1,
-                    remove: false,
                     key: "0"
 
                 },
@@ -539,7 +510,6 @@ export function createChoices(chapterSection) {
                     newScene: 49,
                     newChoice: 38,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 },
                 {
@@ -547,15 +517,15 @@ export function createChoices(chapterSection) {
                     newScene: 50,
                     newChoice: 38,
                     newImage: -1,
-                    remove: false,
-                    key: "2"
+                    key: "2",
+                    condition: 4,
+                    type: "boolean"
                 },
                 {
                     label: "Read book",
                     newScene: 51,
                     newChoice: 38,
                     newImage: -1,
-                    remove: false,
                     key: "3"
                 }
             ],
@@ -565,7 +535,6 @@ export function createChoices(chapterSection) {
                     newScene: 45,
                     newChoice: 36,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -575,7 +544,6 @@ export function createChoices(chapterSection) {
                     newScene: 46,
                     newChoice: 38,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -583,7 +551,6 @@ export function createChoices(chapterSection) {
                     newScene: 47,
                     newChoice: 38,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -593,7 +560,6 @@ export function createChoices(chapterSection) {
                     newScene: 48,
                     newChoice: 38,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -603,7 +569,6 @@ export function createChoices(chapterSection) {
                     newScene: 52,
                     newChoice: 39,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -613,7 +578,6 @@ export function createChoices(chapterSection) {
                     newScene: 53,
                     newChoice: 40,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -623,7 +587,6 @@ export function createChoices(chapterSection) {
                     newScene: 0,
                     newChoice: 0,
                     newImage: 5,
-                    remove: false,
                     key: "0",
                     newSection: "Park",
                 },
@@ -632,7 +595,6 @@ export function createChoices(chapterSection) {
                     newScene: 0,
                     newChoice: 0,
                     newImage: -1,
-                    remove: false,
                     key: "1",
                     newSection: "Cabin",
                 },
@@ -641,9 +603,11 @@ export function createChoices(chapterSection) {
                     newScene: 0,
                     newChoice: 0,
                     newImage: 8,
-                    remove: false,
                     key: "2",
                     newSection: "Tub",
+                    condition: 6,
+                    type: "multipleChoice",
+                    num: 4
                 }
             ]
         ];
@@ -655,7 +619,6 @@ export function createChoices(chapterSection) {
                     newScene: 2,
                     newChoice: 2,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -663,7 +626,6 @@ export function createChoices(chapterSection) {
                     newScene: 1,
                     newChoice: 1,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 },
                 {
@@ -671,7 +633,6 @@ export function createChoices(chapterSection) {
                     newScene: 7,
                     newChoice: 1,
                     newImage: -1,
-                    remove: false,
                     key: "2"
                 }
             ],
@@ -681,7 +642,6 @@ export function createChoices(chapterSection) {
                     newScene: 8,
                     newChoice: 3,
                     newImage: 6,
-                    remove: false,
                     key: "0"
                 },
             ],
@@ -691,7 +651,6 @@ export function createChoices(chapterSection) {
                     newScene: 3,
                     newChoice: 1,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -699,7 +658,6 @@ export function createChoices(chapterSection) {
                     newScene: 4,
                     newChoice: 1,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 },
                 {
@@ -707,7 +665,6 @@ export function createChoices(chapterSection) {
                     newScene: 5,
                     newChoice: 1,
                     newImage: -1,
-                    remove: false,
                     key: "2"
                 }
             ],
@@ -717,7 +674,6 @@ export function createChoices(chapterSection) {
                     newScene: 9,
                     newChoice: 4,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -725,7 +681,6 @@ export function createChoices(chapterSection) {
                     newScene: 12,
                     newChoice: 6,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 },
                 {
@@ -733,7 +688,6 @@ export function createChoices(chapterSection) {
                     newScene: 15,
                     newChoice: 8,
                     newImage: -1,
-                    remove: false,
                     key: "2"
                 }
             ],
@@ -743,7 +697,6 @@ export function createChoices(chapterSection) {
                     newScene: 10,
                     newChoice: 5,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -753,7 +706,6 @@ export function createChoices(chapterSection) {
                     newScene: 11,
                     newChoice: 11,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -763,7 +715,6 @@ export function createChoices(chapterSection) {
                     newScene: 13,
                     newChoice: 7,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -773,7 +724,6 @@ export function createChoices(chapterSection) {
                     newScene: 14,
                     newChoice: 11,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -783,7 +733,6 @@ export function createChoices(chapterSection) {
                     newScene: 16,
                     newChoice: 10,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -793,7 +742,6 @@ export function createChoices(chapterSection) {
                     newScene: 17,
                     newChoice: 10,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -803,7 +751,6 @@ export function createChoices(chapterSection) {
                     newScene: 18,
                     newChoice: 11,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -816,7 +763,6 @@ export function createChoices(chapterSection) {
                     newScene: 19,
                     newChoice: 12,
                     newImage: 7,
-                    remove: false,
                     key: "0",
                 }
             ],
@@ -826,7 +772,6 @@ export function createChoices(chapterSection) {
                     newScene: 20,
                     newChoice: 13,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -834,7 +779,6 @@ export function createChoices(chapterSection) {
                     newScene: 21,
                     newChoice: 13,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -844,7 +788,6 @@ export function createChoices(chapterSection) {
                     newScene: 22,
                     newChoice: 14,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -854,7 +797,6 @@ export function createChoices(chapterSection) {
                     newScene: 23,
                     newChoice: 15,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -862,16 +804,20 @@ export function createChoices(chapterSection) {
                     newScene: 24,
                     newChoice: 15,
                     newImage: -1,
-                    remove: false,
-                    key: "1"
+                    key: "1",
+                    condition: 1,
+                    type: "multipleChoice",
+                    num: 2
                 },
                 {
                     label: "\"What about Poker\"",
                     newScene: 25,
                     newChoice: 15,
                     newImage: -1,
-                    remove: false,
-                    key: "2"
+                    key: "2",
+                    condition: 1,
+                    type: "multipleChoice",
+                    num: 3
                 }
             ],
             [
@@ -880,7 +826,6 @@ export function createChoices(chapterSection) {
                     newScene: 26,
                     newChoice: 16,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                 }
             ],
@@ -890,7 +835,6 @@ export function createChoices(chapterSection) {
                     newScene: 0,
                     newChoice: 0,
                     newImage: 1,
-                    remove: false,
                     key: "0",
                     newSection: "Evening"
                 }
@@ -904,16 +848,20 @@ export function createChoices(chapterSection) {
                     newScene: 1,
                     newChoice: 1,
                     newImage: -1,
-                    remove: false,
-                    key: "0"
+                    key: "0",
+                    condition: 6,
+                    type: "multipleChoice",
+                    num: 1
                 },
                 {
                     label: "Do something else",
                     newScene: 25,
                     newChoice: 12,
                     newImage: -1,
-                    remove: false,
-                    key: "1"
+                    key: "1",
+                    condition: 6,
+                    type: "multipleChoice",
+                    num: 3
                 }
             ],
             [ //1
@@ -922,7 +870,6 @@ export function createChoices(chapterSection) {
                     newScene: 2,
                     newChoice: 2,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -930,7 +877,6 @@ export function createChoices(chapterSection) {
                     newScene: 5,
                     newChoice: 3,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 },
                 {
@@ -938,7 +884,6 @@ export function createChoices(chapterSection) {
                     newScene: 9,
                     newChoice: 5,
                     newImage: -1,
-                    remove: false,
                     key: "2"
                 },
                 "" //
@@ -950,7 +895,6 @@ export function createChoices(chapterSection) {
                     newScene: 3,
                     newChoice: 5,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -958,7 +902,6 @@ export function createChoices(chapterSection) {
                     newScene: 4,
                     newChoice: 5,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -968,7 +911,6 @@ export function createChoices(chapterSection) {
                     newScene: 6,
                     newChoice: 4,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -976,8 +918,9 @@ export function createChoices(chapterSection) {
                     newScene: 8,
                     newChoice: 5,
                     newImage: -1,
-                    remove: false,
-                    key: "1"
+                    key: "1",
+                    condition: 3,
+                    type: "boolean"                    
                 }
             ],
             [ //4
@@ -986,16 +929,18 @@ export function createChoices(chapterSection) {
                     newScene: 7,
                     newChoice: 5,
                     newImage: -1,
-                    remove: false,
-                    key: "0"
+                    key: "0",
+                    condition: 3,
+                    type: "boolean"
                 },
                 {
                     label: "Don't ask anything",
                     newScene: 8,
                     newChoice: 5,
                     newImage: -1,
-                    remove: false,
-                    key: "1"
+                    key: "1",
+                    condition: 3,
+                    type: "boolean"
                 }
             ],
             [ //end of Alicia sequence (5)
@@ -1004,7 +949,6 @@ export function createChoices(chapterSection) {
                     newScene: 11,
                     newChoice: 11,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -1015,7 +959,6 @@ export function createChoices(chapterSection) {
                     newScene: 13,
                     newChoice: 7,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -1023,7 +966,6 @@ export function createChoices(chapterSection) {
                     newScene: 17,
                     newChoice: 9,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -1033,7 +975,6 @@ export function createChoices(chapterSection) {
                     newScene: 14,
                     newChoice: 8,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -1041,7 +982,6 @@ export function createChoices(chapterSection) {
                     newScene: 15,
                     newChoice: 8,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 },
                 {
@@ -1049,7 +989,6 @@ export function createChoices(chapterSection) {
                     newScene: 16,
                     newChoice: 9,
                     newImage: -1,
-                    remove: false,
                     key: "2"
                 }
             ],
@@ -1059,7 +998,6 @@ export function createChoices(chapterSection) {
                     newScene: 18,
                     newChoice: 9,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -1069,7 +1007,6 @@ export function createChoices(chapterSection) {
                     newScene: 19,
                     newChoice: 11,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -1077,7 +1014,6 @@ export function createChoices(chapterSection) {
                     newScene: 20,
                     newChoice: 10,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 },
                 ""
@@ -1088,7 +1024,6 @@ export function createChoices(chapterSection) {
                     newScene: 21,
                     newChoice: 11,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -1096,7 +1031,6 @@ export function createChoices(chapterSection) {
                     newScene: 22,
                     newChoice: 11,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -1106,7 +1040,6 @@ export function createChoices(chapterSection) {
                     newScene: 0,
                     newChoice: 0,
                     newImage: 1,
-                    remove: false,
                     key: "0",
                     newSection: "Evening",
                 }
@@ -1125,7 +1058,6 @@ export function createChoices(chapterSection) {
                     newScene: 24,
                     newChoice: 11,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 },
                 {
@@ -1133,7 +1065,6 @@ export function createChoices(chapterSection) {
                     newScene: 26,
                     newChoice: 11,
                     newImage: -1,
-                    remove: false,
                     key: "2"
                 },
                 {
@@ -1141,7 +1072,6 @@ export function createChoices(chapterSection) {
                     newScene: 28,
                     newChoice: 11,
                     newImage: -1,
-                    remove: false,
                     key: "3"
                 }
             ],
@@ -1177,7 +1107,6 @@ export function createChoices(chapterSection) {
                     newScene: 29,
                     newChoice: 13,
                     newImage: 1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -1187,7 +1116,6 @@ export function createChoices(chapterSection) {
                     newScene: 33,
                     newChoice: 16,
                     newImage: -1,
-                    remove: false,
                     key: "0" 
                 }
             ],
@@ -1197,15 +1125,15 @@ export function createChoices(chapterSection) {
                     newScene: 35,
                     newChoice: 17,
                     newImage: -1,
-                    remove: false,
-                    key: "0"
+                    key: "0",
+                    condition: 5,
+                    type: "boolean"                    
                 },
                 {
                     label: "Leave it",
                     newScene: 34,
                     newChoice: 17,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -1215,7 +1143,6 @@ export function createChoices(chapterSection) {
                     newScene: 0,
                     newChoice: 0,
                     newImage: 1,
-                    remove: false,
                     key: "0",
                     newSection: "Evening",
                 }
@@ -1229,7 +1156,6 @@ export function createChoices(chapterSection) {
                     newScene: 1,
                     newChoice: 1,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -1237,7 +1163,6 @@ export function createChoices(chapterSection) {
                     newScene: 2,
                     newChoice: 1,
                     newImage: -1,
-                    remove: false,
                     key: "1"                
                 }
             ],
@@ -1247,7 +1172,6 @@ export function createChoices(chapterSection) {
                     newScene: 3,
                     newChoice: 2,
                     newImage: -1,
-                    remove: false,
                     key: "0"  
                 },
                 {
@@ -1255,7 +1179,6 @@ export function createChoices(chapterSection) {
                     newScene: 6,
                     newChoice: 5,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 },
             ],
@@ -1265,7 +1188,6 @@ export function createChoices(chapterSection) {
                     newScene: 4,
                     newChoice: 3,
                     newImage: -1,
-                    remove: false,
                     key: "0"  
                 }
             ],
@@ -1275,7 +1197,6 @@ export function createChoices(chapterSection) {
                     newScene: 5,
                     newChoice: 4,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -1285,7 +1206,6 @@ export function createChoices(chapterSection) {
                     newScene: 0,
                     newChoice: 0,
                     newImage: 1,
-                    remove: false,
                     key: "0",
                     newSection: "Evening"
                 }
@@ -1296,7 +1216,6 @@ export function createChoices(chapterSection) {
                     newScene: 7,
                     newChoice: 6,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -1330,7 +1249,7 @@ export function createChoices(chapterSection) {
                     newScene: 12,
                     newChoice: 9,
                     newImage: -1,
-                    remove: true,
+                    remove: false,
                     key: "3"
                 },
             ],
@@ -1340,15 +1259,15 @@ export function createChoices(chapterSection) {
                     newScene: 9,
                     newChoice: 8,
                     newImage: -1,
-                    remove: false,
-                    key: "0"
+                    key: "0",
+                    condition: 3,
+                    type: "boolean"
                 },
                 {
                     label: "Don't respond",
                     newScene: 10,
                     newChoice: 8,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -1358,7 +1277,6 @@ export function createChoices(chapterSection) {
                     newScene: 7,
                     newChoice: 6,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -1368,7 +1286,6 @@ export function createChoices(chapterSection) {
                     newScene: 4,
                     newChoice: 3,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -1378,7 +1295,6 @@ export function createChoices(chapterSection) {
                     newScene: 16,
                     newChoice: 11,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -1386,7 +1302,6 @@ export function createChoices(chapterSection) {
                     newScene: 19,
                     newChoice: 12,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -1396,7 +1311,6 @@ export function createChoices(chapterSection) {
                     newScene: 17,
                     newChoice: 12,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -1404,7 +1318,6 @@ export function createChoices(chapterSection) {
                     newScene: 18,
                     newChoice: 12,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -1414,7 +1327,6 @@ export function createChoices(chapterSection) {
                     newScene: 4,
                     newChoice: 3,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ]
@@ -1428,7 +1340,6 @@ export function createChoices(chapterSection) {
                     newScene: 1, 
                     newChoice: 1,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -1438,7 +1349,6 @@ export function createChoices(chapterSection) {
                     newScene: 1,//this changes based on what activity you did
                     newChoice: 2,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -1448,7 +1358,6 @@ export function createChoices(chapterSection) {
                     newScene: 6, //changes depending on the game played
                     newChoice: 3, //changes depending on the game played
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -1458,7 +1367,6 @@ export function createChoices(chapterSection) {
                     newScene: 7,
                     newChoice: 4,
                     newImage: 17,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -1468,7 +1376,6 @@ export function createChoices(chapterSection) {
                     newScene: 8,
                     newChoice: 5,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -1478,7 +1385,6 @@ export function createChoices(chapterSection) {
                     newScene: 43,
                     newChoice: 25,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -1488,7 +1394,6 @@ export function createChoices(chapterSection) {
                     newScene: 10,
                     newChoice: 7,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                 },
                 {
@@ -1496,7 +1401,6 @@ export function createChoices(chapterSection) {
                     newScene: 11,
                     newChoice: 8,
                     newImage: -1,
-                    remove: false,
                     key: "1",
                 }
             ],
@@ -1506,7 +1410,6 @@ export function createChoices(chapterSection) {
                     newScene: 12,
                     newChoice: 9,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                 }
             ],
@@ -1516,7 +1419,6 @@ export function createChoices(chapterSection) {
                     newScene: 13,
                     newChoice: 9,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                 }
             ],
@@ -1526,7 +1428,6 @@ export function createChoices(chapterSection) {
                     newScene: 14,
                     newChoice: 10,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                 }
             ],
@@ -1536,7 +1437,6 @@ export function createChoices(chapterSection) {
                     newScene: 43,
                     newChoice: 24,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -1546,7 +1446,6 @@ export function createChoices(chapterSection) {
                     newScene: 16,
                     newChoice: 12,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                 }
             ],
@@ -1556,7 +1455,6 @@ export function createChoices(chapterSection) {
                     newScene: 17,
                     newChoice: 13,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                 },
                 {
@@ -1564,7 +1462,6 @@ export function createChoices(chapterSection) {
                     newScene: 20,
                     newChoice: 17,
                     newImage: -1,
-                    remove: false,
                     key: "1",  
                 }
             ],
@@ -1574,7 +1471,6 @@ export function createChoices(chapterSection) {
                     newScene: 18,
                     newChoice: 14,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                 }
             ],
@@ -1584,7 +1480,6 @@ export function createChoices(chapterSection) {
                     newScene: 19,
                     newChoice: 15,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                 }
             ],
@@ -1594,7 +1489,6 @@ export function createChoices(chapterSection) {
                     newScene: 41,
                     newChoice: 16,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                 }
             ],
@@ -1604,7 +1498,6 @@ export function createChoices(chapterSection) {
                     newScene: 43,
                     newChoice: 24,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -1614,7 +1507,6 @@ export function createChoices(chapterSection) {
                     newScene: 30,
                     newChoice: 20,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                 },
                 {
@@ -1622,7 +1514,6 @@ export function createChoices(chapterSection) {
                     newScene: 22,
                     newChoice: 18,
                     newImage: -1,
-                    remove: false,
                     key: "1",
                 },
                 {
@@ -1630,7 +1521,6 @@ export function createChoices(chapterSection) {
                     newScene: 21,
                     newChoice: 14,
                     newImage: -1,
-                    remove: false,
                     key: "2",
                 }
             ],
@@ -1640,7 +1530,6 @@ export function createChoices(chapterSection) {
                     newScene: 24,
                     newChoice: 19,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                 },
                 {
@@ -1648,7 +1537,6 @@ export function createChoices(chapterSection) {
                     newScene: 25,
                     newChoice: 19,
                     newImage: -1,
-                    remove: false,
                     key: "1",
                 },
                 {
@@ -1656,7 +1544,6 @@ export function createChoices(chapterSection) {
                     newScene: 23,
                     newChoice: 15,
                     newImage: -1,
-                    remove: false,
                     key: "2",
                 }
             ],
@@ -1666,7 +1553,6 @@ export function createChoices(chapterSection) {
                     newScene: 26,
                     newChoice: 15,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                 },
                 {
@@ -1674,7 +1560,6 @@ export function createChoices(chapterSection) {
                     newScene: 27,
                     newChoice: 15,
                     newImage: -1,
-                    remove: false,
                     key: "1",
                 },
                 {
@@ -1682,7 +1567,6 @@ export function createChoices(chapterSection) {
                     newScene: 23,
                     newChoice: 15,
                     newImage: -1,
-                    remove: false,
                     key: "2",
                 },
                 {
@@ -1690,7 +1574,6 @@ export function createChoices(chapterSection) {
                     newScene: 28,
                     newChoice: 15,
                     newImage: -1,
-                    remove: false,
                     key: "3",
                 }
             ],
@@ -1700,7 +1583,6 @@ export function createChoices(chapterSection) {
                     newScene: 31,
                     newChoice: 21,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                 },
                 {
@@ -1708,7 +1590,6 @@ export function createChoices(chapterSection) {
                     newScene: 36,
                     newChoice: 22,
                     newImage: -1,
-                    remove: false,
                     key: "1",
                 },
                 {
@@ -1716,7 +1597,6 @@ export function createChoices(chapterSection) {
                     newScene: 29,
                     newChoice: 15,
                     newImage: -1,
-                    remove: false,
                     key: "2",
                 },
             ],
@@ -1726,7 +1606,6 @@ export function createChoices(chapterSection) {
                     newScene: 32,
                     newChoice: 15,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                 },
                 {
@@ -1734,7 +1613,6 @@ export function createChoices(chapterSection) {
                     newScene: 33,
                     newChoice: 15,
                     newImage: -1,
-                    remove: false,
                     key: "1",
                 },
                 {
@@ -1742,7 +1620,6 @@ export function createChoices(chapterSection) {
                     newScene: 34,
                     newChoice: 15,
                     newImage: -1,
-                    remove: false,
                     key: "2",
                 },
                 {
@@ -1750,7 +1627,6 @@ export function createChoices(chapterSection) {
                     newScene: 35,
                     newChoice: 23,
                     newImage: -1,
-                    remove: false,
                     key: "3"
                 }
             ],
@@ -1760,7 +1636,6 @@ export function createChoices(chapterSection) {
                     newScene: 37,
                     newChoice: 15,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                 },
                 {
@@ -1768,7 +1643,6 @@ export function createChoices(chapterSection) {
                     newScene: 38,
                     newChoice: 15,
                     newImage: -1,
-                    remove: false,
                     key: "1",
                 },
                 {
@@ -1776,7 +1650,6 @@ export function createChoices(chapterSection) {
                     newScene: 39,
                     newChoice: 15,
                     newImage: -1,
-                    remove: false,
                     key: "2",
                 },
                 {
@@ -1784,7 +1657,6 @@ export function createChoices(chapterSection) {
                     newScene: 40,
                     newChoice: 15,
                     newImage: -1,
-                    remove: false,
                     key: "3",
                 }
             ],
@@ -1794,7 +1666,6 @@ export function createChoices(chapterSection) {
                     newScene: 42,
                     newChoice: 16,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                 }
             ],
@@ -1804,7 +1675,6 @@ export function createChoices(chapterSection) {
                     newScene: 0,
                     newChoice: 0,
                     newImage: 9,
-                    remove: false,
                     key: "0",
                     newSection: "Inside",
                     song: "stop"
@@ -1816,7 +1686,6 @@ export function createChoices(chapterSection) {
                     newScene: 1,
                     newChoice: 0,
                     newImage: 9,
-                    remove: false,
                     key: "0",
                     newSection: "Inside",
                     song: "stop"
@@ -1831,7 +1700,6 @@ export function createChoices(chapterSection) {
                     newScene: 2,
                     newChoice: 1,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                 },
                 {
@@ -1839,7 +1707,6 @@ export function createChoices(chapterSection) {
                     newScene: 3,
                     newChoice: 1,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -1849,15 +1716,16 @@ export function createChoices(chapterSection) {
                     newScene: 4,
                     newChoice: 2,
                     newImage: -1,
-                    remove: false,
-                    key: "0"
+                    key: "0",
+                    condition: 7,
+                    type: "multipleChoice",
+                    num: 3
                 },
                 {
                     label: "Stay",
                     newScene: 5,
                     newChoice: 3,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -1867,7 +1735,6 @@ export function createChoices(chapterSection) {
                     newScene: 0,
                     newChoice: 0,
                     newImage: 12,
-                    remove: false,
                     key: "0",
                     newSection: "Ben",
                     sfx: "/sfx/crickets.mp3",
@@ -1880,7 +1747,6 @@ export function createChoices(chapterSection) {
                     newScene: 6,
                     newChoice: 4,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -1888,7 +1754,6 @@ export function createChoices(chapterSection) {
                     newScene: 7,
                     newChoice: 4,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 },
                 {
@@ -1896,7 +1761,6 @@ export function createChoices(chapterSection) {
                     newScene: 8,
                     newChoice: 4,
                     newImage: -1,
-                    remove: false,
                     key: "2"
                 }
             ],
@@ -1906,8 +1770,7 @@ export function createChoices(chapterSection) {
                     newScene: 9,
                     newChoice: 5,
                     newImage: -1,
-                    remove: false,
-                    key: "0"
+                    key: "0",
                 }
             ],
             [ //5
@@ -1916,25 +1779,29 @@ export function createChoices(chapterSection) {
                     newScene: 10,
                     newChoice: 6,
                     newImage: 10,
-                    remove: false,
                     key: "0",
                     sfx: "/sfx/hot tub.mp3",
-                    loop: true
+                    loop: true,
+                    condition: 7,
+                    type: "multipleChoice",
+                    num: 2
+                    
                 },
                 {
                     label: "Go to the garage",
                     newScene: 21,
                     newChoice: 16,
                     newImage: -1,
-                    remove: false,
-                    key: "1"
+                    key: "1",
+                    condition: 7,
+                    type: "multipleChoice",
+                    num: 1
                 },
                 {
                     label: "Go back to sleep",
                     newScene: 37,
                     newChoice: 26,
                     newImage: -1,
-                    remove: false,
                     key: "2"
                 }
             ],
@@ -1944,15 +1811,15 @@ export function createChoices(chapterSection) {
                     newScene: 11,
                     newChoice: 7,
                     newImage: -1,
-                    remove: false,
-                    key: "0"
+                    key: "0",
+                    condition: 12,
+                    type: "boolean"
                 },
                 {
                     label: "Remain indifferent",
                     newScene: 12,
                     newChoice: 7,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -1962,7 +1829,6 @@ export function createChoices(chapterSection) {
                     newScene: 13,
                     newChoice: 8,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -1972,7 +1838,6 @@ export function createChoices(chapterSection) {
                     newScene: 14,
                     newChoice: 9,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -1982,16 +1847,17 @@ export function createChoices(chapterSection) {
                     newScene: 15,
                     newChoice: 10,
                     newImage: -1,
-                    remove: false,
                     key: "0",
-                    song: "stop"
+                    sfx: "stop",
+                    condition: 7,
+                    type: "multipleChoice",
+                    num: 4
                 },
                 {
                     label: "Stay in the tub",
                     newScene: 17,
                     newChoice: 12,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -2001,7 +1867,6 @@ export function createChoices(chapterSection) {
                     newScene: 16,
                     newChoice: 11,
                     newImage: 9,
-                    remove: false,
                     key: "0",
                     sfx: "/sfx/movie.mp3",
                     loop: true
@@ -2013,7 +1878,6 @@ export function createChoices(chapterSection) {
                     newScene: 32,
                     newChoice: 23,
                     newImage: 18,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2023,7 +1887,6 @@ export function createChoices(chapterSection) {
                     newScene: 18,
                     newChoice: 13,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2033,7 +1896,6 @@ export function createChoices(chapterSection) {
                     newScene: 19,
                     newChoice: 14,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2043,9 +1905,8 @@ export function createChoices(chapterSection) {
                     newScene: 20,
                     newChoice: 15,
                     newImage: 9,
-                    remove: false,
                     key: "0",
-                    song: "stop"
+                    sfx: "stop"
                 }
             ],
             [ //15 (end of hot tub sequence) end transition of bed, tub and garage sequences
@@ -2054,7 +1915,6 @@ export function createChoices(chapterSection) {
                     newScene: 39,
                     newChoice: 28,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2064,7 +1924,6 @@ export function createChoices(chapterSection) {
                     newScene: 22,
                     newChoice: 17,
                     newImage: 11,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2074,7 +1933,6 @@ export function createChoices(chapterSection) {
                     newScene: 23,
                     newChoice: 18,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -2082,7 +1940,6 @@ export function createChoices(chapterSection) {
                     newScene: 26,
                     newChoice: 18,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -2092,7 +1949,6 @@ export function createChoices(chapterSection) {
                     newScene: 27,
                     newChoice: 19,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2102,7 +1958,6 @@ export function createChoices(chapterSection) {
                     newScene: 28,
                     newChoice: 20,
                     newImage: 18,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2112,7 +1967,6 @@ export function createChoices(chapterSection) {
                     newScene: 29,
                     newChoice: 21,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -2120,7 +1974,6 @@ export function createChoices(chapterSection) {
                     newScene: 30,
                     newChoice: 21,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -2130,7 +1983,6 @@ export function createChoices(chapterSection) {
                     newScene: 31,
                     newChoice: 22,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                     sfx: "/sfx/movie.mp3",
                     loop: true
@@ -2142,7 +1994,6 @@ export function createChoices(chapterSection) {
                     newScene: 32,
                     newChoice: 23,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2152,7 +2003,6 @@ export function createChoices(chapterSection) {
                     newScene: 33,
                     newChoice: 24,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -2160,7 +2010,6 @@ export function createChoices(chapterSection) {
                     newScene: 34,
                     newChoice: 24,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -2170,9 +2019,8 @@ export function createChoices(chapterSection) {
                     newScene: 35,
                     newChoice: 25,
                     newImage: 9,
-                    remove: false,
                     key: "0",
-                    song: "stop"
+                    sfx: "stop"
                 }
             ],
             [ //25
@@ -2181,7 +2029,6 @@ export function createChoices(chapterSection) {
                     newScene: 36,
                     newChoice: 15,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2191,7 +2038,6 @@ export function createChoices(chapterSection) {
                     newScene: 38,
                     newChoice: 27,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2201,7 +2047,6 @@ export function createChoices(chapterSection) {
                     newScene: 36,
                     newChoice: 15,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2211,7 +2056,6 @@ export function createChoices(chapterSection) {
                     newScene: 40,
                     newChoice: 29,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -2219,7 +2063,6 @@ export function createChoices(chapterSection) {
                     newScene: 41,
                     newChoice: 29,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -2229,7 +2072,6 @@ export function createChoices(chapterSection) {
                     newScene: 42,
                     newChoice: 30,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2239,7 +2081,6 @@ export function createChoices(chapterSection) {
                     newScene: 43,
                     newChoice: 31,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -2247,7 +2088,6 @@ export function createChoices(chapterSection) {
                     newScene: 44,
                     newChoice: 31,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -2257,7 +2097,6 @@ export function createChoices(chapterSection) {
                     newScene: 45,
                     newChoice: 32,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2267,16 +2106,20 @@ export function createChoices(chapterSection) {
                     newScene: 46,
                     newChoice: 33,
                     newImage: -1,
-                    remove: false,
-                    key: "0"
+                    key: "0",
+                    condition: 9,
+                    type: "multipleChoice",
+                    num: 2
                 },
                 {
                     label: "Don't give her the jacket",
                     newScene: 47,
                     newChoice: 33,
                     newImage: -1,
-                    remove: false,
-                    key: "1"
+                    key: "1",
+                    condition: 9,
+                    type: "multipleChoice",
+                    num: 1
                 }
             ],
             [ //33
@@ -2285,7 +2128,6 @@ export function createChoices(chapterSection) {
                     newScene: 50,
                     newChoice: 34,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2295,7 +2137,6 @@ export function createChoices(chapterSection) {
                     newScene: 51,
                     newChoice: 35, 
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2305,7 +2146,6 @@ export function createChoices(chapterSection) {
                     newScene: 53,
                     newChoice: 36,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -2313,7 +2153,6 @@ export function createChoices(chapterSection) {
                     newScene: 56,
                     newChoice: 36,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 },
                 {
@@ -2321,7 +2160,6 @@ export function createChoices(chapterSection) {
                     newScene: 57,
                     newChoice: 36,
                     newImage: -1,
-                    remove: false,
                     key: "2"
                 }
             ],
@@ -2331,7 +2169,6 @@ export function createChoices(chapterSection) {
                     newScene: 58,
                     newChoice: 37,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2341,7 +2178,6 @@ export function createChoices(chapterSection) {
                     newScene: 59,
                     newChoice: 38,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2351,7 +2187,6 @@ export function createChoices(chapterSection) {
                     newScene: 60,
                     newChoice: 39,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2361,15 +2196,15 @@ export function createChoices(chapterSection) {
                     newScene: 61,
                     newChoice: 40,
                     newImage: -1,
-                    remove: false,
-                    key: "0"
+                    key: "0",
+                    condition: 13,
+                    type: "boolean"
                 },
                 {
                     label: "Stay behind",
                     newScene: 63,
                     newChoice: 41,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -2379,7 +2214,6 @@ export function createChoices(chapterSection) {
                     newScene: 0,
                     newChoice: 0,
                     newImage: 12,
-                    remove: false,
                     key: "0",
                     newSection: "Lodge"
                 }
@@ -2390,7 +2224,6 @@ export function createChoices(chapterSection) {
                     newScene: 65,
                     newChoice: 42,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2400,7 +2233,6 @@ export function createChoices(chapterSection) {
                     newScene: 67,
                     newChoice: 43,
                     newImage: 18,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -2408,7 +2240,6 @@ export function createChoices(chapterSection) {
                     newScene: 73,
                     newChoice: 48,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -2418,7 +2249,6 @@ export function createChoices(chapterSection) {
                     newScene: 68,
                     newChoice: 44,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                     sfx: "/sfx/movie.mp3",
                     loop: true
@@ -2430,9 +2260,7 @@ export function createChoices(chapterSection) {
                     newScene: 72,
                     newChoice: 47,
                     newImage: -1,
-                    remove: false,
                     key: "0",
-                    song: "stop",
                     sfx: "/sfx/door banging.mp3",
                     loop: false
                 }
@@ -2443,7 +2271,6 @@ export function createChoices(chapterSection) {
                     newScene: 70,
                     newChoice: 46,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -2451,7 +2278,6 @@ export function createChoices(chapterSection) {
                     newScene: 71,
                     newChoice: 46,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 },
                 {
@@ -2459,7 +2285,6 @@ export function createChoices(chapterSection) {
                     newScene: 72,
                     newChoice: 47,
                     newImage: -1,
-                    remove: false,
                     key: "2"
                 }
             ],
@@ -2469,9 +2294,7 @@ export function createChoices(chapterSection) {
                     newScene: 72,
                     newChoice: 47,
                     newImage: -1,
-                    remove: false,
                     key: "0",
-                    song: "stop",
                     sfx: "/sfx/door banging.mp3",
                     loop: false
                 }
@@ -2482,7 +2305,6 @@ export function createChoices(chapterSection) {
                     newScene: 38,
                     newChoice: 30,
                     newImage: 9,
-                    remove: false,
                     key: "0",
                     newSection: "Panic"
                 }
@@ -2493,7 +2315,6 @@ export function createChoices(chapterSection) {
                     newScene: 74,
                     newChoice: 49,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2503,7 +2324,6 @@ export function createChoices(chapterSection) {
                     newScene: 75,
                     newChoice: 50,
                     newImage: 19,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2513,7 +2333,6 @@ export function createChoices(chapterSection) {
                     newScene: 76,
                     newChoice: 47,
                     newImage: 9,
-                    remove: false,
                     key: "0",
                     sfx: "/sfx/door banging.mp3"
                 }
@@ -2527,7 +2346,6 @@ export function createChoices(chapterSection) {
                     newScene: 1,
                     newChoice: 1,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -2535,7 +2353,6 @@ export function createChoices(chapterSection) {
                     newScene: 2,
                     newChoice: 1,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -2545,7 +2362,6 @@ export function createChoices(chapterSection) {
                     newScene: 3,
                     newChoice: 2,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2555,7 +2371,6 @@ export function createChoices(chapterSection) {
                     newScene: 5,
                     newChoice: 3,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2565,23 +2380,24 @@ export function createChoices(chapterSection) {
                     newScene: 6,
                     newChoice: 4,
                     newImage: -1,
-                    remove: false,
-                    key: "0"
+                    key: "0",
+                    condition: 2,
+                    type: "boolean"
                 },
                 {
                     label: "\"What do you mean by the 'culture?'\"",
                     newScene: 7,
                     newChoice: 4,
                     newImage: -1,
-                    remove: false,
-                    key: "1"
+                    key: "1",
+                    condition: 2,
+                    type: "boolean"
                 },
                 { //4
                     label: "\"...\"",
                     newScene: 8,
                     newChoice: 4,
                     newImage: -1,
-                    remove: false,
                     key: "2"
                 }
             ],
@@ -2591,7 +2407,6 @@ export function createChoices(chapterSection) {
                     newScene: 9,
                     newChoice: 5,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -2599,7 +2414,6 @@ export function createChoices(chapterSection) {
                     newScene: 10,
                     newChoice: 5,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 },
                 {
@@ -2607,7 +2421,6 @@ export function createChoices(chapterSection) {
                     newScene: 11,
                     newChoice: 6,
                     newImage: -1,
-                    remove: false,
                     key: "2"
                 }
             ],
@@ -2617,7 +2430,6 @@ export function createChoices(chapterSection) {
                     newScene: 12,
                     newChoice: 6,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -2625,15 +2437,15 @@ export function createChoices(chapterSection) {
                     newScene: 13,
                     newChoice: 6,
                     newImage: -1,
-                    remove: false,
-                    key: "1"
+                    key: "1",
+                    condition: 8,
+                    type: "boolean"
                 },
                 {
                     label: "\"...\"",
                     newScene: 11,
                     newChoice: 6,
                     newImage: -1,
-                    remove: false,
                     key: "2"
                 }
             ],
@@ -2643,7 +2455,6 @@ export function createChoices(chapterSection) {
                     newScene: 16,
                     newChoice: 7,
                     newImage: 13,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2653,7 +2464,6 @@ export function createChoices(chapterSection) {
                     newScene: 17,
                     newChoice: 8,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -2661,7 +2471,6 @@ export function createChoices(chapterSection) {
                     newScene: 18,
                     newChoice: 8,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -2671,7 +2480,6 @@ export function createChoices(chapterSection) {
                     newScene: 19,
                     newChoice: 9,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2681,7 +2489,6 @@ export function createChoices(chapterSection) {
                     newScene: 20,
                     newChoice: 10,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -2689,7 +2496,6 @@ export function createChoices(chapterSection) {
                     newScene: 21,
                     newChoice: 11,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -2699,7 +2505,6 @@ export function createChoices(chapterSection) {
                     newScene: 21,
                     newChoice: 11,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2709,7 +2514,6 @@ export function createChoices(chapterSection) {
                     newScene: 26,
                     newChoice: 15,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -2717,7 +2521,6 @@ export function createChoices(chapterSection) {
                     newScene: 23,
                     newChoice: 12,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -2727,7 +2530,6 @@ export function createChoices(chapterSection) {
                     newScene: 24,
                     newChoice: 13,
                     newImage: 12,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2737,9 +2539,8 @@ export function createChoices(chapterSection) {
                     newScene: 25,
                     newChoice: 14,
                     newImage: 9,
-                    remove: false,
                     key: "0",
-                    song: "stop"
+                    sfx: "stop"
                 }
             ],
             [ //14 (end of going back to cabin sequence)
@@ -2748,7 +2549,6 @@ export function createChoices(chapterSection) {
                     newScene: 39,
                     newChoice: 28,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                     newSection: "Inside"
                 }
@@ -2759,7 +2559,6 @@ export function createChoices(chapterSection) {
                     newScene: 27,
                     newChoice: 16,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2769,16 +2568,20 @@ export function createChoices(chapterSection) {
                     newScene: 28,
                     newChoice: 17,
                     newImage: -1,
-                    remove: false,
-                    key: "0"
+                    key: "0",
+                    condition: 9,
+                    type: "multipleChoice",
+                    num: 2
                 },
                 {
                     label: "Keep your jacket",
                     newScene: 29,
                     newChoice: 17,
                     newImage: -1,
-                    remove: false,
-                    key: "1"
+                    key: "1",
+                    condition: 9,
+                    type: "multipleChoice",
+                    num: 1
                 }
             ],
             [ //17
@@ -2787,7 +2590,6 @@ export function createChoices(chapterSection) {
                     newScene: 30,
                     newChoice: 18,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2797,7 +2599,6 @@ export function createChoices(chapterSection) {
                     newScene: 31,
                     newChoice: 19,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -2805,7 +2606,6 @@ export function createChoices(chapterSection) {
                     newScene: 32,
                     newChoice: 19,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -2815,7 +2615,6 @@ export function createChoices(chapterSection) {
                     newScene: 33,
                     newChoice: 20,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2825,7 +2624,6 @@ export function createChoices(chapterSection) {
                     newScene: 34,
                     newChoice: 21,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -2833,7 +2631,6 @@ export function createChoices(chapterSection) {
                     newScene: 35,
                     newChoice: 22,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -2843,9 +2640,8 @@ export function createChoices(chapterSection) {
                     newScene: 24,
                     newChoice: 13,
                     newImage: 9,
-                    remove: false,
                     key: "0",
-                    song: "stop"
+                    sfx: "stop"
                 },
             ],
             [ //22
@@ -2854,7 +2650,6 @@ export function createChoices(chapterSection) {
                     newScene: 37,
                     newChoice: 23,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2864,7 +2659,6 @@ export function createChoices(chapterSection) {
                     newScene: 38,
                     newChoice: 24,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2874,10 +2668,11 @@ export function createChoices(chapterSection) {
                     newScene: 39,
                     newChoice: 25,
                     newImage: 14,
-                    remove: false,
                     key: "0",
                     sfx: "/sfx/fluorescent lights.mp3",
-                    loop: true
+                    loop: true,
+                    condition: 15,
+                    type: "boolean"
                 }
             ],
             [ //25
@@ -2886,7 +2681,6 @@ export function createChoices(chapterSection) {
                     newScene: 40,
                     newChoice: 26,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2896,7 +2690,6 @@ export function createChoices(chapterSection) {
                     newScene: 41,
                     newChoice: 27,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -2904,7 +2697,6 @@ export function createChoices(chapterSection) {
                     newScene: 42,
                     newChoice: 27,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -2914,7 +2706,6 @@ export function createChoices(chapterSection) {
                     newScene: 43,
                     newChoice: 28,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -2922,7 +2713,6 @@ export function createChoices(chapterSection) {
                     newScene: 44,
                     newChoice: 28,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -2932,7 +2722,6 @@ export function createChoices(chapterSection) {
                     newScene: 45,
                     newChoice: 29,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2942,7 +2731,6 @@ export function createChoices(chapterSection) {
                     newScene: 46,
                     newChoice: 30,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                     sfx: "/sfx/shutdown bang.mp3",
                     loop: false
@@ -2954,7 +2742,6 @@ export function createChoices(chapterSection) {
                     newScene: 47,
                     newChoice: 31,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2964,7 +2751,6 @@ export function createChoices(chapterSection) {
                     newScene: 48,
                     newChoice: 32,
                     newImage: 13,
-                    remove: false,
                     key: "0",
                     sfx: "/sfx/crickets.mp3",
                     loop: true
@@ -2974,7 +2760,6 @@ export function createChoices(chapterSection) {
                     newScene: 65,
                     newChoice: 49,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -2984,7 +2769,6 @@ export function createChoices(chapterSection) {
                     newScene: 49,
                     newChoice: 33,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -2994,9 +2778,8 @@ export function createChoices(chapterSection) {
                     newScene: 50,
                     newChoice: 34,
                     newImage: 15,
-                    remove: false,
                     key: "0",
-                    song: "stop"
+                    sfx: "stop"
                 }
             ],
             [ //34
@@ -3005,8 +2788,9 @@ export function createChoices(chapterSection) {
                     newScene: 51,
                     newChoice: 35,
                     newImage: -1,
-                    remove: false,
-                    key: "0"
+                    key: "0",
+                    condition: 11,
+                    type: "boolean"
                 }
             ],
             [ //35
@@ -3015,7 +2799,6 @@ export function createChoices(chapterSection) {
                     newScene: 52,
                     newChoice: 36,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                 }
             ],
@@ -3025,7 +2808,6 @@ export function createChoices(chapterSection) {
                     newScene: 53,
                     newChoice: 37,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3035,7 +2817,6 @@ export function createChoices(chapterSection) {
                     newScene: 54,
                     newChoice: 38,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3045,7 +2826,6 @@ export function createChoices(chapterSection) {
                     newScene: 56,
                     newChoice: 39,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                     sfx: "/sfx/monster noises.mp3",
                     loop: true
@@ -3057,7 +2837,6 @@ export function createChoices(chapterSection) {
                     newScene: 33,
                     newChoice: 40,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3067,16 +2846,20 @@ export function createChoices(chapterSection) {
                     newScene: 57,
                     newChoice: 41,
                     newImage: -1,
-                    remove: false,
-                    key: "0"
+                    key: "0",
+                    condition: 14,
+                    type: "multipleChoice",
+                    num: 1
                 },
                 {
                     label: "Run away with Alicia",
                     newScene: 61,
                     newChoice: 45,
                     newImage: -1,
-                    remove: false,
-                    key: "1"
+                    key: "1",
+                    condition: 14,
+                    type: "multipleChoice",
+                    num: 2
                 }
             ],
             [ //41 (save Ben)
@@ -3085,7 +2868,6 @@ export function createChoices(chapterSection) {
                     newScene: 58,
                     newChoice: 42,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3095,7 +2877,6 @@ export function createChoices(chapterSection) {
                     newScene: 59,
                     newChoice: 43,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3105,7 +2886,6 @@ export function createChoices(chapterSection) {
                     newScene: 60,
                     newChoice: 44,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                     sfx: "/sfx/door banging.mp3",
                     loop: false
@@ -3117,7 +2897,6 @@ export function createChoices(chapterSection) {
                     newScene: 0,
                     newChoice: 0,
                     newImage: 9,
-                    remove: false,
                     key: "0",
                     newSection: "Panic"
                 }
@@ -3128,7 +2907,6 @@ export function createChoices(chapterSection) {
                     newScene: 62,
                     newChoice: 46,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3138,7 +2916,6 @@ export function createChoices(chapterSection) {
                     newScene: 63,
                     newChoice: 47,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3148,7 +2925,6 @@ export function createChoices(chapterSection) {
                     newScene: 64,
                     newChoice: 48,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                     sfx: "/sfx/door banging.mp3",
                     loop: false
@@ -3160,7 +2936,6 @@ export function createChoices(chapterSection) {
                     newScene: 20,
                     newChoice: 15,
                     newImage: 9,
-                    remove: false,
                     key: "0",
                     newSection: "Panic"
                 }
@@ -3171,7 +2946,6 @@ export function createChoices(chapterSection) {
                     newScene: 66,
                     newChoice: 50,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -3179,7 +2953,6 @@ export function createChoices(chapterSection) {
                     newScene: 67,
                     newChoice: 50,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -3189,7 +2962,6 @@ export function createChoices(chapterSection) {
                     newScene: 68,
                     newChoice: 51,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3199,7 +2971,6 @@ export function createChoices(chapterSection) {
                     newScene: 69,
                     newChoice: 52,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3209,7 +2980,6 @@ export function createChoices(chapterSection) {
                     newScene: 70,
                     newChoice: 53,
                     newImage: 16,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3219,7 +2989,6 @@ export function createChoices(chapterSection) {
 
                     
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ]
@@ -3232,7 +3001,6 @@ export function createChoices(chapterSection) {
                     newScene: 1,
                     newChoice: 1,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -3240,7 +3008,6 @@ export function createChoices(chapterSection) {
                     newScene: 2,
                     newChoice: 1,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -3250,7 +3017,6 @@ export function createChoices(chapterSection) {
                     newScene: 3,
                     newChoice: 2,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3260,7 +3026,6 @@ export function createChoices(chapterSection) {
                     newScene: 4,
                     newChoice: 3,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3270,7 +3035,6 @@ export function createChoices(chapterSection) {
                     newScene: 5,
                     newChoice: 4,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3280,7 +3044,6 @@ export function createChoices(chapterSection) {
                     newScene: 6,
                     newChoice: 5,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -3288,7 +3051,6 @@ export function createChoices(chapterSection) {
                     newScene: 7,
                     newChoice: 5,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 },
                 {
@@ -3296,7 +3058,6 @@ export function createChoices(chapterSection) {
                     newScene: 8,
                     newChoice: 5,
                     newImage: -1,
-                    remove: false,
                     key: "2"
                 }
             ],
@@ -3306,7 +3067,6 @@ export function createChoices(chapterSection) {
                     newScene: 9,
                     newChoice: 6,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3316,7 +3076,6 @@ export function createChoices(chapterSection) {
                     newScene: 11,
                     newChoice: 7,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3326,7 +3085,6 @@ export function createChoices(chapterSection) {
                     newScene: 12,
                     newChoice: 8,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -3334,7 +3092,6 @@ export function createChoices(chapterSection) {
                     newScene: 14,
                     newChoice: 10,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -3344,7 +3101,6 @@ export function createChoices(chapterSection) {
                     newScene: 13,
                     newChoice: 9,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3354,7 +3110,6 @@ export function createChoices(chapterSection) {
                     newScene: 60,
                     newChoice: 43,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                     sfx: "/sfx/double pound.mp3",
                     loop: true
@@ -3366,7 +3121,6 @@ export function createChoices(chapterSection) {
                     newScene: 15,
                     newChoice: 11,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3376,7 +3130,6 @@ export function createChoices(chapterSection) {
                     newScene: 16,
                     newChoice: 12,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -3384,7 +3137,6 @@ export function createChoices(chapterSection) {
                     newScene: 17,
                     newChoice: 12,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -3394,7 +3146,6 @@ export function createChoices(chapterSection) {
                     newScene: 18,
                     newChoice: 13,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3404,7 +3155,6 @@ export function createChoices(chapterSection) {
                     newScene: 19,
                     newChoice: 14,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3414,7 +3164,6 @@ export function createChoices(chapterSection) {
                     newScene: 60,
                     newChoice: 43,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                     sfx: "/sfx/double pound.mp3",
                     loop: true
@@ -3426,7 +3175,6 @@ export function createChoices(chapterSection) {
                     newScene: 21,
                     newChoice: 16,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -3434,7 +3182,6 @@ export function createChoices(chapterSection) {
                     newScene: 22,
                     newChoice: 16,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -3444,7 +3191,6 @@ export function createChoices(chapterSection) {
                     newScene: 23,
                     newChoice: 17,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3454,7 +3200,6 @@ export function createChoices(chapterSection) {
                     newScene: 24,
                     newChoice: 18,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3464,7 +3209,6 @@ export function createChoices(chapterSection) {
                     newScene: 25,
                     newChoice: 19,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3474,7 +3218,6 @@ export function createChoices(chapterSection) {
                     newScene: 26,
                     newChoice: 20,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -3482,7 +3225,6 @@ export function createChoices(chapterSection) {
                     newScene: 27,
                     newChoice: 20,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 },
                 {
@@ -3490,7 +3232,6 @@ export function createChoices(chapterSection) {
                     newScene: 28,
                     newChoice: 20,
                     newImage: -1,
-                    remove: false,
                     key: "2"
                 }
             ],
@@ -3500,7 +3241,6 @@ export function createChoices(chapterSection) {
                     newScene: 29,
                     newChoice: 21,
                     newImage: -1,
-                    remove: false,
                     key: "0" 
                 }
             ],
@@ -3510,7 +3250,6 @@ export function createChoices(chapterSection) {
                     newScene: 30,
                     newChoice: 22,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -3518,7 +3257,6 @@ export function createChoices(chapterSection) {
                     newScene: 31,
                     newChoice: 22,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 },
                 {
@@ -3526,7 +3264,6 @@ export function createChoices(chapterSection) {
                     newScene: 32,
                     newChoice: 22,
                     newImage: -1,
-                    remove: false,
                     key: "2"
                 }
             ],
@@ -3536,7 +3273,6 @@ export function createChoices(chapterSection) {
                     newScene: 33,
                     newChoice: 23,
                     newImage: -1,
-                    remove: false,
                     key: "0" 
                 }
             ],
@@ -3546,7 +3282,6 @@ export function createChoices(chapterSection) {
                     newScene: 11,
                     newChoice: 24,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3556,7 +3291,6 @@ export function createChoices(chapterSection) {
                     newScene: 34,
                     newChoice: 25,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -3564,7 +3298,6 @@ export function createChoices(chapterSection) {
                     newScene: 35,
                     newChoice: 26,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -3574,7 +3307,6 @@ export function createChoices(chapterSection) {
                     newScene: 60,
                     newChoice: 43,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                     sfx: "/sfx/double pound.mp3",
                     loop: true
@@ -3586,7 +3318,6 @@ export function createChoices(chapterSection) {
                     newScene: 16,
                     newChoice: 27,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -3594,7 +3325,6 @@ export function createChoices(chapterSection) {
                     newScene: 17,
                     newChoice: 27,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -3604,7 +3334,6 @@ export function createChoices(chapterSection) {
                     newScene: 36,
                     newChoice: 28,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3614,7 +3343,6 @@ export function createChoices(chapterSection) {
                     newScene: 37,
                     newChoice: 29,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3624,7 +3352,6 @@ export function createChoices(chapterSection) {
                     newScene: 60,
                     newChoice: 43,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                     sfx: "/sfx/double pound.mp3",
                     loop: true
@@ -3636,7 +3363,6 @@ export function createChoices(chapterSection) {
                     newScene: 39,
                     newChoice: 31,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3646,7 +3372,6 @@ export function createChoices(chapterSection) {
                     newScene: 40,
                     newChoice: 32,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3656,7 +3381,6 @@ export function createChoices(chapterSection) {
                     newScene: 30,
                     newChoice: 33,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 "",
@@ -3665,7 +3389,6 @@ export function createChoices(chapterSection) {
                     newScene: 32,
                     newChoice: 33,
                     newImage: -1,
-                    remove: false,
                     key: "2"
                 }
             ],
@@ -3675,7 +3398,6 @@ export function createChoices(chapterSection) {
                     newScene: 42,
                     newChoice: 34,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3685,7 +3407,6 @@ export function createChoices(chapterSection) {
                     newScene: 43,
                     newChoice: 35,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -3693,7 +3414,6 @@ export function createChoices(chapterSection) {
                     newScene: 48,
                     newChoice: 36,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -3703,15 +3423,15 @@ export function createChoices(chapterSection) {
                     newScene: 44,
                     newChoice: 36,
                     newImage: -1,
-                    remove: false,
-                    key: "0"
+                    key: "0",
+                    condition: 10,
+                    type: "boolean"
                 },
                 {
                     label: "We're going to protect you",
                     newScene: 46,
                     newChoice: 36,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 },
                 {
@@ -3719,7 +3439,6 @@ export function createChoices(chapterSection) {
                     newScene: 47,
                     newChoice: 36,
                     newImage: -1,
-                    remove: false,
                     key: "2"
                 },
             ],
@@ -3729,7 +3448,6 @@ export function createChoices(chapterSection) {
                     newScene: 49,
                     newChoice: 23,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3739,7 +3457,6 @@ export function createChoices(chapterSection) {
                     newScene: 51,
                     newChoice: 38,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -3747,7 +3464,6 @@ export function createChoices(chapterSection) {
                     newScene: 52,
                     newChoice: 38,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -3757,7 +3473,6 @@ export function createChoices(chapterSection) {
                     newScene: 53,
                     newChoice: 39,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3767,7 +3482,6 @@ export function createChoices(chapterSection) {
                     newScene: 5,
                     newChoice: 4,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3777,7 +3491,6 @@ export function createChoices(chapterSection) {
                     newScene: 54,
                     newChoice: 6,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3787,7 +3500,6 @@ export function createChoices(chapterSection) {
                     newScene: 56,
                     newChoice: 38,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -3795,7 +3507,6 @@ export function createChoices(chapterSection) {
                     newScene: 57,
                     newChoice: 38,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -3805,7 +3516,6 @@ export function createChoices(chapterSection) {
                     newScene: 59,
                     newChoice: 23,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3815,7 +3525,6 @@ export function createChoices(chapterSection) {
                     newScene: 63,
                     newChoice: 44,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3825,7 +3534,6 @@ export function createChoices(chapterSection) {
                     newScene: 64,
                     newChoice: 45,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                     sfx: "/sfx/double bang and door bang.mp3",
                     loop: true
@@ -3837,7 +3545,6 @@ export function createChoices(chapterSection) {
                     newScene: 66,
                     newChoice: 46,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3847,7 +3554,6 @@ export function createChoices(chapterSection) {
                     newScene: 69,
                     newChoice: 51,
                     newImage: 23,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3857,7 +3563,6 @@ export function createChoices(chapterSection) {
                     newScene: 70,
                     newChoice: 48,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3867,7 +3572,6 @@ export function createChoices(chapterSection) {
                     newScene: 71,
                     newChoice: 51,
                     newImage: 23,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -3875,7 +3579,6 @@ export function createChoices(chapterSection) {
                     newScene: 72,
                     newChoice: 49,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -3885,15 +3588,15 @@ export function createChoices(chapterSection) {
                     newScene: 74,
                     newChoice: 51,
                     newImage: -1,
-                    remove: false,
-                    key: "0"
+                    key: "0",
+                    condition: 16,
+                    type: "boolean"
                 },
                 {
                     label: "\"No, I'm not sure\" (turn the lights off)",
                     newScene: 75,
                     newChoice: 50,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -3903,7 +3606,6 @@ export function createChoices(chapterSection) {
                     newScene: 76,
                     newChoice: 51,
                     newImage: 23,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3913,7 +3615,6 @@ export function createChoices(chapterSection) {
                     newScene: 77,
                     newChoice: 52,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3923,7 +3624,6 @@ export function createChoices(chapterSection) {
                     newScene: 78,
                     newChoice: 53,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -3931,7 +3631,6 @@ export function createChoices(chapterSection) {
                     newScene: 79,
                     newChoice: 53,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 },
                 {
@@ -3939,7 +3638,6 @@ export function createChoices(chapterSection) {
                     newScene: 80,
                     newChoice: 53,
                     newImage: -1,
-                    remove: false,
                     key: "2"
                 }
             ],
@@ -3949,7 +3647,6 @@ export function createChoices(chapterSection) {
                     newScene: 81,
                     newChoice: 54,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3959,7 +3656,6 @@ export function createChoices(chapterSection) {
                     newScene: 82,
                     newChoice: 55,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3969,7 +3665,6 @@ export function createChoices(chapterSection) {
                     newScene: 83,
                     newChoice: 56,
                     newImage: 19,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3979,7 +3674,6 @@ export function createChoices(chapterSection) {
                     newScene: 87,
                     newChoice: 57,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3989,7 +3683,6 @@ export function createChoices(chapterSection) {
                     newScene: 83,
                     newChoice: 58,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -3999,7 +3692,6 @@ export function createChoices(chapterSection) {
                     newScene: 87,
                     newChoice: 59,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                     sfx: "stop"
                 }
@@ -4010,7 +3702,6 @@ export function createChoices(chapterSection) {
                     newScene: 83,
                     newChoice: 60,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4020,7 +3711,6 @@ export function createChoices(chapterSection) {
                     newScene: 84,
                     newChoice: 61,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4030,7 +3720,6 @@ export function createChoices(chapterSection) {
                     newScene: 85,
                     newChoice: 62,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4040,7 +3729,6 @@ export function createChoices(chapterSection) {
                     newScene: 83,
                     newChoice: 63,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4050,7 +3738,6 @@ export function createChoices(chapterSection) {
                     newScene: 87,
                     newChoice: 64,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4060,7 +3747,6 @@ export function createChoices(chapterSection) {
                     newScene: 83,
                     newChoice: 65,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4070,7 +3756,6 @@ export function createChoices(chapterSection) {
                     newScene: 87,
                     newChoice: 66,
                     newImage: 23,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4080,7 +3765,6 @@ export function createChoices(chapterSection) {
                     newScene: 86,
                     newChoice: 67,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4090,7 +3774,6 @@ export function createChoices(chapterSection) {
                     newScene: 87,
                     newChoice: 68,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                     sfx: "/sfx/Roxy and monster scream.mp3",
                     loop: false
@@ -4102,7 +3785,6 @@ export function createChoices(chapterSection) {
                     newScene: 88,
                     newChoice: 69,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4112,7 +3794,6 @@ export function createChoices(chapterSection) {
                     newScene: 89,
                     newChoice: 70,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4122,7 +3803,6 @@ export function createChoices(chapterSection) {
                     newScene: 90,
                     newChoice: 71,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4132,7 +3812,6 @@ export function createChoices(chapterSection) {
                     newScene: 83,
                     newChoice: 72,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                     sfx: "/sfx/smack.mp3",
                     loop: false
@@ -4144,7 +3823,6 @@ export function createChoices(chapterSection) {
                     newScene: 91,
                     newChoice: 73,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4154,7 +3832,6 @@ export function createChoices(chapterSection) {
                     newScene: 92,
                     newChoice: 74,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4164,7 +3841,6 @@ export function createChoices(chapterSection) {
                     newScene: 93,
                     newChoice: 75,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4174,7 +3850,6 @@ export function createChoices(chapterSection) {
                     newScene: 94,
                     newChoice: 76,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4184,7 +3859,6 @@ export function createChoices(chapterSection) {
                     newScene: 96,
                     newChoice: 78,
                     newImage: 9,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4194,7 +3868,6 @@ export function createChoices(chapterSection) {
                     newScene: 97,
                     newChoice: 78,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4204,7 +3877,6 @@ export function createChoices(chapterSection) {
                     newScene: 98,
                     newChoice: 79,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4214,7 +3886,6 @@ export function createChoices(chapterSection) {
                     newScene: 99,
                     newChoice: 80,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4224,7 +3895,6 @@ export function createChoices(chapterSection) {
                     newScene: 102,
                     newChoice: 81,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4234,7 +3904,6 @@ export function createChoices(chapterSection) {
                     newScene: 103,
                     newChoice: 82,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4244,7 +3913,6 @@ export function createChoices(chapterSection) {
                     newScene: 105,
                     newChoice: 83,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4254,7 +3922,6 @@ export function createChoices(chapterSection) {
                     newScene: 0,
                     newChoice: 0,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                     newSection: "After",
                 }
@@ -4268,8 +3935,9 @@ export function createChoices(chapterSection) {
                     newScene: 1,
                     newChoice: 1,
                     newImage: -1,
-                    remove: false,
-                    key: "0"
+                    key: "0",
+                    condition: 11,
+                    type: "boolean"
                 }
             ],
             [ //1
@@ -4278,7 +3946,6 @@ export function createChoices(chapterSection) {
                     newScene: 3,
                     newChoice: 2,
                     newImage: 20,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4288,7 +3955,6 @@ export function createChoices(chapterSection) {
                     newScene: 4,
                     newChoice: 3,
                     newImage: 21,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4298,7 +3964,6 @@ export function createChoices(chapterSection) {
                     newScene: 5,
                     newChoice: 4,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4308,7 +3973,6 @@ export function createChoices(chapterSection) {
                     newScene: 6,
                     newChoice: 5,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4318,7 +3982,6 @@ export function createChoices(chapterSection) {
                     newScene: 7,
                     newChoice: 6,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -4326,7 +3989,6 @@ export function createChoices(chapterSection) {
                     newScene: 8,
                     newChoice: 6,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 },
                 {
@@ -4334,7 +3996,6 @@ export function createChoices(chapterSection) {
                     newScene: 9,
                     newChoice: 7,
                     newImage: -1,
-                    remove: false,
                     key: "2"
                 }
             ],
@@ -4344,7 +4005,6 @@ export function createChoices(chapterSection) {
                     newScene: 9,
                     newChoice: 7,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4354,7 +4014,6 @@ export function createChoices(chapterSection) {
                     newScene: 10,
                     newChoice: 8,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -4362,7 +4021,6 @@ export function createChoices(chapterSection) {
                     newScene: 11,
                     newChoice: 8,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 },
                 {
@@ -4370,7 +4028,6 @@ export function createChoices(chapterSection) {
                     newScene: 12,
                     newChoice: 8,
                     newImage: -1,
-                    remove: false,
                     key: "2"
                 },
                 {
@@ -4378,7 +4035,6 @@ export function createChoices(chapterSection) {
                     newScene: 13,
                     newChoice: 9,
                     newImage: -1,
-                    remove: false,
                     key: "3"
                 }
             ],
@@ -4388,7 +4044,6 @@ export function createChoices(chapterSection) {
                     newScene: 13,
                     newChoice: 9,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4398,7 +4053,6 @@ export function createChoices(chapterSection) {
                     newScene: 14,
                     newChoice: 10,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                     sfx: "/sfx/shutdown bang.mp3",
                     loop: false
@@ -4410,7 +4064,6 @@ export function createChoices(chapterSection) {
                     newScene: 15,
                     newChoice: 11,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -4418,7 +4071,6 @@ export function createChoices(chapterSection) {
                     newScene: 16,
                     newChoice: 11,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -4428,7 +4080,6 @@ export function createChoices(chapterSection) {
                     newScene: 17,
                     newChoice: 12,
                     newImage: 15,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4438,7 +4089,6 @@ export function createChoices(chapterSection) {
                     newScene: 18,
                     newChoice: 13,
                     newImage: 21,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4448,7 +4098,6 @@ export function createChoices(chapterSection) {
                     newScene: 19,
                     newChoice: 14,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4458,7 +4107,6 @@ export function createChoices(chapterSection) {
                     newScene: 20,
                     newChoice: 15,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                     sfx: "/sfx/car collision.mp3",
                     loop: false
@@ -4470,7 +4118,6 @@ export function createChoices(chapterSection) {
                     newScene: 21,
                     newChoice: 16,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4480,7 +4127,6 @@ export function createChoices(chapterSection) {
                     newScene: 22,
                     newChoice: 17,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -4488,7 +4134,6 @@ export function createChoices(chapterSection) {
                     newScene: 23,
                     newChoice: 17,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -4498,7 +4143,6 @@ export function createChoices(chapterSection) {
                     newScene: 24,
                     newChoice: 18,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4508,7 +4152,6 @@ export function createChoices(chapterSection) {
                     newScene: 25,
                     newChoice: 19,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4518,7 +4161,6 @@ export function createChoices(chapterSection) {
                     newScene: 26,
                     newChoice: 20,
                     newImage: 22,
-                    remove: false,
                     key: "0",
                 }
             ],
@@ -4528,7 +4170,6 @@ export function createChoices(chapterSection) {
                     newScene: 27,
                     newChoice: 21,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4538,7 +4179,6 @@ export function createChoices(chapterSection) {
                     newScene: 28,
                     newChoice: 22,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                     sfx: "/sfx/monster noises.mp3",
                     loop: true
@@ -4550,7 +4190,6 @@ export function createChoices(chapterSection) {
                     newScene: 29,
                     newChoice: 23,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4560,7 +4199,6 @@ export function createChoices(chapterSection) {
                     newScene: 31,
                     newChoice: 24,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4570,7 +4208,6 @@ export function createChoices(chapterSection) {
                     newScene: 32,
                     newChoice: 25,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4580,16 +4217,20 @@ export function createChoices(chapterSection) {
                     newScene: 33,
                     newChoice: 26,
                     newImage: -1,
-                    remove: false,
-                    key: "0"
+                    key: "0",
+                    condition: 14,
+                    type: "multipleChoice",
+                    num: 1
                 },
                 {
                     label: "Flee with Alicia",
                     newScene: 37,
                     newChoice: 30,
                     newImage: -1,
-                    remove: false,
-                    key: "1"
+                    key: "1",
+                    condition: 14,
+                    type: "multipleChoice",
+                    num: 2
                 }
             ],
             [ //26 (save Ben sequence)
@@ -4598,7 +4239,6 @@ export function createChoices(chapterSection) {
                     newScene: 34,
                     newChoice: 27,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4608,7 +4248,6 @@ export function createChoices(chapterSection) {
                     newScene: 35,
                     newChoice: 28,
                     newImage: 20,
-                    remove: false,
                     key: "0",
                     sfx: "stop"
                 }
@@ -4619,7 +4258,6 @@ export function createChoices(chapterSection) {
                     newScene: 36,
                     newChoice: 29,
                     newImage: 12,
-                    remove: false,
                     key: "0",
                     sfx: "/sfx/door banging.mp3",
                     loop: false
@@ -4631,7 +4269,6 @@ export function createChoices(chapterSection) {
                     newScene: 50,
                     newChoice: 37,
                     newImage: 9,
-                    remove: false,
                     key: "0",
                     newSection: "Panic"
                 }
@@ -4642,7 +4279,6 @@ export function createChoices(chapterSection) {
                     newScene: 38,
                     newChoice: 31,
                     newImage: -1,
-                    remove: false,
                     key: "0",
                 }
             ],
@@ -4652,7 +4288,6 @@ export function createChoices(chapterSection) {
                     newScene: 39,
                     newChoice: 32,
                     newImage: 20,
-                    remove: false,
                     key: "0",
                     sfx: "stop"
                 }
@@ -4663,7 +4298,6 @@ export function createChoices(chapterSection) {
                     newScene: 40,
                     newChoice: 33,
                     newImage: 12,
-                    remove: false,
                     key: "0",
                     sfx: "/sfx/door banging.mp3",
                     loop: false
@@ -4675,7 +4309,6 @@ export function createChoices(chapterSection) {
                     newScene: 55,
                     newChoice: 41,
                     newImage: 9,
-                    remove: false,
                     key: "0",
                     newSection: "Panic"
                 }
@@ -4689,7 +4322,6 @@ export function createChoices(chapterSection) {
                     newScene: 1,
                     newChoice: 1,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4699,7 +4331,6 @@ export function createChoices(chapterSection) {
                     newScene: 2,
                     newChoice: 2,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4709,7 +4340,6 @@ export function createChoices(chapterSection) {
                     newScene: 6,
                     newChoice: 3,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4719,7 +4349,6 @@ export function createChoices(chapterSection) {
                     newScene: 8,
                     newChoice: 25,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4729,7 +4358,6 @@ export function createChoices(chapterSection) {
                     newScene: 10,
                     newChoice: 5,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4739,7 +4367,6 @@ export function createChoices(chapterSection) {
                     newScene: 11,
                     newChoice: 6,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -4747,8 +4374,9 @@ export function createChoices(chapterSection) {
                     newScene: 21,
                     newChoice: 12,
                     newImage: -1,
-                    remove: false,
-                    key: "1"
+                    key: "1",
+                    condition: 17,
+                    type: "boolean"
                 }
             ],
             [ //6 (help Pepper call 911)
@@ -4757,7 +4385,6 @@ export function createChoices(chapterSection) {
                     newScene: 12,
                     newChoice: 26,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4767,7 +4394,6 @@ export function createChoices(chapterSection) {
                     newScene: 15,
                     newChoice: 8,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4777,7 +4403,6 @@ export function createChoices(chapterSection) {
                     newScene: 16,
                     newChoice: 9,
                     newImage: 24,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4787,7 +4412,6 @@ export function createChoices(chapterSection) {
                     newScene: 17,
                     newChoice: 10,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4797,7 +4421,6 @@ export function createChoices(chapterSection) {
                     newScene: 18,
                     newChoice: 11,
                     newImage: 9,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4807,7 +4430,6 @@ export function createChoices(chapterSection) {
                     newScene: 20,
                     newChoice: 5,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4817,7 +4439,6 @@ export function createChoices(chapterSection) {
                     newScene: 22,
                     newChoice: 13,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -4825,7 +4446,6 @@ export function createChoices(chapterSection) {
                     newScene: 23,
                     newChoice: 13,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 }
             ],
@@ -4835,7 +4455,6 @@ export function createChoices(chapterSection) {
                     newScene: 24,
                     newChoice: 14,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4845,7 +4464,6 @@ export function createChoices(chapterSection) {
                     newScene: 26,
                     newChoice: 16,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4855,7 +4473,6 @@ export function createChoices(chapterSection) {
                     newScene: 28,
                     newChoice: 16,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4865,7 +4482,6 @@ export function createChoices(chapterSection) {
                     newScene: 29,
                     newChoice: 17,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4875,7 +4491,6 @@ export function createChoices(chapterSection) {
                     newScene: 30,
                     newChoice: 18,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4885,7 +4500,6 @@ export function createChoices(chapterSection) {
                     newScene: 31,
                     newChoice: 19,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4895,7 +4509,6 @@ export function createChoices(chapterSection) {
                     newScene: 32,
                     newChoice: 20,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4905,7 +4518,6 @@ export function createChoices(chapterSection) {
                     newScene: 33,
                     newChoice: 21,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4915,7 +4527,6 @@ export function createChoices(chapterSection) {
                     newScene: 34,
                     newChoice: 22,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4925,7 +4536,6 @@ export function createChoices(chapterSection) {
                     newScene: 35,
                     newChoice: 23,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4935,7 +4545,6 @@ export function createChoices(chapterSection) {
                     newScene: 36,
                     newChoice: 24,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 },
                 {
@@ -4943,7 +4552,6 @@ export function createChoices(chapterSection) {
                     newScene: 37,
                     newChoice: 24,
                     newImage: -1,
-                    remove: false,
                     key: "1"
                 },
                 {
@@ -4951,7 +4559,6 @@ export function createChoices(chapterSection) {
                     newScene: 38,
                     newChoice: 24,
                     newImage: -1,
-                    remove: false,
                     key: "2"
                 }
             ],
@@ -4961,7 +4568,6 @@ export function createChoices(chapterSection) {
                     newScene: 39,
                     newChoice: 26,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -4971,7 +4577,6 @@ export function createChoices(chapterSection) {
                     newScene: 14,
                     newChoice: 7,
                     newImage: -1,
-                    remove: false,
                     key: "0"
                 }
             ],
@@ -5122,7 +4727,9 @@ export function createChoices(chapterSection) {
                     newChoice: 41,
                     newImage: -1,
                     remove: true,
-                    key: "0"
+                    key: "0",
+                    condition: 18,
+                    type: "boolean"
                 },
                 {
                     label: "Go into the bunkbed room",
@@ -5681,7 +5288,9 @@ export function createChoices(chapterSection) {
                     newScene: 186,
                     newChoice: 104,
                     newImage: -1,
-                    key: "0"
+                    key: "0",
+                    condition: 20,
+                    type: "boolean"
                 },
                 {
                     label: "Stay behind",
@@ -5727,7 +5336,7 @@ export function createChoices(chapterSection) {
                     key: "0"
                 }
             ],
-            [ //99
+            [ //99 (left behind with Pepper)
                 {
                     label: "",
 
@@ -5778,13 +5387,14 @@ export function createChoices(chapterSection) {
                     key: "0"
                 }
             ],
-            [ //103
+            [ //103 (left behind with Pepper)
                 {
                     label: "",
-
+                    
 
                     newImage: -1,
-                    key: "0"
+                    key: "0",
+                    newSection: "Stay"
                 }
             ],
             [ //104 (go with them)
@@ -5829,17 +5439,18 @@ export function createChoices(chapterSection) {
             [ //106
                 {
                     label: "Try to convince Pepper to come",
-
+                    newScene: 0,
+                    newChoice: 0,
                     newImage: -1,
                     key: "0",
                     newSection: "Convince"
                 },
                 {
-                    label: "Leave",
-
-                    newImage: 12,
-                    key: "1",
-                    newSection: "Search"
+                    label: "Leave her",
+                    newScene: 200,
+                    newChoice: 110,
+                    newImage: -1,
+                    key: "1"
                 }
             ],
             [ //107 (if Ben confessed his problems)
@@ -5855,28 +5466,714 @@ export function createChoices(chapterSection) {
                 {
                     label: "Continue",
                     newScene: 153,
-                    newChoice: 108,
+                    newChoice: 109,
                     newImage: -1,
                     key: "0"
                 }
             ],
-            [ //108
+            [ //109
                 {
                     label: "Try to convince Pepper to come",
-
+                    newScene: 0,
+                    newChoice: 0,
                     newImage: -1,
                     key: "0",
                     newSection: "Convince"
                 },
                 {
-                    label: "Leave",
-
-                    newImage: 12,
+                    label: "Leave her",
+                    newScene: 200,
+                    newChoice: 110,
+                    newImage: -1,
                     key: "1",
-                    newSection: "Search"
                 }
             ],
+            [ //110
+                {
+                    label: "Leave",
+                    newScene: 0,
+                    newChoice: 0,
+                    newImage: 12,
+                    key: "0",
+                    newSection: "Search"
+                }
+            ]
         ];
+    } else if (chapterSection == "Convince") {
+        return [
+            [ //0
+                {
+                    label: "Continue",
+                    newScene: 1,
+                    newChoice: 1,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //1
+                {
+                    label: "\"Please come with us\"",
+                    newScene: 2,
+                    newChoice: 2,
+                    newImage: -1,
+                    key: "0"
+                },
+                {
+                    label: "\"You can't stay here, it's not safe here alone\"",
+                    newScene: 3,
+                    newChoice: 2,
+                    newImage: -1,
+                    key: "1",
+                    condition: 21,
+                    type: "increment"
+                },
+                {
+                    label: "\"I'm not leaving you until you come\"",
+                    newScene: 4,
+                    newChoice: 2,
+                    newImage: -1,
+                    key: "2",
+                    condition: 21,
+                    type: "increment"
+                }
+            ],
+            [ //2
+                {
+                    label: "Continue",
+                    newScene: 5,
+                    newChoice: 3,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //3
+                {
+                    label: "\"Staying here is also suicide\"",
+                    newScene: 6,
+                    newChoice: 4,
+                    newImage: -1,
+                    key: "0"
+                },
+                {
+                    label: "\"Please, if you stay here you'll die\"",
+                    newScene: 7,
+                    newChoice: 4,
+                    newImage: -1,
+                    key: "1"
+                },
+                {
+                    label: "\"Because we're saving our friends\"",
+                    newScene: 8,
+                    newChoice: 4,
+                    newImage: -1,
+                    key: "2"
+                }
+            ],
+            [ //4
+                {
+                    label: "\"How are you so sure it's safer here?\"",
+                    newScene: 9,
+                    newChoice: 5,
+                    newImage: -1,
+                    key: "0"
+                },
+                {
+                    label: "\"You'll end up like everyone missing if you stay here\"",
+                    newScene: 10,
+                    newChoice: 5,
+                    newImage: -1,
+                    key: "1",
+                    condition: 21,
+                    type: "increment"
+                },
+                {
+                    label: "Point at the blood trail",
+                    newScene: 11,
+                    newChoice: 5,
+                    newImage: -1,
+                    key: "2",
+                    condition: 21,
+                    type: "increment"
+                }
+            ],
+            [ //5
+                {
+                    label: "Continue",
+                    newScene: 12,
+                    newChoice: 6,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //6
+                {
+                    label: "\"They're not coming, you know that\"",
+                    newScene: 13,
+                    newChoice: 7,
+                    newImage: -1,
+                    key: "0"
+                },
+                {
+                    label: "\"They don't stand a chance against what's out there. You heard those noises\"",
+                    newScene: 14,
+                    newChoice: 7,
+                    newImage: -1,
+                    key: "1",
+                    condition: 21,
+                    type: "increment"
+                },
+                {
+                    label: "\"How are you so sure they're coming to being with?\"",
+                    newScene: 15,
+                    newChoice: 7,
+                    newImage: -1,
+                    key: "2"
+                }
+            ],
+            [ //7
+                {
+                    label: "\"There's still no guarantee someone will come\"",
+                    newScene: 16,
+                    newChoice: 8,
+                    newImage: -1,
+                    key: "0"
+                },
+                {
+                    label: "\"You could be waiting a long time. The thing could during that\"",
+                    newScene: 17,
+                    newChoice: 8,
+                    newImage: -1,
+                    key: "1",
+                    condition: 21,
+                    type: "increment"
+                }
+            ],
+            [ //8
+                {
+                    label: "\"We'll all be safe if we're together. Safety in numbers\"",
+                    newScene: 18,
+                    newChoice: 9,
+                    newImage: -1,
+                    key: "0",
+                    condition: 21,
+                    type: "increment"
+                },
+                {
+                    label: "\"There's no service. If you need help we won't be able to help you\"",
+                    newScene: 18,
+                    newChoice: 9,
+                    newImage: -1,
+                    key: "1",
+                    condition: 21,
+                    type: "increment"
+                },
+                {
+                    label: "\"I'm begging you please. Come with us. Staying will be a big mistake\"",
+                    newScene: 18,
+                    newChoice: 9,
+                    newImage: -1,
+                    key: "2"
+                }
+            ],
+            [ //9
+                {
+                    label: "Continue",
+                    newScene: 19,
+                    newChoice: 10,
+                    newImage: -1,
+                    key: "0",
+                }
+            ],
+            [ //10
+                {
+                    label: "\"...\"",
+                    newScene: 20,
+                    newChoice: 11,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //11
+                {
+                    label: "\"...\"",
+                    newScene: 21,
+                    newChoice: 12,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //12
+                {
+                    label: "Leave",
+                    newScene: 0,
+                    newChoice: 0,
+                    newImage: 12,
+                    key: "0",
+                    newSection: "Search",
+                    sfx: "/sfx/crickets.mp3",
+                    loop: true
+                }
+            ]
+        ]
+    } else if (chapterSection == "Search") {
+        return [
+            [ //0
+                {
+                    label: "Continue",
+                    newScene: 7,
+                    newChoice: 2,
+                    newImage: -1,
+                    key: "0",
+                    sfx: "/sfx/crickets.mp3"
+                }
+            ],
+            [ //1
+                {
+                    label: "Continue",
+                    newScene: 7,
+                    newChoice: 2,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //2 (Roxy is dead)
+                {
+                    label: "Go left",
+                    newScene: 8,
+                    newChoice: 3,
+                    newImage: 26,
+                    key: "0"
+                }
+            ],
+            [ //3
+                {
+                    label: "Keep following",
+                    newScene: 9,
+                    newChoice: 4,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //4 (arrive at the dungeon house)
+                {
+                    label: "\"...\"",
+                    newScene: 11,
+                    newChoice: 5,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //5
+                {
+                    label: "\"...\"",
+                    newScene: 13,
+                    newChoice: 6,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //6
+                {
+                    label: "\"...\"",
+                    newScene: 14,
+                    newChoice: 8,
+                    newImage: 27,
+                    key: "0"
+                }
+            ],
+            [ //7
+                {
+                    label: "\"...\"",
+                    newScene: 15,
+                    newChoice: 8,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //8
+                {
+                    label: "\"...\"",
+                    newScene: 16,
+                    newChoice: 9,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //9
+                {
+                    label: "\"...\"",
+                    newScene: 17,
+                    newChoice: 10,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //10
+                {
+                    label: "\"...\"",
+                    newScene: 19,
+                    newChoice: 11,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //11
+                {
+                    label: "\"...\"",
+                    newScene: 21,
+                    newChoice: 12,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //12
+                {
+                    label: "\"...\"",
+                    newScene: 22,
+                    newChoice: 13,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //13
+                {
+                    label: "\"...\"",
+                    newScene: 23,
+                    newChoice: 14,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //14
+                {
+                    label: "\"...\"",
+                    newScene: 28,
+                    newChoice: 15,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //15
+                {
+                    label: "\"...\"",
+                    newScene: 31,
+                    newChoice: 16,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //16 (enter the dungeon house)
+                {
+                    label: "Enter the house",
+                    
+
+
+                    key: "0"
+                }
+            ],
+            [ //17 (from the beginning, Roxy is alive)
+                {
+                    label: "Go left",
+                    newScene: 34,
+                    newChoice: 18,
+                    newImage: 26,
+                    key: "0"
+                },
+                {
+                    label: "Go right",
+                    newScene: 42,
+                    newChoice: 23,
+                    newImage: 12,
+                    key: "1"
+                }
+            ],
+            [ //18 
+                {
+                    label: "Keep walking",
+                    newScene: 35,
+                    newChoice: 19,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //19      (going straight)
+                {
+                    label: "\"...\"",
+                    newScene: 36,
+                    newChoice: 20,
+                    newImage: 27,
+                    key: "0"
+                }
+            ],
+            [ //20
+                {
+                    label: "\"...\"",
+                    newScene: 11,
+                    newChoice: 22,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //21
+                {
+                    label: "\"...\"",
+                    newScene: 15,
+                    newChoice: 22,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //22
+                {
+                    label: "\"...\"",
+                    newScene: 37,
+                    newChoice: 9,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //23 (going right)
+                {
+                    label: "Keep walking",
+                    newScene: 43,
+                    newChoice: 25,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //24
+                {
+                    label: "\"...\"",
+                    newScene: 44,
+                    newChoice: 25,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //25
+                {
+                    label: "\"...\"",
+                    newScene: 45,
+                    newChoice: 27,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //26
+                {
+                    label: "\"...\"",
+                    newScene: 49,
+                    newChoice: 27,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //27
+                {
+                    label: "\"...\"",
+                    newScene: 50,
+                    newChoice: 28,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //28
+                {
+                    label: "\"We should check the wreckage\"",
+                    newScene: 52,
+                    newChoice: 29,
+                    newImage: -1,
+                    key: "0",
+                    condition: 23,
+                    type: "boolean"
+                },
+                {
+                    label: "\"We should go to the park\"",
+                    newScene: 70,
+                    newChoice: 44,
+                    newImage: -1,
+                    key: "1",
+                    condition: 23,
+                    type: "boolean"
+                },
+                {
+                    label: "\"Go back\"",
+                    newScene: 82,
+                    newChoice: 46,
+                    newImage: -1,
+                    key: "2"
+                }
+            ],
+            [ //29      (going to the wreckage)
+                {
+                    label: "Head to the wreckage",
+                    newScene: 55,
+                    newChoice: 30,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //30
+                {
+                    label: "Look inside",
+                    newScene: 56,
+                    newChoice: 31,
+                    newImage: -1,
+                    key: "0"
+                },
+                {
+                    label: "Don't look inside",
+                    newScene: 58,
+                    newChoice: 32,
+                    newImage: -1,
+                    key: "1"
+                }
+            ],
+            [ //31
+                {
+                    label: "Continue",
+                    newScene: 57,
+                    newChoice: 32,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //32
+                {
+                    label: "Continue",
+                    newScene: 59,
+                    newChoice: 33,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //33
+                {
+                    label: "\"...\"",
+                    newScene: 60,
+                    newChoice: 34,
+                    newImage: 24,
+                    key: "0"
+                }
+            ],
+            [ //34
+                {
+                    label: "\"...\"",
+                    newScene: 61,
+                    newChoice: 35,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //35
+                {
+                    label: "\"...\"",
+                    newScene: 62,
+                    newChoice: 37,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //36
+                {
+                    label: "\"...\"",
+                    newScene: 63,
+                    newChoice: 37,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //37
+                {
+                    label: "\"...\"",
+                    newScene: 64,
+                    newChoice: 38,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //38
+                {
+                    label: "\"...\"",
+                    newScene: 68,
+                    newChoice: 39,
+                    newImage: 12,
+                    key: "0"
+                }
+            ],
+            [ //39
+                {
+                    label: "\"...\"",
+                    newScene: 69,
+                    newChoice: 18,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //40      (go to the park)
+                {
+                    label: "Continue",
+                    newScene: 71,
+                    newChoice: 41,
+                    newImage: 28,
+                    key: "0"
+                }
+            ],
+            [ //41
+                {
+                    label: "\"...\"",
+                    newScene: 72,
+                    newChoice: 42,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //42
+                {
+                    label: "\"...\"",
+                    newScene: 73,
+                    newChoice: 43,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //43
+                {
+                    label: "\"...\"",
+                    newScene: 74,
+                    newChoice: 44,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //44
+                {
+                    label: "\"...\"",
+                    newScene: 79,
+                    newChoice: 45,
+                    newImage: 13,
+                    key: "0"
+                }
+            ],
+            [ //45
+                {
+                    label: "\"...\"",
+                    newScene: 80,
+                    newChoice: 46,
+                    newImage: -1,
+                    key: "0"
+                }
+            ],
+            [ //46
+                {
+                    label: "Go back",
+                    newScene: 81,
+                    newChoice: 18,
+                    newImage: 26,
+                    key: "0"
+                }
+            ]
+        ]
     } else {
         return[];
     }

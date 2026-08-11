@@ -7,63 +7,63 @@ import { useEffect, useState } from "react";
 import { createChoices } from "./choices";
 import { Howler } from "howler";
 
-  let ambience = new Howl({
-    src:[""],
-    loop: true,
-    volume: 0.5,
-  })
+let ambience = new Howl({
+  src:[""],
+  loop: true,
+  volume: 0.5,
+})
 
-  ambience.play();
+ambience.play();
 
-  let sfxPlayer = new Howl({
-    src:[""],
-    loop: false,
-    volume: 0.5,
-  })
+let sfxPlayer = new Howl({
+  src:[""],
+  loop: false,
+  volume: 0.5,
+})
 
-  function changeSong(song) {
-    if (song == "stop") {
-      ambience.stop();
-    } else if (song != null) {
-      ambience.stop();
-      ambience = new Howl({
-        src:[song],
-        loop: true,
-        volume: 0.2,
-      })
-      ambience.play();
-    }
+function changeSong(song) {
+  if (song == "stop") {
+    ambience.stop();
+  } else if (song != null) {
+    ambience.stop();
+    ambience = new Howl({
+      src:[song],
+      loop: true,
+      volume: 0.2,
+    })
+    ambience.play();
   }
+}
 
-  function playSFX(sfx, loop) {
+function playSFX(sfx, loop) {
+  
+  if (sfx == "stop") {
+    sfxPlayer.stop();
+  } else if (sfx != null) {
+    sfxPlayer.stop();
+    sfxPlayer = new Howl({
+      src:[sfx],
+      loop: loop,
+      volume: 0.5,
+    })
     
-    if (sfx == "stop") {
-      sfxPlayer.stop();
-    } else if (sfx != null) {
-      sfxPlayer.stop();
-      sfxPlayer = new Howl({
-        src:[sfx],
-        loop: loop,
-        volume: 0.5,
-      })
-      
-      sfxPlayer.play();
-    }
+    sfxPlayer.play();
   }
+}
 
 
 const builder = imageUrlBuilder(client);
 export default function Scene() {
     const [playerName, updateName] = useState("");
-    const [scene, updateScene] = useState(0);
-    const [currChoices, updateChoices] = useState(0);
-    const [currSection, updateSection] = useState("Intro");
+    const [scene, updateScene] = useState(192);
+    const [currChoices, updateChoices] = useState(106);
+    const [currSection, updateSection] = useState("After");
     
     const [choices, modifyChoices] = useState(createChoices(currSection));
     const [text, updateText] = useState(null);
 
     const [images, setImages] = useState(null);
-    const [currImage, changeImage] = useState(0);
+    const [currImage, changeImage] = useState(9);
 
     const [tempScene, setTemp] = useState(null);
    
@@ -74,7 +74,7 @@ export default function Scene() {
       false, //saw Mort's notebook
       
       //1
-      0, //the game you chose (1 = JackBox, 2 = Telestrations, 3 = Poker
+      1, //the game you chose (1 = JackBox, 2 = Telestrations, 3 = Poker
       
       //2 
       false, //engage with Ben at least once? (Act 2)
@@ -117,7 +117,7 @@ export default function Scene() {
       1, //who did you save in the first monster encounter? 0 - weren't there, 1 - Ben, 2 - Alicia
 
       //15
-      false, //did you go to the bathroom in the park?
+      true, //did you go to the bathroom in the park?
 
       //16
       true, //did you keep the lights on?
@@ -136,7 +136,13 @@ export default function Scene() {
       false, //did you go out to find your friends?
 
       //21
-      0, //convince points. If above at least 3 you convinced Pepper and Roxy
+      4, //convince points. If above at least 4 you convinced Pepper and Roxy. Only 3, Roxy will go if applicable
+
+      //22
+      0, //where did you hide? 0 - under bed, 1 - in the garage, 2 - in the nook
+
+      //23
+      false, //is Ben/Alicia, whoever wasn't saved is dead
     ]);
 
     const pictureStyle = {
@@ -157,7 +163,6 @@ export default function Scene() {
       }
       getPictures();
       updateName(localStorage.getItem("playerName"));
-
     }, []);
 
     useEffect (() => {
@@ -172,24 +177,19 @@ export default function Scene() {
               "slug":slug.current
           }`;
           
+          updateText(null);
           const content = await client.fetch(query, {currSection});
           updateText(content);
-          if(tempScene != null) {
-            let newChoices = createChoices(tempScene.newSection);
-            checkSpecialCondition(newChoices, tempScene.newScene);
-            modifyChoices(newChoices);
+          if (tempScene != null) {
             updateScene(tempScene.newScene);
-            updateChoices(tempScene.newChoice);
-            modifyConditions(tempScene.newScene);
-            
-          }   
+          }  
       }
       getScenes();
     }, [currSection, tempScene]);
 
 
     //Changes the scene and choices displayed. Also updates the picture, removes choices from 
-    //recurring scenes, updates any conditions and updates choices according to special conditions
+    //recurring scenes, updates any conditions and updates choices according to special condition
     function changeScene(choice) {
       changeSong(choice.song);
       playSFX(choice.sfx, choice.loop);
@@ -202,123 +202,40 @@ export default function Scene() {
         changeImage(choice.newImage);
       }
       
-      
+      if (choice.condition != null) {
+        editConditions(choice.condition, choice.type, choice.num);
+        checkSpecialCondition(choices, currSection);
+      }
+
       if (choice.newSection != null) {
         updateSection(choice.newSection);
         setTemp(choice);
+
+        let newChoices = createChoices(choice.newSection);
+        checkSpecialCondition(newChoices, choice.newSection);
+        modifyChoices(newChoices);
+        updateChoices(choice.newChoice);
+        
       } else {
         updateScene(choice.newScene);
         updateChoices(choice.newChoice);
-        modifyConditions(choice.newScene);
-        checkSpecialCondition(choices, choice.newScene);
       }      
     }
 
-    
-
-
-    //checks if a certain scene is picked to modify a condition
-    function modifyConditions(scene) {
-      if (currSection == "Intro") { //Chapter 1
-        if (scene == 32) {
-          conditions[0] = true;
-        } else if (scene == 50) {
-          conditions[4] = true;
-        }
-      } else if (currSection == "Park") {
-        if (scene == 24) {
-          conditions[1] = 2;
-        } else if (scene == 25) {
-          conditions[1] = 3;
-        }
-      } else if (currSection == "Cabin") {
-        if (scene == 7) {
-          conditions[3] = true;
-        } else if (scene == 8) {
-          conditions[3] = true;
-        } else if (scene == 35) {
-          conditions[5] = true;
-        } else if (scene == 1) {
-          conditions[6] = 1;
-        } else if (scene == 12) {
-          conditions[6] = 2;
-        } else if (scene == 25) {
-          conditions[6] = 3;
-        }
-      } else if (currSection == "Tub") {
-        if (scene == 9) {
-          conditions[3] = true;
-        } else if (scene == 0) {
-          conditions[6] = 4;
-        }
-      } else if (currSection == "Evening") {
-
-      } else if (currSection == "Inside") { //Chapter 2
-        if (scene == 4) {
-          conditions[7] = 3;
-        } else if (scene == 46) {
-          conditions[9] = 2;
-        } else if (scene == 47) {
-          conditions[9] = 1;
-        } else if (scene == 10) {
-          conditions[7] = 2;
-        } else if (scene == 21) {
-          conditions[7] = 1;
-        } else if (scene == 15) {
-          conditions[7] = 4;
-        } else if (scene == 11) {
-          conditions[12] = true;
-        } else if (scene == 61) {
-          conditions[13] = true;
-        }
-      } else if (currSection == "Ben") {
-        if (scene == 6 || scene == 7) {
-          conditions[2] = true;
-        } else if (scene == 13 || scene == 14) {
-          conditions[8] = true;
-        } else if (scene == 28) {
-          conditions[9] = 2;
-        } else if (scene == 29) {
-          conditions[9] = 1;
-        } else if (scene == 39) {
-          conditions[15] = true;
-          conditions[11] = true;
-        } else if (scene == 57) {
-          conditions[14] = 1;
-        } else if (scene == 61) {
-          conditions[14] = 2;
-        }
-      } else if (currSection == "Panic") {
-        if (scene == 44 || scene == 45) {
-          conditions[10] = true;
-        } else if (scene == 74) {
-          conditions[16] = true;
-        }
-      } else if (currSection == "Lodge") {
-        if (scene == 33) {
-          conditions[14] = 1;
-        } else if (scene == 37) {
-          conditions[14] = 2;
-        } else if (scene == 0) {
-          conditions[11] = true;
-        }
-      } else if (currSection == "After") { //Chapter 3
-        if (scene == 21) {
-          conditions[17] = true;
-        } else if (scene == 67) {
-          conditions[18] = true;
-        } else if (scene == 111) {
-          conditions[19] = true;
-        } else if (scene == 186 || scene == 194) {
-          conditions[20] = true;
-        }
+    //updates a condition
+    function editConditions(conditionIndex, type, num) {
+      if (type == "boolean") {
+        conditions[conditionIndex] = true;
+      } else if (type == "multipleChoice") {
+        conditions[conditionIndex] = num;
+      } else {
+        conditions[conditionIndex] += 1;
       }
-      
     }
 
     //all of the special condition events happen here
-    function checkSpecialCondition(choices, scene) {
-      if (currSection == "Intro") {
+    function checkSpecialCondition(choices, section) {
+      if (section == "Intro") {
         if(conditions[0]) {
           choices[20][0] = {
               label: "Ask about Mort's notebook",
@@ -329,30 +246,23 @@ export default function Scene() {
               key: "0"
           };
         } 
-        if (choices[3][0] == "" && choices[3][1] == "" && choices[3][2] == "" && 
-          choices[3][3] == "" && scene == 4) {
-          updateScene(42);
-          updateChoices(33);
-        }
-      } else if (currSection == "Park") {
+      } else if (section == "Park") {
         if(conditions[0]) {
           choices[8][0] = {
               label: "Continue",
               newScene: 16,
               newChoice: 9,
               newImage: -1,
-              remove: false,
               key: "0"
           }
         }
-      } else if (currSection == "Cabin") {
+      } else if (section == "Cabin") {
         if (conditions[0]) {
           choices[1][3] = {
             label: "Mort's notebook",
             newScene: 10,
             newChoice: 5,
             newImage: -1,
-            remove: false,
             key: "3"
           };
 
@@ -361,7 +271,6 @@ export default function Scene() {
             newScene: 23,
             newChoice: 11,
             newImage: -1,
-            remove: false,
             key: "2"
           };
           if (choices[13][2] !== "") {
@@ -372,18 +281,12 @@ export default function Scene() {
         if (conditions[4]) {
           choices[12][2].newScene = 27;
         }
-      } else if (currSection == "Tub") {
-        if (choices[6][0] == "" && choices[6][1] == "" && choices[6][2] == "" && scene == 7) {
-          if (conditions[0]) {
-            updateScene(15);
-            updateChoices(10);
-          } else {
-            updateScene(14);
-            updateChoices(9);
-          }
-          
+      } else if (section == "Tub") {
+        if (conditions[0]) {
+          choices[6][3].newScene = 15;
+          choices[6][3].newChoice = 10;
         }
-      } else if (currSection == "Evening") {
+      } else if (section == "Evening") {
         if (conditions[6] == 1) {
           choices[1][0].newScene = 2;
         } else if (conditions[6] == 2) {
@@ -401,7 +304,7 @@ export default function Scene() {
           choices[2][0].newScene = 15;
           choices[2][0].newChoice = 11;
         }
-      } else if (currSection == "Inside") {
+      } else if (section == "Inside") {
         if (conditions[1] == 2) {
           choices[17][0].newScene = 24;
         } else if (conditions[1] == 2) {
@@ -438,10 +341,12 @@ export default function Scene() {
           choices[44][0].song = null;
           choices[44][0].sfx = "";
         }
-      } else if (currSection == "Ben") {
+      } else if (section == "Ben") {
         if (conditions[3]) {
           choices[1][0].newScene = 4;
           choices[5][0].newScene = 14;
+          choices[5][0].condition = 8;
+          choices[5][0].type = "boolean"
         }
 
         if (conditions[2]) {
@@ -456,7 +361,7 @@ export default function Scene() {
         if (conditions[9]) {
           choices[22][0].newScene = 36;
         }
-      } else if (currSection == "Panic") {
+      } else if (section == "Panic") {
         if (conditions[0]) {
           choices[6][0].newScene = 10;
           choices[23][0].newScene = 10;
@@ -468,7 +373,6 @@ export default function Scene() {
               newScene: 31,
               newChoice: 33,
               newImage: -1,
-              remove: false,
               key: "1"
           };
         }
@@ -533,7 +437,7 @@ export default function Scene() {
         if (conditions[14] == 1 && !conditions[16]) {
           choices[79][0].newScene = 100;
         }
-      } else if (currSection == "Lodge") {
+      } else if (section == "Lodge") {
         if (conditions[7] == 3) {
           choices[1][0].newScene = 2;
         }
@@ -541,7 +445,7 @@ export default function Scene() {
         if (conditions[8]) {
           choices[23][0].newScene = 30;
         }
-      } else if (currSection == "After") {
+      } else if (section == "After") {
         if ((conditions[14] == 0 || conditions[14] == 2) && conditions[16]) { //if Alicia and Roxy alive
           choices[1][0].newScene = 3;
           choices[29][0].newScene = 49;
@@ -672,7 +576,14 @@ export default function Scene() {
           choices[70][0].newScene = 117;
 
           choices[106][0].label = "Try to convince them to come";
-          choices[108][0].label = "Try to convince them to come";
+          choices[106][0].newScene = 25;
+          choices[106][1].label = "Leave them";
+          choices[106][1].newScene = 201;
+
+          choices[109][0].label = "Try to convince them to come";
+          choices[109][0].newScene = 25;
+          choices[109][1].label = "Leave them";
+          choices[109][1].newScene = 201;
         }
 
         if (conditions[15]) { //if you made it to the park bathroom (don't know Mabel's name)
@@ -699,6 +610,8 @@ export default function Scene() {
           choices[66][0].newChoice = 67;
           choices[66][0].song = "/audio/Hug Energy.mp3";
           choices[66][0].sfx = "";
+          choices[66][0].condition = 19;
+          choices[66][0].type = "boolean"
         }
 
         if (conditions[18]) { //if you checked on Pepper
@@ -708,7 +621,159 @@ export default function Scene() {
         if (conditions[20]) { //if you went to find your friends
           choices[97][0].newChoice = 105;
         }
+      } else if (section == "Convince") {
+        if (conditions[16]) { //if Roxy is alive
+          choices[0][0].newScene = 26;
+          
+          choices[1][0].newScene = 27;
+          choices[1][1].label = "\"You both can't stay here. It's not safe here alone\"";
+          choices[1][2].label = "\"I'm not leaving until you both come\"";
+
+          choices[2][0].newScene = 28;
+          choices[3][0].newScene = 29;
+          choices[3][1].newScene = 30;
+          choices[3][2].newScene = 31;
+
+          choices[4][1].newScene = 32;
+          choices[4][2] = "";
+
+          choices[5][0].newScene = 33;
+
+          choices[6][0].newScene = 34;
+          choices[6][1].newScene = 35;
+          choices[6][2].newScene = 36;
+
+          choices[8][0].newScene = 37;
+          choices[8][1].newScene = 37;
+          choices[8][2].newScene = 37;
+
+          choices[9][0].newScene = 38;
+        }
+
+        if (conditions[21] >= 4 && conditions[16]) { //Roxy and Pepper convinced
+          choices[10][0].newScene = 41;
+          if (conditions[19]) {
+            choices[11][0].newScene = 43;
+          } else {  
+            choices[11][0].newScene = 42;
+          }
+        } else if (conditions[21] >= 4) { //only Pepper convinced
+          choices[10][0].newScene = 22;
+          if (conditions[19]) {
+            choices[11][0].newScene = 24;            
+          } else {
+            choices[11][0].newScene = 23;
+          }
+        } else if (conditions[21] >= 3 && conditions[16]) { //only Roxy convinced
+          choices[10][0].newScene = 44;
+          if (conditions[19]) {
+            choices[11][0].newScene = 46;            
+          } else {
+            choices[11][0].newScene = 45;
+          }
+        } else if (conditions[16]) { //Roxy and Pepper not convinced
+          choices[10][0].newScene = 39;
+          choices[11][0].newScene = 40;
+        }
+      } else if (section == "Search") {
+        if (conditions[14] == 1 && conditions[16] && conditions[21] >= 4) { //Ben, Roxy and Pepper
+          choices[0][0].newScene = 6;
+          choices[0][0].newChoice = 1;
+        } else if (conditions[14] == 1 && conditions[16] && conditions[21] >= 3) { //Ben and Roxy
+          choices[0][0].newScene = 5;
+          choices[0][0].newChoice = 1;
+        } else if (conditions[14] == 1 && conditions[21] >= 4) { //Ben and Pepper
+          choices[0][0].newScene = 4;
+          choices[0][0].newChoice = 1;
+        } else if (conditions[16] && conditions[21] >= 4) { //Alicia, Roxy and Pepper
+          choices[0][0].newScene = 3;
+          choices[0][0].newChoice = 1;
+        } else if (conditions[16] && conditions[21] >= 3) { //Alicia and Roxy
+          choices[0][0].newScene = 2;
+          choices[0][0].newChoice = 1;
+        } else if (conditions[21] >= 4) { //Alicia and Pepper
+          choices[0][0].newScene = 1;
+          choices[0][0].newChoice = 1;
+        }
+
+        if (conditions[14] == 1 && conditions[16] && conditions[21] >= 3) { //Ben and Roxy
+          choices[28][0].newScene = 53;
+          choices[37][0].newScene = 67;
+        } else if (conditions[14] == 1) { //Ben
+          choices[28][0].newScene = 54;
+          choices[37][0].newScene = 66;
+        } else if (conditions[16] && conditions[21] >= 3) { //Alicia and Roxy
+          choices[28][0].newScene = 52;
+          choices[37][0].newScene = 65;
+        }
+        
+        
+        if (conditions[21] >= 4) { //if Pepper's there
+          choices[3][0].newScene = 10;
+          choices[6][0].newChoice = 7;
+          choices[23][0].newChoice = 24;
+          choices[35][0].newChoice = 36;
+        } 
+
+        if (conditions[16] && conditions[21] >= 3) {
+          choices[25][0].newChoice = 26;
+        }
+
+        if (conditions[21] >= 4 && conditions[16]) { //if Pepper and Roxy are there
+          choices[10][0].newScene = 39;
+          choices[15][0].newScene = 41;
+        } else if (conditions[21] >= 3 && conditions[16]) { //if only Roxy's there
+          choices[10][0].newScene = 38;
+          choices[15][0].newScene = 40;    
+        } else if (conditions[21] >= 4) { //if only Pepper's there
+          choices[10][0].newScene = 20;
+          choices[15][0].newScene = 32;
+        }
+
+        if (conditions[14] == 1) { //if Ben's there
+          choices[4][0].newScene = 12;
+          choices[9][0].newScene = 18;
+          choices[11][0].newScene = 24;
+          choices[12][0].newScene = 25;
+          choices[20][0].newScene = 12;
+          if (conditions[15]) { //if you made it to the bathroom
+            choices[13][0].newScene = 27;
+            choices[14][0].newScene = 30;
+          } else {
+            choices[13][0].newScene = 26;
+            choices[14][0].newScene = 29;
+          }
+        }
+
+        if (conditions[16] && conditions[21] < 3) { //if Pepper and Roxy stayed behind
+          choices[0][0].newScene = 33;
+          choices[0][0].newChoice = 17;
+        } else if (conditions[16]) { //if at Roxy and/or Pepper came
+          choices[1][0].newScene = 33;
+          choices[1][0].newChoice = 17;
+        }
+        
+        if (conditions[14] == 1 && conditions[21] >= 4) { //if Ben and Pepper
+          choices[25][0].newScene = 48;
+        } else if (conditions[21] >= 4) { //if Pepper and Alicia
+          choices[25][0].newScene = 47;
+        } else if (conditions[14] == 1) { //if Ben
+          choices[25][0].newScene = 46;
+        }
+
+        if (conditions[15] && conditions[14] == 1) { //saved Ben after leaving the bathroom
+          choices[28][1].newChoice = 40;
+          choices[40][0].newScene = 75;
+          choices[41][0].newScene = 76;
+          choices[42][0].newScene = 77;
+          choices[43][0].newScene = 78;
+        } else if (conditions[15]) { //saved Alicia after leaving the bathroom
+          choices[28][1].newChoice = 40;
+        }
+      
       }
+
+      
     }
 
 
@@ -728,21 +793,22 @@ export default function Scene() {
           <div className="mx-auto max-w-prose space-y-8 py-13 p-1 text-left">
             <div className="fade-in" key={scene}>
               <article className="p-2 prose md:prose-md prose-primary mx-auto max-h-125 overflow-y-scroll">
-                  <PortableText value={text ? replaceInBlocks(text[scene].text, playerName) : ""} 
-                    components={[]} />
-                  <br/>
-                  {choices[currChoices].map((choice) => 
-                    choice ? 
+                {text ? (
+                  <>
+                    <PortableText value={replaceInBlocks(text[scene].text, playerName)} components={[]} />  
+                    <br/>
+                    {choices[currChoices].map((choice) => choice ? 
                       <div key={choice.key}>
-                      <button key={choice.key} className="hover:underline cursor-pointer p-1 
-                        text-left text-red-500 font-bold" 
-                      onClick={() => changeScene(choice)}>
-                        {choice.label}
-                      </button>
-                    </div> : null
-                  )}
+                        <button key={choice.key} className="hover:underline cursor-pointer p-1 
+                          text-left text-red-500 font-bold" onClick={() => changeScene(choice)}>
+                          {choice.label}
+                        </button>
+                      </div> : null
+                    )}
+                  </>) : (<div>Loading...</div>)
+                }
               </article>
-              </div>
+            </div>
           </div>   
         </section>    
          
