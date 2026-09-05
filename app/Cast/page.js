@@ -106,7 +106,7 @@ function Alicia() {
                 Despite her workaholic attitude, it has at least rewarded her greatly her entire life with a high GPA, reputation among profs, peers and even a seat on the student government. 
             </p>
             <p>
-                She&apos;s been part of the group since the start. She likes the company and figures that having them will at least keep for her sane when she needs to study for long hours. She also loves cooking and baking, taking every opportunity to make her friends meals.
+                She&apos;s been part of the group since the start. During second year, she and Sayori ended up being roomates. She likes the company and figures that having them will at least keep for her sane when she needs to study for long hours. She also loves cooking and baking, taking every opportunity to make her friends meals.
             </p>
         </>
     )
